@@ -1,0 +1,30 @@
+#btnhome{
+ -fx-background-color: transparent;
+}
+
+#btnhome:hover{
+ -fx-background-color: white;
+ -fx-text-fill:  #03396c;
+}
+
+#btnticket{
+ -fx-background-color: transparent;
+}
+
+#btnticket:hover{
+ -fx-background-color: white;
+ -fx-text-fill:  #03396c;
+}
+
+#btnbus{
+ -fx-background-color: transparent;
+}
+
+.borders{
+
+}
+
+#btnbus:hover{
+ -fx-background-color: white;
+ -fx-text-fill:  #03396c;
+}
