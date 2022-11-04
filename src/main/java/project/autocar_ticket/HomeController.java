@@ -28,7 +28,6 @@ public class HomeController implements Initializable {
     @FXML
     private void bus(MouseEvent event){
         loadpage("Buspage");
-        System.out.println("hello");
     }
 
     @FXML

@@ -18,7 +18,7 @@
             </Label>
          </children>
       </AnchorPane>
-      <Button layoutX="38.0" layoutY="71.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="165.0" style="-fx-background-color: #008080; -fx-background-radius: 30; -fx-background-insets: 0 0 0 0, 0, 1, 2;" text="Cree Ticket" textFill="WHITE">
+      <Button onMouseClicked="#CreatTicketpage" fx:id="btnadd" layoutX="38.0" layoutY="71.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="165.0" style="-fx-background-color: #008080; -fx-background-radius: 30; -fx-background-insets: 0 0 0 0, 0, 1, 2;" text="Cree Ticket" textFill="WHITE">
          <font>
             <Font name="System Bold" size="17.0" />
          </font>

@@ -54,7 +54,7 @@
                   </Label>
                </children>
             </AnchorPane>
-            <HBox layoutY="57.0" prefHeight="165.0" spacing="15.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="57.0">
+            <HBox alignment="CENTER" layoutY="57.0" prefHeight="165.0" spacing="15.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="57.0">
                <children>
                   <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #66B2B2;" styleClass="borders">
                      <children>
@@ -74,7 +74,7 @@
                      </children></AnchorPane>
                   <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #66B2B2;" styleClass="borders">
                      <children>
-                        <Label layoutX="61.0" layoutY="14.0" text="Solde">
+                        <Label layoutX="51.0" layoutY="14.0" text="Balance">
                            <font>
                               <Font name="System Bold" size="20.0" />
                            </font>
