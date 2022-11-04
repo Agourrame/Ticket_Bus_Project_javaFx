@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #6497b1;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.autocar_ticket.TicketController">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #6497b1;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.autocar_ticket.TicketController">
    <children>
       <AnchorPane prefHeight="57.0" prefWidth="200.0" style="-fx-background-color: #f9f9f9;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
@@ -18,18 +18,21 @@
             </Label>
          </children>
       </AnchorPane>
-      <Button layoutX="38.0" layoutY="71.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="165.0" style="-fx-background-color: #008080;" text="Cree Ticket" textFill="WHITE">
+      <Button layoutX="38.0" layoutY="71.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="165.0" style="-fx-background-color: #008080; -fx-background-radius: 30; -fx-background-insets: 0 0 0 0, 0, 1, 2;" text="Cree Ticket" textFill="WHITE">
          <font>
             <Font name="System Bold" size="17.0" />
          </font>
       </Button>
-      <TableView layoutX="19.0" layoutY="133.0" prefHeight="267.0" prefWidth="436.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="19.0" AnchorPane.rightAnchor="145.0" AnchorPane.topAnchor="133.0">
+      <TableView layoutX="19.0" layoutY="133.0" prefHeight="267.0" prefWidth="436.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="133.0">
         <columns>
           <TableColumn prefWidth="69.33334159851074" style="-fx-background-color: #008080; -fx-text-fill: #f9f9f9;" text="ID" />
           <TableColumn prefWidth="129.33331298828125" style="-fx-background-color: #008080;" text="Ville d'eparte" />
             <TableColumn prefWidth="124.88893127441406" style="-fx-background-color: #008080;" text="Ville d'arriver" />
             <TableColumn prefWidth="111.11114501953125" style="-fx-background-color: #008080;" text="Prix" />
         </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
       </TableView>
    </children>
 </AnchorPane>
