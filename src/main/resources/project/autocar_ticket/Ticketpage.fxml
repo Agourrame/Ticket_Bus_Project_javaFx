@@ -4,6 +4,8 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
@@ -11,14 +13,19 @@
    <children>
       <AnchorPane prefHeight="57.0" prefWidth="200.0" style="-fx-background-color: #f9f9f9;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <Label layoutX="18.0" layoutY="20.0" prefHeight="57.0" prefWidth="100.0" text="Ticket" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <Label layoutX="65.0" prefHeight="57.0" prefWidth="100.0" text="Ticket" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="0.0">
                <font>
                   <Font name="System Bold" size="25.0" />
                </font>
             </Label>
+             <ImageView fitHeight="34.0" fitWidth="40.0" layoutX="21.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
+                 <image>
+                     <Image url="@../../project/autocar_ticket/img/8679214_coupon_ticket_icon.png" />
+                 </image>
+             </ImageView>
          </children>
       </AnchorPane>
-      <Button onMouseClicked="#CreatTicketpage" fx:id="btnadd" layoutX="38.0" layoutY="71.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="165.0" style="-fx-background-color: #008080; -fx-background-radius: 30; -fx-background-insets: 0 0 0 0, 0, 1, 2;" text="Cree Ticket" textFill="WHITE">
+      <Button fx:id="btnadd" layoutX="38.0" layoutY="71.0" mnemonicParsing="false" onMouseClicked="#CreatTicketpage" prefHeight="40.0" prefWidth="165.0" style="-fx-background-color: #008080; -fx-background-radius: 30; -fx-background-insets: 0 0 0 0, 0, 1, 2;" text="Cree Ticket" textFill="WHITE">
          <font>
             <Font name="System Bold" size="17.0" />
          </font>
