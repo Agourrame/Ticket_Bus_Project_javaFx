@@ -17,14 +17,14 @@
       <AnchorPane prefHeight="418.0" prefWidth="223.0" style="-fx-background-color: #03396c;">
       <VBox layoutY="184.0" prefHeight="318.0" prefWidth="223.0" spacing="10.0" style="-fx-background-color: #03396c;" BorderPane.alignment="CENTER">
          <children>
-            <Button fx:id="btnhome" alignment="TOP_LEFT" mnemonicParsing="false" onMouseClicked="#home" prefHeight="57.0" prefWidth="229.0" style="" stylesheets="@Style.css" text="Home" textFill="WHITE">
+            <Button fx:id="btnhome" alignment="TOP_LEFT" mnemonicParsing="false" onMouseClicked="#home" prefHeight="57.0" prefWidth="229.0" style="" stylesheets="@Style.css" text="   Home" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="20.0" />
                </font>
                   <graphic>
                      <ImageView fitHeight="35.0" fitWidth="52.0" pickOnBounds="true" preserveRatio="true">
                         <image>
-                           <Image url="@../../project/autocar_ticket/img/216242_home_icon.png" />
+                           <Image url="@../../project/autocar_ticket/img/home.png" />
                         </image>
                      </ImageView>
                   </graphic>
@@ -32,14 +32,14 @@
                      <Insets left="50.0" />
                   </padding>
             </Button>
-            <Button fx:id="btnticket" alignment="TOP_LEFT" mnemonicParsing="false" onMouseClicked="#ticket" prefHeight="57.0" prefWidth="226.0" stylesheets="@Style.css" text="Ticket" textFill="WHITE">
+            <Button fx:id="btnticket" alignment="TOP_LEFT" mnemonicParsing="false" onMouseClicked="#ticket" prefHeight="57.0" prefWidth="226.0" stylesheets="@Style.css" text="   Ticket" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="20.0" />
                </font>
                   <graphic>
                      <ImageView fitHeight="35.0" fitWidth="52.0" pickOnBounds="true" preserveRatio="true">
                         <image>
-                           <Image url="@../../project/autocar_ticket/img/8679214_coupon_ticket_icon.png" />
+                           <Image url="@../../project/autocar_ticket/img/ticket.png" />
                         </image>
                      </ImageView>
                   </graphic>
@@ -47,14 +47,14 @@
                      <Insets left="50.0" />
                   </padding>
             </Button>
-            <Button fx:id="btnbus" alignment="TOP_LEFT" mnemonicParsing="false" onMouseClicked="#bus" prefHeight="57.0" prefWidth="231.0" stylesheets="@Style.css" text="Bus" textFill="WHITE">
+            <Button fx:id="btnbus" alignment="TOP_LEFT" mnemonicParsing="false" onMouseClicked="#bus" prefHeight="57.0" prefWidth="231.0" stylesheets="@Style.css" text="   Bus" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="20.0" />
                </font>
                   <graphic>
                      <ImageView fitHeight="35.0" fitWidth="52.0" pickOnBounds="true" preserveRatio="true">
                         <image>
-                           <Image url="@../../project/autocar_ticket/img/352314_bus_directions_icon.png" />
+                           <Image url="@../../project/autocar_ticket/img/bus.png" />
                         </image>
                      </ImageView>
                   </graphic>
