@@ -12,12 +12,12 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<BorderPane fx:id="AllPage" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.autocar_ticket.HomeController">
+<BorderPane fx:id="AllPage" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="614.0" prefWidth="917.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.autocar_ticket.HomeController">
    <left>
-      <AnchorPane prefHeight="418.0" prefWidth="223.0" style="-fx-background-color: #03396c;">
-      <VBox layoutY="184.0" prefHeight="318.0" prefWidth="223.0" spacing="10.0" style="-fx-background-color: #03396c;" BorderPane.alignment="CENTER">
+      <AnchorPane prefHeight="614.0" prefWidth="250.0" style="-fx-background-color: #03396c;">
+      <VBox layoutY="184.0" prefHeight="318.0" prefWidth="253.0" spacing="10.0" style="-fx-background-color: #03396c;" BorderPane.alignment="CENTER">
          <children>
-            <Button fx:id="btnhome" alignment="TOP_LEFT" mnemonicParsing="false" onMouseClicked="#home" prefHeight="57.0" prefWidth="229.0" style="" stylesheets="@Style.css" text="   Home" textFill="WHITE">
+            <Button fx:id="btnhome" alignment="TOP_LEFT" mnemonicParsing="false" onMouseClicked="#home" prefHeight="58.0" prefWidth="254.0" style="" stylesheets="@Style.css" text="   Home" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="20.0" />
                </font>
@@ -32,7 +32,7 @@
                      <Insets left="50.0" />
                   </padding>
             </Button>
-            <Button fx:id="btnticket" alignment="TOP_LEFT" mnemonicParsing="false" onMouseClicked="#ticket" prefHeight="57.0" prefWidth="226.0" stylesheets="@Style.css" text="   Ticket" textFill="WHITE">
+            <Button fx:id="btnticket" alignment="TOP_LEFT" mnemonicParsing="false" onMouseClicked="#reservation" prefHeight="58.0" prefWidth="253.0" stylesheets="@Style.css" text="   Reservation" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="20.0" />
                </font>
@@ -47,7 +47,7 @@
                      <Insets left="50.0" />
                   </padding>
             </Button>
-            <Button fx:id="btnbus" alignment="TOP_LEFT" mnemonicParsing="false" onMouseClicked="#bus" prefHeight="57.0" prefWidth="231.0" stylesheets="@Style.css" text="   Bus" textFill="WHITE">
+            <Button fx:id="btnbus" alignment="TOP_LEFT" mnemonicParsing="false" onMouseClicked="#bus" prefHeight="58.0" prefWidth="254.0" stylesheets="@Style.css" text="   Bus" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="20.0" />
                </font>
@@ -62,6 +62,21 @@
                      <Insets left="50.0" />
                   </padding>
             </Button>
+               <Button fx:id="btnchauffeur" alignment="TOP_LEFT" mnemonicParsing="false" onMouseClicked="#chauffeur" prefHeight="58.0" prefWidth="254.0" style="" stylesheets="@Style.css" text="   CHauffeur" textFill="WHITE">
+                  <font>
+                     <Font name="System Bold" size="20.0" />
+                  </font>
+                  <graphic>
+                     <ImageView fitHeight="35.0" fitWidth="52.0" pickOnBounds="true" preserveRatio="true">
+                        <image>
+                           <Image url="@img/chauffeur.png" />
+                        </image>
+                     </ImageView>
+                  </graphic>
+                  <padding>
+                     <Insets left="50.0" />
+                  </padding>
+               </Button>
          </children>
          <padding>
             <Insets top="30.0" />

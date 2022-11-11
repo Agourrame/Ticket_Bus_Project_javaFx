@@ -13,4 +13,9 @@
       <module name="Autocar_Ticket" target="18" />
     </bytecodeTargetLevel>
   </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="Autocar_Ticket" options="--add-exports java.datatransfer/java.awt=project.autocar_ticket" />
+    </option>
+  </component>
 </project>

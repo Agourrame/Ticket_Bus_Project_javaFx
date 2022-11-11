@@ -14,6 +14,7 @@ import java.util.ResourceBundle;
 
 public class HomeController implements Initializable {
 
+
     @FXML
     private BorderPane AllPage;
 
@@ -25,6 +26,11 @@ public class HomeController implements Initializable {
 
         AllPage.setCenter(homepage);
     }
+    @FXML
+    private void chauffeur(MouseEvent event){
+
+        loadpage("Chauffeur");
+    }
 
     @FXML
     private void bus(MouseEvent event){
@@ -32,9 +38,9 @@ public class HomeController implements Initializable {
     }
 
     @FXML
-    private void ticket(MouseEvent event){
+    private void reservation(MouseEvent event){
 
-        loadpage("Ticketpage");
+        loadpage("Reservationpage");
     }
 
 
