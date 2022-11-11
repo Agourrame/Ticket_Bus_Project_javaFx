@@ -15,7 +15,7 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="Autocar_Ticket" options="--add-exports java.datatransfer/java.awt=project.autocar_ticket" />
+      <module name="Autocar_Ticket" options="" />
     </option>
   </component>
 </project>
