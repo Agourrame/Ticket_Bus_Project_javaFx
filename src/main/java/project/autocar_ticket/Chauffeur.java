@@ -8,6 +8,7 @@ import java.util.ResourceBundle;
 public class Chauffeur implements Initializable {
 
    String name;
+   String CIN;
 
 
 
