@@ -13,7 +13,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="502.0" prefWidth="724.0" style="-fx-background-color: #6497b1;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.autocar_ticket.ReservationtController">
+<AnchorPane prefHeight="502.0" prefWidth="724.0" style="-fx-background-color: #6497b1;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.autocar_ticket.TicketController">
    <children>
       <AnchorPane prefHeight="57.0" prefWidth="200.0" style="-fx-background-color: #f9f9f9;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>

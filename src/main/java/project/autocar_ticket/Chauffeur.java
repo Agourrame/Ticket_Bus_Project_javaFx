@@ -1,5 +1,18 @@
 package project.autocar_ticket;
 
-public class Chauffeur {
+import javafx.fxml.Initializable;
 
+import java.net.URL;
+import java.util.ResourceBundle;
+
+public class Chauffeur implements Initializable {
+
+
+
+    
+
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+
+    }
 }
