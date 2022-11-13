@@ -24,7 +24,7 @@ public class HomeController implements Initializable {
     @FXML
     private void home(MouseEvent event){
 
-        AllPage.setCenter(homepage);
+         AllPage.setCenter(homepage);
     }
     @FXML
     private void chauffeur(MouseEvent event){
@@ -39,7 +39,6 @@ public class HomeController implements Initializable {
 
     @FXML
     private void reservation(MouseEvent event){
-
         loadpage("Reservationpage");
     }
 

@@ -17,7 +17,7 @@
       <AnchorPane prefHeight="614.0" prefWidth="250.0" style="-fx-background-color: #03396c;">
       <VBox layoutY="184.0" prefHeight="318.0" prefWidth="253.0" spacing="10.0" style="-fx-background-color: #03396c;" BorderPane.alignment="CENTER">
          <children>
-            <Button fx:id="btnhome" alignment="TOP_LEFT" mnemonicParsing="false" onMouseClicked="#home" prefHeight="58.0" prefWidth="254.0" style="" stylesheets="@Style.css" text="   Home" textFill="WHITE">
+            <Button fx:id="btnhome" alignment="TOP_LEFT" mnemonicParsing="false" onMouseClicked="#home" prefHeight="58.0" prefWidth="254.0" stylesheets="@Style.css" text="   Home" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="20.0" />
                </font>

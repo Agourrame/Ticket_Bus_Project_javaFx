@@ -84,16 +84,16 @@
                               <Font name="System Bold" size="17.0" />
                            </font>
                         </Label>
-                        <TextField layoutX="165.0" layoutY="33.0" />
-                        <ComboBox layoutX="164.0" layoutY="76.0" prefWidth="150.0" />
-                        <ComboBox layoutX="164.0" layoutY="121.0" prefWidth="150.0" />
+                        <TextField layoutX="165.0" layoutY="33.0" promptText="Name" />
+                        <ComboBox fx:id="txtsplace" layoutX="164.0" layoutY="76.0"  prefWidth="150.0" />
+                        <ComboBox layoutX="164.0" layoutY="121.0"  prefWidth="150.0" />
                         <DatePicker layoutX="164.0" layoutY="168.0" prefHeight="26.0" prefWidth="152.0" />
-                        <TextField layoutX="164.0" layoutY="214.0" />
+                        <TextField layoutX="164.0" layoutY="214.0" prefHeight="26.0" prefWidth="153.0" />
                         <TextField layoutX="453.0" layoutY="33.0" />
                         <TextField layoutX="453.0" layoutY="75.0" />
                         <TextField layoutX="453.0" layoutY="121.0" />
                         <Button layoutX="444.0" layoutY="323.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="146.0" text="Resesrver" />
-                        <Button layoutX="285.0" layoutY="323.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="146.0" text="Searche" />
+                        <Button layoutX="285.0" layoutY="323.0" mnemonicParsing="false"  prefHeight="46.0" prefWidth="146.0" text="Searche" />
                      </children>
                   </AnchorPane>
                </children>
