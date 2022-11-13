@@ -86,7 +86,7 @@
                <Image url="@img/bus-transparent-background-17.png" />
             </image>
          </ImageView>
-         <Text fill="WHITE" layoutX="20.0" layoutY="161.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ticket Autocar" textAlignment="CENTER" wrappingWidth="182.93670654296875">
+         <Text fill="WHITE" layoutX="35.0" layoutY="161.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ticket Autocar" textAlignment="CENTER" wrappingWidth="182.93670654296875">
             <font>
                <Font name="Bauhaus 93" size="24.0" />
             </font>
@@ -94,7 +94,7 @@
       </AnchorPane>
    </left>
    <center>
-      <AnchorPane fx:id="homepage" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #6497b1;" stylesheets="@Style.css" BorderPane.alignment="CENTER">
+      <AnchorPane fx:id="homepage" prefHeight="638.0" prefWidth="984.0" style="-fx-background-color: #6497b1;" stylesheets="@Style.css" BorderPane.alignment="CENTER">
          <children>
             <AnchorPane layoutX="14.0" prefHeight="57.0" prefWidth="577.0" style="-fx-background-color: #f9f9f9;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                <children>
@@ -108,6 +108,19 @@
                         <Image url="@../../project/autocar_ticket/img/216242_home_icon.png" />
                      </image>
                   </ImageView>
+                  <HBox layoutX="606.0" layoutY="12.0" AnchorPane.bottomAnchor="10.399999999999999" AnchorPane.rightAnchor="14.799999999999955" AnchorPane.topAnchor="12.0">
+                     <children>
+                        <Button alignment="TOP_RIGHT" mnemonicParsing="false" onMouseClicked="#close">
+                           <graphic>
+                              <ImageView fitHeight="27.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@img/close.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                     </children>
+                  </HBox>
                </children>
             </AnchorPane>
             <HBox alignment="CENTER" layoutY="57.0" prefHeight="165.0" spacing="15.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="57.0">

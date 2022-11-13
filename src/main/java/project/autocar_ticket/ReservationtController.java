@@ -1,15 +1,25 @@
 package project.autocar_ticket;
 
 import javafx.fxml.FXML;
+import javafx.scene.Node;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.input.MouseEvent;
+import javafx.stage.Stage;
 
+import java.io.IOException;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
 public class ReservationtController  {
+
+    public void close(MouseEvent event) throws IOException {
+        Stage stage1;
+        stage1 = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        stage1.close();
+    }
 
     public TextField Name,Cin,Vd,Va,NBus,Price;
     public DatePicker Date;
