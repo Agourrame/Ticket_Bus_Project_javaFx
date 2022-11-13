@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
@@ -40,7 +41,7 @@
          <children>
             <AnchorPane prefHeight="482.0" prefWidth="361.0">
                <children>
-                  <Label layoutX="2.0" layoutY="32.0" prefHeight="26.0" prefWidth="146.0" text="Name Passanger :">
+                  <Label layoutX="2.0" layoutY="32.0" prefHeight="26.0" prefWidth="146.0" text="Name  :">
                      <font>
                         <Font name="System Bold" size="17.0" />
                      </font>
@@ -65,21 +66,14 @@
                         <Font name="System Bold" size="17.0" />
                      </font>
                   </Label>
-                  <Label layoutX="-2.0" layoutY="308.0" text="Name Bus :">
-                     <font>
-                        <Font name="System Bold" size="17.0" />
-                     </font>
-                  </Label>
-                  <Label layoutX="-2.0" layoutY="357.0" text="Price :">
+                  <Label layoutX="-2.0" layoutY="308.0" text="Price :">
                      <font>
                         <Font name="System Bold" size="17.0" />
                      </font>
                   </Label>
                   <TextField layoutX="161.0" layoutY="33.0" prefHeight="26.0" prefWidth="154.0" />
-                  <TextField layoutX="160.0" layoutY="214.0" prefHeight="26.0" prefWidth="154.0" />
                   <TextField layoutX="162.0" layoutY="263.0" prefHeight="26.0" prefWidth="154.0" />
                   <TextField layoutX="162.0" layoutY="309.0" prefHeight="26.0" prefWidth="154.0" />
-                  <TextField layoutX="162.0" layoutY="358.0" prefHeight="26.0" prefWidth="154.0" />
                   <TextField layoutX="162.0" layoutY="75.0" prefHeight="26.0" prefWidth="154.0" />
                   <Label layoutX="2.0" layoutY="75.0" prefHeight="26.0" prefWidth="146.0" text="CIN :">
                      <font>
@@ -88,19 +82,19 @@
                   </Label>
                   <TextField layoutX="160.0" layoutY="120.0" prefHeight="26.0" prefWidth="154.0" />
                   <TextField layoutX="162.0" layoutY="168.0" prefHeight="26.0" prefWidth="154.0" />
-                  <Button layoutX="98.0" layoutY="428.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="146.0" text="Resesrver" />
+                  <Button layoutX="89.0" layoutY="391.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="146.0" text="Resesrver" />
+                  <DatePicker layoutX="162.0" layoutY="214.0" prefHeight="26.0" prefWidth="154.0" />
                </children>
             </AnchorPane>
          </children>
       </HBox>
       <TableView layoutX="401.0" layoutY="90.0" prefHeight="348.0" prefWidth="558.0">
         <columns>
-          <TableColumn prefWidth="52.0" text="Bus No" />
-          <TableColumn prefWidth="85.5999755859375" text="Name Bus" />
-            <TableColumn prefWidth="96.7999267578125" text="Start Place" />
-            <TableColumn prefWidth="108.80010986328125" text="End Place" />
-            <TableColumn prefWidth="120.79998779296875" text="Date" />
-            <TableColumn prefWidth="95.199951171875" text="Price" />
+          <TableColumn prefWidth="60.79998779296875" text="Bus No" />
+            <TableColumn prefWidth="147.20001220703125" text="Start Place" />
+            <TableColumn prefWidth="140.0" text="End Place" />
+            <TableColumn prefWidth="131.199951171875" text="Date" />
+            <TableColumn prefWidth="83.2001953125" text="Price" />
         </columns>
       </TableView>
    </children>
