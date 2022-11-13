@@ -11,12 +11,9 @@ import java.sql.ResultSet;
 
 public class ReservationtController  {
 
-
-
     public TextField Name,Cin,Vd,Va,NBus,Price;
     public DatePicker Date;
-
-    public TableView<Rese> tableStd;
+    public TableView<Rese> tablereservation;
 
     @FXML
     public TableColumn<Rese,String> colmunName = new TableColumn<>();
@@ -44,9 +41,6 @@ public class ReservationtController  {
             System.out.println(e.toString());
         }
 
-
-
-
         colmunName.setCellValueFactory(new PropertyValueFactory<>("Name"));
         colmunCin.setCellValueFactory(new PropertyValueFactory<>("Cin"));
         colmunVd.setCellValueFactory(new PropertyValueFactory<>("Start Place"));
@@ -61,7 +55,7 @@ public class ReservationtController  {
         int BusNum= Integer.parseInt(NBus.getText());
         Rese rese = new Rese(Name.getText(),Cin.getText(),Vd.getText(),Va.getText(),Date.getValue().toString(),BusNum,Price.getText());
 
-        tableStd.getItems().add(rese);
+        tablereservation.getItems().add(rese);
     }
 
 }
