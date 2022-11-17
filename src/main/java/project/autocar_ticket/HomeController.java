@@ -12,6 +12,10 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.net.URL;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.util.ResourceBundle;
 
 public class HomeController implements Initializable {
@@ -21,6 +25,16 @@ public class HomeController implements Initializable {
         stage1 = (Stage) ((Node) event.getSource()).getScene().getWindow();
         stage1.close();
     }
+
+
+
+    //Database
+    String url = "jdbc:mysql://localhost/gestion_de_teckit";
+    String username="root";
+    String password="";
+    Connection con;
+    PreparedStatement stmt;
+    ResultSet rs;
 
 
     @FXML
@@ -64,6 +78,11 @@ public class HomeController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-
+        try {
+            con = DriverManager.getConnection(this.url,username,password);
+            System.out.println("Good");
+        }catch (Exception e){
+            System.out.println(e.toString());
+        }
     }
 }
