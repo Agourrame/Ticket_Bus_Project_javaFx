@@ -20,7 +20,7 @@ public class HelloApplication extends Application {
         scene.getStylesheets().add(getClass().getResource("style.css").toExternalForm());
         stage.setTitle("Ticket Autocar");
         stage.setScene(scene);
-        stage.initStyle(StageStyle.UNDECORATED);
+       // stage.initStyle(StageStyle.UNDECORATED);
         stage.show();
     }
 

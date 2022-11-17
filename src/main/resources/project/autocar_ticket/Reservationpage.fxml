@@ -1,101 +1,64 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.DatePicker?>
-<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="638.0" prefWidth="984.0" style="-fx-background-color: #6497b1;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.autocar_ticket.ReservationtController">
+<AnchorPane prefHeight="638.0" prefWidth="984.0" style="-fx-background-color: #005b96;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.autocar_ticket.ReservationtController">
    <children>
-      <AnchorPane prefHeight="57.0" prefWidth="200.0" style="-fx-background-color: #f9f9f9;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <HBox layoutX="37.0" layoutY="58.0" />
+      <AnchorPane layoutX="37.0" layoutY="14.0" prefHeight="70.0" prefWidth="200.0" style="-fx-background-color: #E9EEF2; -fx-background-radius: 20;" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
          <children>
-            <Label layoutX="65.0" prefHeight="58.0" prefWidth="145.0" text="Reservation" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <Text fill="#5b5b5b" layoutX="14.0" layoutY="43.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Reservation" textAlignment="CENTER" wrappingWidth="164.84063720703125">
                <font>
-                  <Font name="System Bold" size="25.0" />
+                  <Font name="System Bold" size="27.0" />
                </font>
-            </Label>
-             <ImageView fitHeight="34.0" fitWidth="40.0" layoutX="21.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
-                 <image>
-                     <Image url="@../../project/autocar_ticket/img/8679214_coupon_ticket_icon.png" />
-                 </image>
-             </ImageView>
-            <Button layoutX="940.0" layoutY="12.0" mnemonicParsing="false" onMouseClicked="#close">
-               <graphic>
-                  <ImageView fitHeight="27.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@img/close.png" />
-                     </image>
-                  </ImageView>
-               </graphic>
-            </Button>
+            </Text>
          </children>
       </AnchorPane>
-      <HBox layoutX="37.0" layoutY="58.0">
+      <AnchorPane layoutX="14.0" layoutY="93.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #E9EEF2; -fx-background-radius: 20;" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="95.0">
          <children>
-            <AnchorPane prefHeight="482.0" prefWidth="361.0">
+            <ComboBox cacheShape="false" centerShape="false" editable="true" focusTraversable="false" layoutX="30.0" layoutY="37.0" prefHeight="36.0" prefWidth="200.0" promptText="start city" scaleShape="false" />
+            <ComboBox cacheShape="false" centerShape="false" editable="true" focusTraversable="false" layoutX="305.0" layoutY="37.0" prefHeight="36.0" prefWidth="200.0" promptText="start city" scaleShape="false" />
+            <Button layoutX="574.0" layoutY="37.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="133.0" styleClass="searchbtn" stylesheets="@Style.css" text="Search" AnchorPane.rightAnchor="250.0">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+            <TableView cacheShape="false" centerShape="false" focusTraversable="false" layoutX="30.0" layoutY="87.0" prefHeight="433.0" prefWidth="678.0" scaleShape="false" style="-fx-background-radius: 15;" AnchorPane.bottomAnchor="12.399999999999977" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="250.0" AnchorPane.topAnchor="87.0">
+              <columns>
+                <TableColumn prefWidth="75.0" text="start city" />
+                <TableColumn prefWidth="75.0" text="city end" />
+              </columns>
+            </TableView>
+            <VBox layoutX="738.0" layoutY="87.0" prefHeight="434.0" prefWidth="200.0" spacing="20.0" AnchorPane.rightAnchor="20.0">
                <children>
-                  <Label layoutX="2.0" layoutY="32.0" prefHeight="26.0" prefWidth="146.0" text="Name  :">
+                  <Text fill="#5b5b5b" strokeType="OUTSIDE" strokeWidth="0.0" text="Ticket bus" textAlignment="CENTER" wrappingWidth="199.7366943359375">
                      <font>
-                        <Font name="System Bold" size="17.0" />
+                        <Font name="System Bold" size="18.0" />
                      </font>
-                  </Label>
-                  <Label layoutY="120.0" prefHeight="26.0" prefWidth="106.0" text="Start Place :">
+                  </Text>
+                  <TextField prefHeight="35.0" prefWidth="200.0" />
+                  <TextField prefHeight="35.0" prefWidth="200.0" />
+                  <TextField prefHeight="35.0" />
+                  <TextField prefHeight="35.0" />
+                  <TextField prefHeight="35.0" />
+                  <TextField prefHeight="35.0" />
+                  <Button mnemonicParsing="false" prefHeight="50.0" prefWidth="200.0" styleClass="searchbtn" stylesheets="@Style.css" text="Reserver">
                      <font>
-                        <Font name="System Bold" size="17.0" />
+                        <Font name="System Bold" size="14.0" />
                      </font>
-                  </Label>
-                  <Label layoutY="168.0" text="End Place :">
-                     <font>
-                        <Font name="System Bold" size="17.0" />
-                     </font>
-                  </Label>
-                  <Label layoutX="-2.0" layoutY="214.0" text="Date :">
-                     <font>
-                        <Font name="System Bold" size="17.0" />
-                     </font>
-                  </Label>
-                  <Label layoutY="262.0" text="Bus No :">
-                     <font>
-                        <Font name="System Bold" size="17.0" />
-                     </font>
-                  </Label>
-                  <Label layoutX="-2.0" layoutY="308.0" text="Price :">
-                     <font>
-                        <Font name="System Bold" size="17.0" />
-                     </font>
-                  </Label>
-                  <TextField layoutX="161.0" layoutY="33.0" prefHeight="26.0" prefWidth="154.0" />
-                  <TextField layoutX="162.0" layoutY="263.0" prefHeight="26.0" prefWidth="154.0" />
-                  <TextField layoutX="162.0" layoutY="309.0" prefHeight="26.0" prefWidth="154.0" />
-                  <TextField layoutX="162.0" layoutY="75.0" prefHeight="26.0" prefWidth="154.0" />
-                  <Label layoutX="2.0" layoutY="75.0" prefHeight="26.0" prefWidth="146.0" text="CIN :">
-                     <font>
-                        <Font name="System Bold" size="17.0" />
-                     </font>
-                  </Label>
-                  <TextField layoutX="160.0" layoutY="120.0" prefHeight="26.0" prefWidth="154.0" />
-                  <TextField layoutX="162.0" layoutY="168.0" prefHeight="26.0" prefWidth="154.0" />
-                  <Button layoutX="89.0" layoutY="391.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="146.0" text="Resesrver" />
-                  <DatePicker layoutX="162.0" layoutY="214.0" prefHeight="26.0" prefWidth="154.0" />
+                  </Button>
                </children>
-            </AnchorPane>
+            </VBox>
          </children>
-      </HBox>
-      <TableView layoutX="401.0" layoutY="90.0" prefHeight="309.0" prefWidth="558.0">
-        <columns>
-          <TableColumn prefWidth="60.79998779296875" text="Bus No" />
-            <TableColumn prefWidth="147.20001220703125" text="Start Place" />
-            <TableColumn prefWidth="140.0" text="End Place" />
-            <TableColumn prefWidth="131.199951171875" text="Date" />
-            <TableColumn prefWidth="83.2001953125" text="Price" />
-        </columns>
-      </TableView>
+      </AnchorPane>
    </children>
 </AnchorPane>

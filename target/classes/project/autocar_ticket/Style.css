@@ -32,3 +32,41 @@
  -fx-background-color: white;
  -fx-text-fill:  #03396c;
 }
+
+.btnnav{
+-fx-background-radius:20;
+ -fx-background-color: transparent;
+}
+
+.btnnav:hover{
+-fx-background-color: #005b96;
+-fx-text-fill: white;
+}
+
+.searchbtn{
+-fx-background-radius:8;
+-fx-background-color:#6497b1;
+-fx-text-fill: white;
+}
+
+.btn_add{
+-fx-background-radius:8;
+-fx-background-color:	#44bec7;
+-fx-text-fill: white;
+}
+.btn_update{
+-fx-background-radius:8;
+-fx-background-color:	#ffc300;
+-fx-text-fill: white;
+}
+.btn_remove{
+-fx-background-radius:8;
+-fx-background-color:#fa3c4c;
+-fx-text-fill: white;
+}
+
+.input{
+-fx-background-radius:15;
+-fx-pref-width:200;
+-fx-pref-height:40;
+}

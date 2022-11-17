@@ -1,14 +1,79 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="project.autocar_ticket.Chauffeur"
-            prefHeight="400.0" prefWidth="600.0">
 
+<AnchorPane prefHeight="542.0" prefWidth="965.0" style="-fx-background-color: #005b96;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.autocar_ticket.Chauffeur">
+   <children>
+      <AnchorPane layoutX="21.0" layoutY="6.0" prefHeight="70.0" prefWidth="200.0" style="-fx-background-color: #E9EEF2; -fx-background-radius: 20;" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+         <children>
+            <Text fill="#5b5b5b" layoutX="14.0" layoutY="45.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Chaiffeur" textAlignment="CENTER" wrappingWidth="140.53076171875">
+               <font>
+                  <Font name="System Bold" size="27.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="44.0" layoutY="237.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #E9EEF2; -fx-background-radius: 20;" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="95.0">
+         <children>
+            <HBox layoutX="14.0" layoutY="22.0" prefHeight="138.0" prefWidth="875.0" spacing="50.0" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="10.0">
+               <children>
+                  <VBox prefHeight="138.0" prefWidth="246.0" spacing="20.0">
+                     <children>
+                        <TextField cacheShape="false" centerShape="false" focusTraversable="false" prefHeight="40.0" prefWidth="210.0" promptText="city start" scaleShape="false" styleClass="input" stylesheets="@Style.css" />
+                        <TextField styleClass="input" stylesheets="@Style.css" />
+                        <TextField styleClass="input" stylesheets="@Style.css" />
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="138.0" prefWidth="202.0" spacing="20.0">
+                     <children>
+                        <Button mnemonicParsing="false" prefHeight="26.0" prefWidth="212.0" stylesheets="@Style.css" text="Add bus">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                           <styleClass>
+                              <String fx:value="btn_add" />
+                              <String fx:value="input" />
+                           </styleClass>
+                        </Button>
+                        <Button mnemonicParsing="false" prefHeight="26.0" prefWidth="220.0" stylesheets="@Style.css" text="update bus">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                           <styleClass>
+                              <String fx:value="btn_update" />
+                              <String fx:value="input" />
+                           </styleClass>
+                        </Button>
+                        <Button mnemonicParsing="false" prefHeight="26.0" prefWidth="231.0" stylesheets="@Style.css" text="delet bus">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                           <styleClass>
+                              <String fx:value="btn_remove" />
+                              <String fx:value="input" />
+                           </styleClass>
+                        </Button>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+            <TableView layoutX="14.0" layoutY="164.0" prefHeight="263.0" prefWidth="779.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="164.0">
+              <columns>
+                <TableColumn prefWidth="75.0" text="C1" />
+                <TableColumn prefWidth="75.0" text="C2" />
+              </columns>
+            </TableView>
+         </children>
+      </AnchorPane>
+   </children>
 </AnchorPane>
