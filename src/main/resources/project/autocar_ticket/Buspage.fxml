@@ -11,7 +11,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="594.0" prefWidth="955.0" style="-fx-background-color: #005b96;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.autocar_ticket.BusController">
+<AnchorPane prefHeight="594.0" prefWidth="955.0" style="-fx-background-color: #005b96;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.autocar_ticket.BusController">
    <children>
       <AnchorPane layoutX="26.0" layoutY="24.0" prefHeight="70.0" prefWidth="200.0" style="-fx-background-color: #E9EEF2; -fx-background-radius: 20;" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
          <children>
@@ -28,16 +28,16 @@
                <children>
                   <VBox prefHeight="138.0" prefWidth="246.0" spacing="20.0">
                      <children>
-                        <TextField cacheShape="false" centerShape="false" focusTraversable="false" prefHeight="40.0" prefWidth="210.0" promptText="city start" scaleShape="false" styleClass="input" stylesheets="@Style.css" />
-                        <TextField styleClass="input" stylesheets="@Style.css" />
-                        <TextField styleClass="input" stylesheets="@Style.css" />
+                        <TextField cacheShape="false" centerShape="false" focusTraversable="false" prefHeight="40.0" prefWidth="210.0" promptText="Id" scaleShape="false" styleClass="input" stylesheets="@Style.css" />
+                        <TextField promptText="Start Place" styleClass="input" stylesheets="@Style.css" />
+                        <TextField promptText="End Place" styleClass="input" stylesheets="@Style.css" />
                      </children>
                   </VBox>
                   <VBox prefHeight="138.0" prefWidth="312.0" spacing="20.0">
                      <children>
-                        <TextField styleClass="input" stylesheets="@Style.css" />
-                        <TextField styleClass="input" stylesheets="@Style.css" />
-                        <TextField styleClass="input" stylesheets="@Style.css" />
+                        <TextField promptText="Date" styleClass="input" stylesheets="@Style.css" />
+                        <TextField promptText="Price" styleClass="input" stylesheets="@Style.css" />
+                        <TextField promptText="N° Place" styleClass="input" stylesheets="@Style.css" />
                      </children>
                   </VBox>
                   <VBox prefHeight="138.0" prefWidth="202.0" spacing="20.0">
@@ -75,8 +75,12 @@
             </HBox>
             <TableView layoutX="26.0" layoutY="172.0" prefHeight="317.0" prefWidth="886.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="172.0">
               <columns>
-                <TableColumn prefWidth="75.0" text="C1" />
-                <TableColumn prefWidth="75.0" text="C2" />
+                <TableColumn prefWidth="66.39995956420898" text="Id" />
+                <TableColumn prefWidth="184.8000030517578" text="Start Place" />
+                  <TableColumn prefWidth="184.8000030517578" text="End Place" />
+                  <TableColumn prefWidth="184.8000030517578" text="Date" />
+                  <TableColumn prefWidth="165.60003662109375" text="Price" />
+                  <TableColumn prefWidth="96.7999267578125" text="N° Place" />
               </columns>
             </TableView>
          </children>
