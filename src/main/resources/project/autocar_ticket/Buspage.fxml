@@ -7,6 +7,8 @@
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
@@ -22,55 +24,104 @@
                   <Font name="System Bold" size="27.0" />
                </font>
             </Text>
+            <HBox alignment="TOP_RIGHT" layoutX="817.0" layoutY="10.0" prefHeight="50.0" prefWidth="104.0" AnchorPane.bottomAnchor="10.000000000000007" AnchorPane.leftAnchor="817.0" AnchorPane.rightAnchor="2.799999999999997" AnchorPane.topAnchor="10.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#actualiser" prefHeight="50.0" prefWidth="52.0" styleClass="bt" stylesheets="@Style.css">
+                     <graphic>
+                        <ImageView fitHeight="41.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@img/icons8-sync-48%20(2).png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#close" prefHeight="54.0" prefWidth="52.0" styleClass="bt" stylesheets="@Style.css">
+                     <graphic>
+                        <ImageView fitHeight="41.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@img/icons8-cancel-48.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+            </HBox>
          </children>
       </AnchorPane>
       <AnchorPane layoutX="14.0" layoutY="97.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #E9EEF2; -fx-background-radius: 20;" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="95.0">
          <children>
-            <HBox alignment="CENTER" layoutX="26.0" layoutY="14.0" prefHeight="209.0" prefWidth="875.0" spacing="85.0" AnchorPane.bottomAnchor="265.4" AnchorPane.leftAnchor="26.0" AnchorPane.rightAnchor="33.799999999999955" AnchorPane.topAnchor="14.0">
+            <HBox alignment="CENTER" layoutX="26.0" layoutY="14.0" prefHeight="210.0" prefWidth="900.0" spacing="75.0" AnchorPane.bottomAnchor="265.0" AnchorPane.leftAnchor="26.0" AnchorPane.rightAnchor="9.0" AnchorPane.topAnchor="14.0">
                <children>
-                  <VBox prefHeight="210.0" prefWidth="246.0" spacing="20.0">
+                  <VBox prefHeight="210.0" prefWidth="220.0" spacing="20.0">
                      <children>
                         <TextField fx:id="startplace" promptText="Start Place" styleClass="input" stylesheets="@Style.css" />
                         <TextField fx:id="endplace" promptText="End Place" styleClass="input" stylesheets="@Style.css" />
                         <ComboBox fx:id="chauffeur" prefHeight="34.0" prefWidth="246.0" promptText="Chauffeur" style="-fx-background-radius: 15;" />
                      </children>
                   </VBox>
-                  <VBox prefHeight="210.0" prefWidth="246.0" spacing="20.0">
+                  <VBox prefHeight="210.0" prefWidth="220.0" spacing="20.0">
                      <children>
                         <DatePicker fx:id="date" prefHeight="33.0" prefWidth="314.0" promptText="Date" style="-fx-background-radius: 12;" />
                         <TextField fx:id="price" prefWidth="301.0" promptText="Price" styleClass="input" stylesheets="@Style.css" />
                         <TextField fx:id="nplace" promptText="N° Place" styleClass="input" stylesheets="@Style.css" />
                      </children>
                   </VBox>
-                  <VBox prefHeight="210.0" prefWidth="202.0" spacing="20.0">
+                  <VBox alignment="TOP_RIGHT" prefHeight="210.0" prefWidth="228.0" spacing="20.0">
                      <children>
-                        <Button mnemonicParsing="false" onAction="#addautocar" prefHeight="26.0" prefWidth="212.0" stylesheets="@Style.css" text="Add Autocar">
-                           <font>
-                              <Font name="System Bold" size="12.0" />
-                           </font>
-                           <styleClass>
-                              <String fx:value="btn_add" />
-                              <String fx:value="input" />
-                           </styleClass>
-                        </Button>
-                        <Button mnemonicParsing="false" onAction="#updateautocar" prefHeight="26.0" prefWidth="220.0" stylesheets="@Style.css" text="Update Autocar">
-                           <font>
-                              <Font name="System Bold" size="12.0" />
-                           </font>
-                           <styleClass>
-                              <String fx:value="btn_update" />
-                              <String fx:value="input" />
-                           </styleClass>
-                        </Button>
-                        <Button mnemonicParsing="false" onAction="#deleteautocar" prefHeight="26.0" prefWidth="231.0" stylesheets="@Style.css" text="Delete Autocar">
-                           <font>
-                              <Font name="System Bold" size="12.0" />
-                           </font>
-                           <styleClass>
-                              <String fx:value="btn_remove" />
-                              <String fx:value="input" />
-                           </styleClass>
-                        </Button>
+                        <HBox alignment="TOP_RIGHT" spacing="10.0">
+                           <children>
+                              <ImageView fitHeight="36.0" fitWidth="37.0">
+                                 <image>
+                                    <Image url="@img/addicon.png" />
+                                 </image>
+                              </ImageView>
+                              <Button mnemonicParsing="false" onAction="#addautocar" prefHeight="26.0" prefWidth="212.0" stylesheets="@Style.css" text="Add Autocar">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                                 <styleClass>
+                                    <String fx:value="btn_add" />
+                                    <String fx:value="input" />
+                                 </styleClass>
+                              </Button>
+                           </children>
+                        </HBox>
+                        <HBox alignment="TOP_RIGHT" spacing="10.0">
+                           <children>
+                              <ImageView fitHeight="36.0" fitWidth="37.0">
+                                 <image>
+                                    <Image url="@img/updateicon.png" />
+                                 </image>
+                              </ImageView>
+                              <Button mnemonicParsing="false" onAction="#updateautocar" prefHeight="26.0" prefWidth="176.0" stylesheets="@Style.css" text="Update Autocar">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                                 <styleClass>
+                                    <String fx:value="btn_update" />
+                                    <String fx:value="input" />
+                                 </styleClass>
+                              </Button>
+                           </children>
+                        </HBox>
+                        <HBox alignment="TOP_RIGHT" spacing="10.0">
+                           <children>
+                              <ImageView fitHeight="43.0" fitWidth="39.0">
+                                 <image>
+                                    <Image url="@img/removeicon.png" />
+                                 </image>
+                              </ImageView>
+                              <Button mnemonicParsing="false" onAction="#deleteautocar" prefHeight="26.0" prefWidth="181.0" stylesheets="@Style.css" text="Delete Autocar">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                                 <styleClass>
+                                    <String fx:value="btn_remove" />
+                                    <String fx:value="input" />
+                                 </styleClass>
+                              </Button>
+                           </children>
+                        </HBox>
                      </children>
                   </VBox>
                </children>

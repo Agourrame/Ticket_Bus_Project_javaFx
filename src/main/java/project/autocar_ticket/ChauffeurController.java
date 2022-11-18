@@ -18,7 +18,7 @@ public class ChauffeurController implements Initializable {
 
 
     //database
-    String url = "jdbc:mysql://localhost/gestion_de_teckit";
+    String url = "jdbc:mysql://localhost/gestion_de_teciket";
     String username="root";
     String password="";
     Connection con;
