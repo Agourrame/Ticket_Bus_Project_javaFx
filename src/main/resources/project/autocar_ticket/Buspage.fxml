@@ -11,6 +11,7 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
@@ -26,15 +27,6 @@
             </Text>
             <HBox alignment="TOP_RIGHT" layoutX="817.0" layoutY="10.0" prefHeight="50.0" prefWidth="104.0" AnchorPane.bottomAnchor="10.000000000000007" AnchorPane.leftAnchor="817.0" AnchorPane.rightAnchor="2.799999999999997" AnchorPane.topAnchor="10.0">
                <children>
-                  <Button mnemonicParsing="false" onAction="#actualiser" prefHeight="50.0" prefWidth="52.0" styleClass="bt" stylesheets="@Style.css">
-                     <graphic>
-                        <ImageView fitHeight="41.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@img/icons8-sync-48%20(2).png" />
-                           </image>
-                        </ImageView>
-                     </graphic>
-                  </Button>
                   <Button mnemonicParsing="false" onAction="#close" prefHeight="54.0" prefWidth="52.0" styleClass="bt" stylesheets="@Style.css">
                      <graphic>
                         <ImageView fitHeight="41.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
@@ -50,13 +42,13 @@
       </AnchorPane>
       <AnchorPane layoutX="14.0" layoutY="97.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #E9EEF2; -fx-background-radius: 20;" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="95.0">
          <children>
-            <HBox alignment="CENTER" layoutX="26.0" layoutY="14.0" prefHeight="210.0" prefWidth="900.0" spacing="75.0" AnchorPane.bottomAnchor="265.0" AnchorPane.leftAnchor="26.0" AnchorPane.rightAnchor="9.0" AnchorPane.topAnchor="14.0">
+            <HBox alignment="CENTER" layoutX="26.0" layoutY="13.0" prefHeight="165.0" prefWidth="900.0" spacing="75.0" AnchorPane.bottomAnchor="311.0" AnchorPane.leftAnchor="26.0" AnchorPane.rightAnchor="9.0" AnchorPane.topAnchor="13.0">
                <children>
                   <VBox prefHeight="210.0" prefWidth="220.0" spacing="20.0">
                      <children>
                         <TextField fx:id="startplace" promptText="Start Place" styleClass="input" stylesheets="@Style.css" />
                         <TextField fx:id="endplace" promptText="End Place" styleClass="input" stylesheets="@Style.css" />
-                        <ComboBox fx:id="chauffeur" prefHeight="34.0" prefWidth="246.0" promptText="Chauffeur" style="-fx-background-radius: 15;" />
+                        <ComboBox fx:id="chauffeur" editable="true" prefHeight="34.0" prefWidth="246.0" promptText="Chauffeur" style="-fx-background-radius: 15;" />
                      </children>
                   </VBox>
                   <VBox prefHeight="210.0" prefWidth="220.0" spacing="20.0">
@@ -141,6 +133,11 @@
                   </TableView>
                </children>
             </HBox>
+            <Pane layoutY="190.0" prefHeight="4.0" prefWidth="200.0" style="-fx-background-color: #005b96;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+            <ComboBox fx:id="startt" editable="true" layoutX="26.0" layoutY="204.0" prefWidth="150.0" promptText="Start Place" />
+            <ComboBox fx:id="endd" editable="true" layoutX="185.0" layoutY="204.0" prefWidth="150.0" promptText="End Place" />
+            <DatePicker fx:id="datee" layoutX="344.0" layoutY="204.0" promptText="Date" />
+            <Button layoutX="536.0" layoutY="199.0" mnemonicParsing="false" onAction="#searche" prefHeight="34.0" prefWidth="38.0" />
          </children>
       </AnchorPane>
    </children>
