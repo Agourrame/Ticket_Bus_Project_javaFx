@@ -1,0 +1,7 @@
+*************** Welcom ***************
+Start city : casablanca
+end city : Taroudant
+date : 2022-11-26
+price : 150
+N° : 50
+**************************************

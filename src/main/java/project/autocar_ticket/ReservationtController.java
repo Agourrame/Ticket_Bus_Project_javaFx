@@ -9,16 +9,24 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 
+import java.io.File;
+import java.io.FileWriter;
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.net.URL;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.ResourceBundle;
 
 public class ReservationtController implements Initializable {
+
+    ArrayList<String> startcity=new ArrayList<>();
+
+    ArrayList<String> endcity=new ArrayList<>();
 
     //Database----------------------------------------
 
@@ -40,9 +48,13 @@ public class ReservationtController implements Initializable {
     @FXML
     private TextField nameinput;
     @FXML
-    private TextField priceinput;
+    private DatePicker dateinputt;
     @FXML
     private TextField startinput;
+    @FXML
+    private TextField priceinput;
+    @FXML
+    private TextField idbus;
 
     //----------------------------------------------
 
@@ -58,6 +70,8 @@ public class ReservationtController implements Initializable {
     private TableColumn<Bus,Integer> pricecol;
     @FXML
     private TableColumn<Bus,String> startcol;
+    @FXML
+    private TableColumn<Bus,String> idcol;
 
     //----------------------------------------------
 
@@ -78,11 +92,12 @@ public class ReservationtController implements Initializable {
     void search(MouseEvent event) {
         this.tablebus.getItems().clear();
         try{
-            ps=con.prepareStatement("select Vd,Va,prix,Nplace,date from bus where Vd='"+startCom.getSelectionModel().getSelectedItem()+"' and Va='"+endCom.getSelectionModel().getSelectedItem()+"'");
+            ps=con.prepareStatement("select * from bus where Vd='"+startCom.getSelectionModel().getSelectedItem()+"' and Va='"+endCom.getSelectionModel().getSelectedItem()+"'");
             rs=ps.executeQuery();
 
             while (rs.next()){
                  Bus newbus=new Bus(
+                         rs.getInt("id"),
                          rs.getString("Vd"),
                          rs.getString("Va"),
                          rs.getInt("prix"),
@@ -99,11 +114,91 @@ public class ReservationtController implements Initializable {
 
 
     @FXML
-    void reserver(MouseEvent event) {
+    void reserver(MouseEvent event) throws IOException {
+        String name=nameinput.getText();
+        String CIN=cininput.getText();
+        int idid=Integer.parseInt(idbus.getText());
+        int numberofplace=getnumberofplace(idid);
+        int newnum=(numberofplace-1);
+
+        try{
+            ps=con.prepareStatement("INSERT INTO `reservation` (`nom`, `cin`, `busid`) VALUES ('"+name+"','"+CIN+"','"+idid+"')");
+            ps.executeUpdate();
+        }catch(Exception e){
+            System.out.println(e.toString());
+        }
+
+        try{
+            ps=con.prepareStatement("UPDATE bus set Nplace="+newnum+" where id="+idid+"");
+            ps.executeUpdate();
+        }catch(Exception e){
+            System.out.println(e.toString());
+        }
+
+        try{
+            File reserv=new File("ticket"+priceinput.getText()+".txt");
+
+              if(!reserv.exists()){
+                reserv.createNewFile();
+               }
+              PrintWriter pw=new PrintWriter(reserv);
+            pw.println("*************** Welcom ***************");
+            pw.println("Start city : "+startinput.getText());
+            pw.println("end city : "+endinput.getText());
+            pw.println("date : "+dateinputt.getValue().toString());
+            pw.println("price : "+priceinput.getText());
+            pw.println("N° : "+numberofplace);
+            pw.println("**************************************");
+            pw.close();
+            System.out.println("your tickt already");
+            }catch (Exception e){
+            System.out.println(e);
+            }
+
+        Alert alert=new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle("Status");
+        alert.setContentText("ticket add succssefuly");
+        alert.showAndWait();
 
     }
 
+    void getStartcity(){
+        try {
+            ps=con.prepareStatement("select Vd from bus");
+            rs=ps.executeQuery();
+            while (rs.next()){
+                this.startcity.add(rs.getString("Vd"));
+            }
+        }catch(Exception e){
+            System.out.println(e.toString());
+        }
+    }
 
+    void getEndcity(){
+        try {
+            ps=con.prepareStatement("select Va from bus");
+            rs=ps.executeQuery();
+            while (rs.next()){
+                this.endcity.add(rs.getString("Va"));
+            }
+        }catch(Exception e){
+            System.out.println(e.toString());
+        }
+    }
+
+    int getnumberofplace(int nb){
+        ArrayList<Integer> val=new ArrayList<>();
+        try {
+            ps=con.prepareStatement("select Nplace from bus where id="+nb+"");
+            rs=ps.executeQuery();
+            while (rs.next()){
+              val.add(rs.getInt("Nplace"));
+            }
+        }catch(Exception e){
+            System.out.println(e.toString());
+        }
+        return val.get(0);
+    }
 
 
 
@@ -122,22 +217,25 @@ public class ReservationtController implements Initializable {
             System.out.println(e.toString());
         }
 
+        getStartcity();
+        getEndcity();
 
-        this.startCom.getItems().addAll("taroudant","agadir","tanger");
-        this.endCom.getItems().addAll("taroudant","agadir","tanger");
+        this.startCom.getItems().addAll(startcity);
+        this.endCom.getItems().addAll(endcity);
 
         startcol.setCellValueFactory(new PropertyValueFactory("start"));
         endcol.setCellValueFactory(new PropertyValueFactory("end"));
         pricecol.setCellValueFactory(new PropertyValueFactory("prix"));
         nbcol.setCellValueFactory(new PropertyValueFactory("nplace"));
         datecol.setCellValueFactory(new PropertyValueFactory("date"));
-
+        idcol.setCellValueFactory(new PropertyValueFactory("id"));
 
         this.tablebus.setOnMouseClicked(event -> {
             startinput.setText(tablebus.getSelectionModel().getSelectedItem().getStart());
             endinput.setText(tablebus.getSelectionModel().getSelectedItem().getEnd());
-            //dateinput.setValue(LocalDate.parse(tablebus.getSelectionModel().getSelectedItem().getDate()));
-
+            dateinputt.setValue(LocalDate.parse(tablebus.getSelectionModel().getSelectedItem().getDate()));
+            priceinput.setText(String.valueOf(tablebus.getSelectionModel().getSelectedItem().getPrix()));
+            idbus.setText(String.valueOf(tablebus.getSelectionModel().getSelectedItem().getId()));
         });
 
     }
