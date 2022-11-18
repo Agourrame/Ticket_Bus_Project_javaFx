@@ -98,7 +98,7 @@ public class BusController {
         int autocarprice=Integer.parseInt(price.getText());
         int autocarnplace=Integer.parseInt(nplace.getText());
         try {
-            stmt=con.prepareStatement("INSERT INTO `bus`(`Va`, `Vd`, `prix`, `Nplace`, `date`, `chauffeur`) VALUES (?,?,?,?,?,?)");
+            stmt=con.prepareStatement("INSERT INTO `bus`(`Vd`, `Va`, `prix`, `Nplace`, `date`, `chauffeur`) VALUES (?,?,?,?,?,?)");
             stmt.setString(1,startplace.getText());
             stmt.setString(2,endplace.getText());
             stmt.setInt(3,autocarprice);
@@ -129,10 +129,12 @@ public class BusController {
                 );
 
                 this.tableautocar.getItems().add(newbus);
+
             }
         }catch (Exception e){
             System.out.println(e);
         }
+
 
 
     }
@@ -150,12 +152,40 @@ public class BusController {
     }
 
      @FXML
-    void deleteautocar(){
+    void deleteautocar(ActionEvent event){
+         int id=tableautocar.getSelectionModel().getSelectedItem().getId();
          try{
-             stmt=con.prepareStatement("DELETE FROM `bus` WHERE id='");
-             rs=stmt.executeQuery();
+             stmt=con.prepareStatement("DELETE FROM bus WHERE id='"+id+"'");
+             stmt.executeUpdate();
     }catch (Exception e){
              System.out.println(e);
       }
     }
+
+
+    @FXML
+    void updateautocar(ActionEvent event) {
+        int autocarprice=Integer.parseInt(price.getText());
+        int autocarnplace=Integer.parseInt(nplace.getText());
+        int id=tableautocar.getSelectionModel().getSelectedItem().getId();
+        try {
+            stmt=con.prepareStatement("UPDATE bus SET Vd=?,Va=?,prix=?,Nplace=?,date=?,chauffeur=? WHERE id='"+id+"'");
+            stmt.setString(1,startplace.getText());
+            stmt.setString(2,endplace.getText());
+            stmt.setInt(3,autocarprice);
+            stmt.setInt(4,autocarnplace);
+            stmt.setString(5,date.getValue().toString());
+            stmt.setString(6,chauffeur.getSelectionModel().getSelectedItem());
+            stmt.executeUpdate();
+        }catch (Exception e){
+            System.out.println(e.toString());
+        }
+
+
+    }
+
+
 }
+
+
+

@@ -26,7 +26,7 @@
       </AnchorPane>
       <AnchorPane layoutX="14.0" layoutY="97.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #E9EEF2; -fx-background-radius: 20;" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="95.0">
          <children>
-            <HBox layoutX="26.0" layoutY="14.0" prefHeight="209.0" prefWidth="875.0" spacing="85.0">
+            <HBox alignment="CENTER" layoutX="26.0" layoutY="14.0" prefHeight="209.0" prefWidth="875.0" spacing="85.0" AnchorPane.bottomAnchor="265.4" AnchorPane.leftAnchor="26.0" AnchorPane.rightAnchor="33.799999999999955" AnchorPane.topAnchor="14.0">
                <children>
                   <VBox prefHeight="210.0" prefWidth="246.0" spacing="20.0">
                      <children>
@@ -53,7 +53,7 @@
                               <String fx:value="input" />
                            </styleClass>
                         </Button>
-                        <Button mnemonicParsing="false" prefHeight="26.0" prefWidth="220.0" stylesheets="@Style.css" text="Update Autocar">
+                        <Button mnemonicParsing="false" onAction="#updateautocar" prefHeight="26.0" prefWidth="220.0" stylesheets="@Style.css" text="Update Autocar">
                            <font>
                               <Font name="System Bold" size="12.0" />
                            </font>
@@ -62,7 +62,7 @@
                               <String fx:value="input" />
                            </styleClass>
                         </Button>
-                        <Button mnemonicParsing="false" onMouseClicked="#deleteautocar" prefHeight="26.0" prefWidth="231.0" stylesheets="@Style.css" text="Delete Autocar">
+                        <Button mnemonicParsing="false" onAction="#deleteautocar" prefHeight="26.0" prefWidth="231.0" stylesheets="@Style.css" text="Delete Autocar">
                            <font>
                               <Font name="System Bold" size="12.0" />
                            </font>
