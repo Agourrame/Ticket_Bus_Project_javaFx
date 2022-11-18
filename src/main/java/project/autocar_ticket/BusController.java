@@ -152,7 +152,7 @@ public class BusController {
      @FXML
     void deleteautocar(){
          try{
-             stmt=con.prepareStatement("DELETE FROM `bus` WHERE  ");
+             stmt=con.prepareStatement("DELETE FROM `bus` WHERE id='");
              rs=stmt.executeQuery();
     }catch (Exception e){
              System.out.println(e);
