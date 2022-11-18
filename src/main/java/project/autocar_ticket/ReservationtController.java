@@ -30,7 +30,7 @@ public class ReservationtController implements Initializable {
 
     //Database----------------------------------------
 
-    String url = "jdbc:mysql://localhost/gestion_de_teciket";
+    String url = "jdbc:mysql://localhost/gestion_de_teckit";
     String username="root";
     String password="";
     Connection con;
@@ -150,14 +150,14 @@ public class ReservationtController implements Initializable {
             pw.println("N° : "+numberofplace);
             pw.println("**************************************");
             pw.close();
-            System.out.println("your tickt already");
+            System.out.println("your tickt is ready");
             }catch (Exception e){
             System.out.println(e);
             }
 
         Alert alert=new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle("Status");
-        alert.setContentText("ticket add succssefuly");
+        alert.setContentText("ticket added succssefuly");
         alert.showAndWait();
 
     }

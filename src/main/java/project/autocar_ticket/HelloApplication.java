@@ -34,14 +34,5 @@ public class HelloApplication extends Application {
 
 
 
-
-<<<<<<< HEAD
-    public static void main(String[] args) {
-        launch();
-    }
-=======
-
-
         public static void main(String[] args) {launch();}
->>>>>>> 1649d5e55a3cda5b1ee1c7772cfcbeb43ed10eb4
 }

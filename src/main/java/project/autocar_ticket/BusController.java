@@ -24,20 +24,6 @@ public class BusController {
     private Button addbus;
 
     @FXML
-    private void Addbus(MouseEvent event){
-        try{
-            FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("Addbuspage.fxml"));
-            Scene scene = new Scene(fxmlLoader.load(), 400, 400);
-            Stage stage=new Stage();
-            stage.setTitle("Add Bus");
-            stage.setScene(scene);
-            stage.show();
-        }catch (Exception e){
-
-        }
-    }
-
-    @FXML
     void actualiser(ActionEvent event) {
         this.tableautocar.getItems().clear();
         try{
@@ -86,7 +72,7 @@ public class BusController {
 
 
     //Database
-    String url = "jdbc:mysql://localhost/gestion_de_teciket";
+    String url = "jdbc:mysql://localhost/gestion_de_teckit";
     String username="root";
     String password="";
     Connection con;
