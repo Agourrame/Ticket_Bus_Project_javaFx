@@ -29,7 +29,7 @@ public class HomeController implements Initializable {
 
 
     //Database
-    String url = "jdbc:mysql://localhost/gestion_de_teciket";
+    String url = "jdbc:mysql://localhost/gestion_de_teckit";
     String username="root";
     String password="";
     Connection con;
@@ -63,7 +63,10 @@ public class HomeController implements Initializable {
     private void reservation(MouseEvent event){
         loadpage("Reservationpage");
     }
-
+    @FXML
+    void History(MouseEvent event) {
+        loadpage("Historypage");
+    }
 
 
     private void loadpage(String page){
