@@ -5,13 +5,16 @@ import Modules.chauffeur;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
 import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.stage.Stage;
 import org.w3c.dom.events.MouseEvent;
 
+import java.io.IOException;
 import java.net.URL;
 import java.sql.*;
 import java.util.ArrayList;
@@ -19,8 +22,14 @@ import java.util.ResourceBundle;
 
 public class ChauffeurController implements Initializable {
 
+    @FXML
+    void close(ActionEvent event) throws IOException {
+        Stage stage1;
+        stage1 = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        stage1.close();
+    }
     //database
-    String url = "jdbc:mysql://localhost/gestion_de_teciket";
+    String url = "jdbc:mysql://localhost/gestion_de_teckit";
     String username="root";
     String password="";
     Connection con;
@@ -52,6 +61,8 @@ public class ChauffeurController implements Initializable {
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
+        clear();
+        uploadChauffeurInfo();
     }
     @FXML
     void updateChauffeur(ActionEvent event) {
@@ -62,6 +73,8 @@ public class ChauffeurController implements Initializable {
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
+        clear();
+        uploadChauffeurInfo();
     }
     @FXML
     void deleteChauffeur(ActionEvent event) {
@@ -72,7 +85,14 @@ public class ChauffeurController implements Initializable {
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
+        clear();
+        uploadChauffeurInfo();
     }
+    void clear(){
+        this.table.getItems().clear();
+    }
+
+
     void uploadChauffeurInfo(){
         try{
             stmt=con.prepareStatement("SELECT * FROM `chauffeur`");
