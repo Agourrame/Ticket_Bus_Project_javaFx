@@ -15,7 +15,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<BorderPane fx:id="AllPage" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="614.0" prefWidth="1204.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.autocar_ticket.HomeController">
+<BorderPane fx:id="AllPage" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="614.0" prefWidth="1204.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.autocar_ticket.HomeController">
    <left>
       <AnchorPane prefHeight="614.0" prefWidth="232.0" style="-fx-background-color: #005b96;">
          <children>
@@ -118,48 +118,73 @@
             </AnchorPane>
             <AnchorPane layoutX="233.0" layoutY="95.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #E9EEF2; -fx-background-radius: 20;" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="95.0">
                <children>
-                  <HBox layoutX="276.0" layoutY="37.0" prefHeight="127.0" prefWidth="752.0" spacing="30.0" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="100.0" AnchorPane.topAnchor="10.0">
+                  <HBox layoutX="276.0" layoutY="37.0" prefHeight="127.0" prefWidth="752.0" spacing="30.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="10.0">
                      <children>
                         <AnchorPane prefHeight="100.0" prefWidth="270.0" style="-fx-background-radius: 20; -fx-background-color: #4AA94C;">
                            <children>
-                              <Label layoutX="75.0" layoutY="14.0" text="N° Ticket" textFill="WHITE">
+                              <Label layoutX="89.0" layoutY="14.0" text="N° Ticket" textFill="WHITE">
                                  <font>
                                     <Font name="System Bold" size="20.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="Nbticket" layoutX="121.0" layoutY="64.0" prefHeight="40.0" prefWidth="37.0" text="0" textAlignment="CENTER" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="28.0" />
                                  </font>
                               </Label>
                            </children></AnchorPane>
                         <AnchorPane prefHeight="100.0" prefWidth="270.0" style="-fx-background-radius: 20; -fx-background-color: #FA6D02;">
                            <children>
-                              <Label layoutX="67.0" layoutY="14.0" text="N° Autocar" textFill="WHITE">
+                              <Label layoutX="80.0" layoutY="14.0" text="N° Autocar" textFill="WHITE">
                                  <font>
                                     <Font name="System Bold" size="20.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="NbAuto" layoutX="125.0" layoutY="64.0" prefHeight="40.0" prefWidth="37.0" text="0" textAlignment="CENTER" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="28.0" />
                                  </font>
                               </Label>
                            </children></AnchorPane>
                         <AnchorPane prefHeight="100.0" prefWidth="270.0" style="-fx-background-radius: 20; -fx-background-color: #FF3D00;">
                            <children>
-                              <Label layoutX="57.0" layoutY="14.0" text="N° Chauffeur" textFill="WHITE">
+                              <Label layoutX="71.0" layoutY="14.0" text="N° Chauffeur" textFill="WHITE">
                                  <font>
                                     <Font name="System Bold" size="20.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="NbChauff" layoutX="122.0" layoutY="64.0" prefHeight="40.0" prefWidth="40.0" text="4" textAlignment="CENTER" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="28.0" />
                                  </font>
                               </Label>
                            </children></AnchorPane>
                      </children>
                   </HBox>
-                  <BarChart layoutX="81.0" layoutY="162.0" prefHeight="324.0" prefWidth="373.0">
+                  <BarChart fx:id="barchartbus" layoutY="200.0" prefHeight="309.0" prefWidth="458.0" title="Bus">
                     <xAxis>
-                      <CategoryAxis side="BOTTOM" />
+                      <CategoryAxis fx:id="X" label="bus id" side="BOTTOM" />
                     </xAxis>
                     <yAxis>
-                      <NumberAxis side="LEFT" />
+                      <NumberAxis fx:id="Y" label="N °place" side="LEFT" />
                     </yAxis>
                   </BarChart>
-                  <LineChart layoutX="476.0" layoutY="159.0" prefHeight="329.0" prefWidth="412.0">
+                  <Label layoutX="50.0" layoutY="159.0" prefHeight="35.0" prefWidth="193.0" text="Autocars Barchart" textFill="#747474">
+                     <font>
+                        <Font name="System Bold" size="19.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="509.0" layoutY="159.0" prefHeight="35.0" prefWidth="193.0" text="Citys Piechart" textFill="#747474">
+                     <font>
+                        <Font name="System Bold" size="19.0" />
+                     </font>
+                  </Label>
+                  <LineChart fx:id="LineChartbus" layoutX="476.0" layoutY="198.0" prefHeight="292.0" prefWidth="454.0" title="LineChartbus">
                     <xAxis>
-                      <CategoryAxis side="BOTTOM" />
+                      <CategoryAxis fx:id="XL" label="days" side="BOTTOM" />
                     </xAxis>
                     <yAxis>
-                      <NumberAxis side="LEFT" />
+                      <NumberAxis fx:id="YL" label="N° ticket" side="LEFT" tickLabelFill="#c52727" />
                     </yAxis>
                   </LineChart>
                </children>

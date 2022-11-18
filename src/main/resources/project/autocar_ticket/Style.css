@@ -79,3 +79,20 @@
 -fx-background-color: transparent;
 }
 
+.tabelcolstart{
+-fx-background-radius:8 0 0 0;
+-fx-background-color:#16A9E5;
+-fx-pref-height:30;
+-fx-text-fill: white;
+}
+.tabelcol{
+-fx-background-color:#16A9E5;
+-fx-pref-height:30;
+-fx-text-fill: white;
+}
+.tabelcolend{
+-fx-background-radius:0 8 0 0;
+-fx-background-color:#16A9E5;
+-fx-pref-height:30;
+-fx-text-fill: white;
+}
