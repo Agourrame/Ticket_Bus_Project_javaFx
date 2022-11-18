@@ -23,31 +23,8 @@ public class BusController {
     ArrayList<String> startcity=new ArrayList<>();
     private Button addbus;
 
-    @FXML
-    void actualiser(ActionEvent event) {
-        this.tableautocar.getItems().clear();
-        try{
-        stmt=con.prepareStatement("SELECT * FROM `bus`");
-        rs=stmt.executeQuery();
 
-        while (rs.next()){
-            Bus newbus=new Bus(
-                    rs.getInt("id"),
-                    rs.getString("Vd"),
-                    rs.getString("Va"),
-                    rs.getInt("prix"),
-                    rs.getInt("Nplace"),
-                    rs.getString("date"),
-                    rs.getString("chauffeur")
-            );
 
-            this.tableautocar.getItems().add(newbus);
-
-        }
-    }catch (Exception e){
-        System.out.println(e);
-    }
-    }
 
     @FXML
     void close(ActionEvent event) throws IOException {
@@ -72,7 +49,7 @@ public class BusController {
 
 
     //Database
-    String url = "jdbc:mysql://localhost/gestion_de_teckit";
+    String url = "jdbc:mysql://localhost/gestion_de_teciket";
     String username="root";
     String password="";
     Connection con;
@@ -132,6 +109,28 @@ public class BusController {
         }catch (Exception e){
             System.out.println(e.toString());
         }
+        this.tableautocar.getItems().clear();
+        try{
+            stmt=con.prepareStatement("SELECT * FROM `bus`");
+            rs=stmt.executeQuery();
+
+            while (rs.next()){
+                Bus newbus=new Bus(
+                        rs.getInt("id"),
+                        rs.getString("Vd"),
+                        rs.getString("Va"),
+                        rs.getInt("prix"),
+                        rs.getInt("Nplace"),
+                        rs.getString("date"),
+                        rs.getString("chauffeur")
+                );
+
+                this.tableautocar.getItems().add(newbus);
+
+            }
+        }catch (Exception e){
+            System.out.println(e);
+        }
     }
 
     void getget() {
@@ -183,6 +182,29 @@ public class BusController {
     }catch (Exception e){
              System.out.println(e);
       }
+
+         this.tableautocar.getItems().clear();
+         try{
+             stmt=con.prepareStatement("SELECT * FROM `bus`");
+             rs=stmt.executeQuery();
+
+             while (rs.next()){
+                 Bus newbus=new Bus(
+                         rs.getInt("id"),
+                         rs.getString("Vd"),
+                         rs.getString("Va"),
+                         rs.getInt("prix"),
+                         rs.getInt("Nplace"),
+                         rs.getString("date"),
+                         rs.getString("chauffeur")
+                 );
+
+                 this.tableautocar.getItems().add(newbus);
+
+             }
+         }catch (Exception e){
+             System.out.println(e);
+         }
     }
 
 
@@ -202,6 +224,28 @@ public class BusController {
             stmt.executeUpdate();
         }catch (Exception e){
             System.out.println(e.toString());
+        }
+        this.tableautocar.getItems().clear();
+        try{
+            stmt=con.prepareStatement("SELECT * FROM `bus`");
+            rs=stmt.executeQuery();
+
+            while (rs.next()){
+                Bus newbus=new Bus(
+                        rs.getInt("id"),
+                        rs.getString("Vd"),
+                        rs.getString("Va"),
+                        rs.getInt("prix"),
+                        rs.getInt("Nplace"),
+                        rs.getString("date"),
+                        rs.getString("chauffeur")
+                );
+
+                this.tableautocar.getItems().add(newbus);
+
+            }
+        }catch (Exception e){
+            System.out.println(e);
         }
 
 
