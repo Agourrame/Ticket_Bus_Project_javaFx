@@ -30,7 +30,7 @@ public class HomeController implements Initializable {
 
 
     //Database
-    String url = "jdbc:mysql://localhost/gestion_de_teciket";
+    String url = "jdbc:mysql://localhost/gestion_de_teckit";
     String username="root";
     String password="";
     Connection con;
