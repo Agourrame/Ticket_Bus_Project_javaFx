@@ -30,7 +30,6 @@
                <children>
                   <VBox prefHeight="210.0" prefWidth="246.0" spacing="20.0">
                      <children>
-                        <TextField fx:id="rn" cacheShape="false" centerShape="false" focusTraversable="false" prefHeight="40.0" prefWidth="210.0" promptText="Registration Number" scaleShape="false" styleClass="input" stylesheets="@Style.css" />
                         <TextField fx:id="startplace" promptText="Start Place" styleClass="input" stylesheets="@Style.css" />
                         <TextField fx:id="endplace" promptText="End Place" styleClass="input" stylesheets="@Style.css" />
                         <ComboBox fx:id="chauffeur" prefHeight="34.0" prefWidth="246.0" promptText="Chauffeur" style="-fx-background-radius: 15;" />
@@ -63,7 +62,7 @@
                               <String fx:value="input" />
                            </styleClass>
                         </Button>
-                        <Button mnemonicParsing="false" prefHeight="26.0" prefWidth="231.0" stylesheets="@Style.css" text="Delet Autocar">
+                        <Button mnemonicParsing="false" onMouseClicked="#deleteautocar" prefHeight="26.0" prefWidth="231.0" stylesheets="@Style.css" text="Delete Autocar">
                            <font>
                               <Font name="System Bold" size="12.0" />
                            </font>
@@ -80,7 +79,7 @@
                <children>
                   <TableView fx:id="tableautocar" prefHeight="241.0" prefWidth="883.0">
                     <columns>
-                      <TableColumn fx:id="colmunrn" prefWidth="66.39995956420898" text="R.N" />
+                      <TableColumn fx:id="colmunid" prefWidth="66.39995956420898" text="R.N" />
                       <TableColumn fx:id="colmunstartplace" prefWidth="184.8000030517578" text="Start Place" />
                         <TableColumn fx:id="colmunendplace" prefWidth="184.8000030517578" text="End Place" />
                         <TableColumn fx:id="colmundate" prefWidth="155.99993896484375" text="Date" />
