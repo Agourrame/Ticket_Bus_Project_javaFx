@@ -75,6 +75,9 @@
 -fx-pref-width:200;
 -fx-pref-height:40;
 }
+.bt{
+-fx-background-color: transparent;
+}
 
 .tabelcolstart{
 -fx-background-radius:8 0 0 0;

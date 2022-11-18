@@ -5,11 +5,15 @@ import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
+
+import java.io.IOException;
 import java.sql.*;
 import java.time.LocalDate;
 import java.util.ArrayList;
@@ -31,6 +35,39 @@ public class BusController {
         }catch (Exception e){
 
         }
+    }
+
+    @FXML
+    void actualiser(ActionEvent event) {
+        this.tableautocar.getItems().clear();
+        try{
+        stmt=con.prepareStatement("SELECT * FROM `bus`");
+        rs=stmt.executeQuery();
+
+        while (rs.next()){
+            Bus newbus=new Bus(
+                    rs.getInt("id"),
+                    rs.getString("Vd"),
+                    rs.getString("Va"),
+                    rs.getInt("prix"),
+                    rs.getInt("Nplace"),
+                    rs.getString("date"),
+                    rs.getString("chauffeur")
+            );
+
+            this.tableautocar.getItems().add(newbus);
+
+        }
+    }catch (Exception e){
+        System.out.println(e);
+    }
+    }
+
+    @FXML
+    void close(ActionEvent event) throws IOException {
+        Stage stage1;
+        stage1 = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        stage1.close();
     }
 
     public TextField startplace,endplace,price,nplace;

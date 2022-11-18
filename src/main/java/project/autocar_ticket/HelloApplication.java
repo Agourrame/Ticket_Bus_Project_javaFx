@@ -1,6 +1,8 @@
 package project.autocar_ticket;
 
 import javafx.application.Application;
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Scene;
@@ -20,9 +22,11 @@ public class HelloApplication extends Application {
         scene.getStylesheets().add(getClass().getResource("style.css").toExternalForm());
         stage.setTitle("Ticket Autocar");
         stage.setScene(scene);
-       // stage.initStyle(StageStyle.UNDECORATED);
+        stage.initStyle(StageStyle.UNDECORATED);
         stage.show();
     }
+
+
 
 
 
