@@ -6,6 +6,8 @@
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
@@ -15,23 +17,23 @@
    <children>
       <AnchorPane layoutX="21.0" layoutY="6.0" prefHeight="70.0" prefWidth="200.0" style="-fx-background-color: #E9EEF2; -fx-background-radius: 20;" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
          <children>
-            <Text fill="#5b5b5b" layoutX="14.0" layoutY="45.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Chaiffeur" textAlignment="CENTER" wrappingWidth="140.53076171875">
+            <Text fill="#5b5b5b" layoutX="14.0" layoutY="45.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Chauffeur" textAlignment="CENTER" wrappingWidth="140.53076171875">
                <font>
                   <Font name="System Bold" size="27.0" />
                </font>
             </Text>
          </children>
       </AnchorPane>
-      <AnchorPane layoutX="44.0" layoutY="237.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #E9EEF2; -fx-background-radius: 20;" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="95.0">
+      <AnchorPane layoutX="10.0" layoutY="128.0" prefHeight="355.0" prefWidth="945.0" style="-fx-background-color: #E9EEF2; -fx-background-radius: 20;" AnchorPane.bottomAnchor="59.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="128.0">
          <children>
-            <TableView layoutX="341.0" layoutY="38.0" prefHeight="263.0" prefWidth="388.0">
+            <TableView layoutX="294.0" layoutY="38.0" prefHeight="263.0" prefWidth="388.0">
               <columns>
                 <TableColumn fx:id="tableid" prefWidth="81.0" text="Id" />
                 <TableColumn fx:id="tablename" prefWidth="158.0" text="Name" />
                   <TableColumn fx:id="tablecin" prefWidth="148.0" text="CIN" />
               </columns>
             </TableView>
-            <VBox layoutX="30.0" layoutY="150.0" prefHeight="138.0" prefWidth="202.0" spacing="20.0">
+            <VBox layoutX="78.0" layoutY="150.0" prefHeight="138.0" prefWidth="156.0" spacing="20.0">
                <children>
                   <Button fx:id="addch" mnemonicParsing="false" prefHeight="26.0" prefWidth="212.0" stylesheets="@Style.css" text="Add Chauffeur">
                      <font>
@@ -79,6 +81,34 @@
                   </TextField>
                </children>
             </VBox>
+            <Button fx:id="refreshbtn" layoutX="734.0" layoutY="49.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="156.0" styleClass="btn_refresh" stylesheets="@Style.css" text="refresh table">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <padding>
+                  <Insets left="15.0" />
+               </padding>
+            </Button>
+            <ImageView fitHeight="36.0" fitWidth="37.0" layoutX="734.0" layoutY="48.0">
+               <image>
+                  <Image url="@img/syncicon.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="36.0" fitWidth="37.0" layoutX="31.0" layoutY="150.0">
+               <image>
+                  <Image url="@img/addicon.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="36.0" fitWidth="37.0" layoutX="31.0" layoutY="201.0">
+               <image>
+                  <Image url="@img/updateicon.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="43.0" fitWidth="45.0" layoutX="26.0" layoutY="250.0">
+               <image>
+                  <Image url="@img/removeicon.png" />
+               </image>
+            </ImageView>
          </children>
       </AnchorPane>
    </children>

@@ -8,7 +8,16 @@ public class Bus {
     String date;
     String chauffeur;
 
-    public Bus(String start, String end, int prix, int nplace, String date, String chauffeur) {
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public Bus(int id,String start, String end, int prix, int nplace, String date, String chauffeur) {
+        this.id=id;
         this.start = start;
         this.end = end;
         this.prix = prix;
@@ -16,14 +25,17 @@ public class Bus {
         this.date = date;
         this.chauffeur = chauffeur;
     }
-    public Bus(String start, String end, int prix, int nplace, String date) {
+    public Bus(int id,String start, String end, int prix, int nplace, String date) {
+        this.id=id;
         this.start = start;
         this.end = end;
         this.prix = prix;
         this.nplace = nplace;
         this.date = date;
-
+        this.chauffeur = chauffeur;
     }
+
+
     public String getStart() {
         return start;
     }

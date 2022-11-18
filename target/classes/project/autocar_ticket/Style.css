@@ -51,18 +51,23 @@
 
 .btn_add{
 -fx-background-radius:8;
--fx-background-color:	#44bec7;
+-fx-background-color:	#4AA94C;
 -fx-text-fill: white;
 }
 .btn_update{
 -fx-background-radius:8;
--fx-background-color:	#ffc300;
+-fx-background-color:	#FA6D02;
 -fx-text-fill: white;
 }
 .btn_remove{
 -fx-background-radius:8;
--fx-background-color:#fa3c4c;
+-fx-background-color:#FF3D00;
 -fx-text-fill: white;
+}
+.btn_refresh{
+-fx-background-radius:8;
+-fx-background-color:#B7DAF6;
+-fx-text-fill: black;
 }
 
 .input{
