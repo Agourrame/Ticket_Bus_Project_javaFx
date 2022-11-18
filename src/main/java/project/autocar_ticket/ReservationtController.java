@@ -8,7 +8,8 @@ import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
-
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -122,7 +123,7 @@ public class ReservationtController implements Initializable {
         int newnum=(numberofplace-1);
 
         try{
-            ps=con.prepareStatement("INSERT INTO `reservation` (`nom`, `cin`, `busid`) VALUES ('"+name+"','"+CIN+"','"+idid+"')");
+            ps=con.prepareStatement("INSERT INTO `reservation` (`nom`, `cin`, `busid` ,`today`) VALUES ('"+name+"','"+CIN+"','"+idid+"','"+java.time.LocalDate.now()+"')");
             ps.executeUpdate();
         }catch(Exception e){
             System.out.println(e.toString());
@@ -142,10 +143,11 @@ public class ReservationtController implements Initializable {
                 reserv.createNewFile();
                }
               PrintWriter pw=new PrintWriter(reserv);
+            pw.println("*************** "+java.time.LocalDate.now()+" ***************");
             pw.println("*************** Welcom ***************");
             pw.println("Start city : "+startinput.getText());
             pw.println("end city : "+endinput.getText());
-            pw.println("date : "+dateinputt.getValue().toString());
+            pw.println("date start bus : "+dateinputt.getValue().toString());
             pw.println("price : "+priceinput.getText());
             pw.println("N° : "+numberofplace);
             pw.println("**************************************");
@@ -216,6 +218,7 @@ public class ReservationtController implements Initializable {
         }catch (Exception e){
             System.out.println(e.toString());
         }
+
 
         getStartcity();
         getEndcity();
