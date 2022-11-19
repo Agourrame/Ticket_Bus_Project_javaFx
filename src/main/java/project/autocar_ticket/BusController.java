@@ -122,11 +122,12 @@ public class BusController {
         colmunid.setCellValueFactory(new PropertyValueFactory<>("id"));
         colmunstartplace.setCellValueFactory(new PropertyValueFactory<>("start"));
         colmunendplace.setCellValueFactory(new PropertyValueFactory<>("end"));
+        colmunchauffeur.setCellValueFactory(new PropertyValueFactory<>("chauffeur"));
+        colmundate.setCellValueFactory(new PropertyValueFactory<>("date"));
         columntime.setCellValueFactory(new PropertyValueFactory<>("time"));
         colmunprice.setCellValueFactory(new PropertyValueFactory<>("prix"));
-        colmundate.setCellValueFactory(new PropertyValueFactory<>("date"));
         colmunnplace.setCellValueFactory(new PropertyValueFactory<>("nplace"));
-        colmunchauffeur.setCellValueFactory(new PropertyValueFactory<>("chauffeur"));
+
     }
 
     void clear(){
@@ -176,11 +177,11 @@ public class BusController {
                         rs.getInt("id"),
                         rs.getString("Vd"),
                         rs.getString("Va"),
-                        rs.getString("time"),
                         rs.getInt("prix"),
                         rs.getInt("Nplace"),
                         rs.getString("date"),
-                        rs.getString("chauffeur")
+                        rs.getString("chauffeur"),
+                        rs.getString("time")
                 );
 
                 this.tableautocar.getItems().add(newbus);
@@ -256,11 +257,11 @@ public class BusController {
                         rs.getInt("id"),
                         rs.getString("Vd"),
                         rs.getString("Va"),
-                        rs.getString("time"),
                         rs.getInt("prix"),
                         rs.getInt("Nplace"),
                         rs.getString("date"),
-                        rs.getString("chauffeur")
+                        rs.getString("chauffeur"),
+                        rs.getString("time")
                 );
 
                 this.tableautocar.getItems().add(newbus);

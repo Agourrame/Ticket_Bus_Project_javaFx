@@ -140,7 +140,7 @@
                       <TableColumn fx:id="colmunstartplace" prefWidth="127.19998168945312" text="Start Place" />
                         <TableColumn fx:id="colmunendplace" prefWidth="136.00001525878906" text="End Place" />
                         <TableColumn fx:id="colmundate" prefWidth="136.800048828125" text="Date" />
-                        <TableColumn fx:id="colmuntime" prefWidth="76.79998779296875" text="Time" />
+                        <TableColumn fx:id="columntime" prefWidth="76.79998779296875" text="Time" />
                         <TableColumn fx:id="colmunprice" prefWidth="92.79998779296875" text="price" />
                         <TableColumn fx:id="colmunnplace" minWidth="0.0" prefWidth="143.20001220703125" text="N° Place" />
                         <TableColumn fx:id="colmunchauffeur" minWidth="0.0" prefWidth="119.99993896484375" text="Chauffeur" />

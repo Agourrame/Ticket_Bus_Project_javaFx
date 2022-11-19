@@ -8,7 +8,7 @@ public class Bus {
     String date;
     String chauffeur;
 
-    public Bus(int id,String start, String end,String time, int prix, int nplace, String date, String chauffeur) {
+    public Bus(int id,String start, String end, int prix, int nplace, String date, String chauffeur,String time) {
         this.id=id;
         this.start = start;
         this.end = end;

@@ -91,7 +91,7 @@
                            <graphic>
                               <ImageView fitHeight="44.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@img/296816_log%20out_icon.png" />
+                                    <Image url="@img/296816_log out_icon.png" />
                                  </image>
                               </ImageView>
                            </graphic>
@@ -100,7 +100,7 @@
                   </VBox>
                   <ImageView fitHeight="150.0" fitWidth="152.0" layoutX="30.0">
                      <image>
-                        <Image url="@img/Blue%20Minimalist%20Our%20Bus%20Features%20Instagram%20Post%20%20(1080%20×%20900%20px)%20(4).png" />
+                        <Image url="@img/Blue Minimalist Our Bus Features Instagram Post  (1080 × 900 px) (4).png" />
                      </image>
                   </ImageView>
                </children>
