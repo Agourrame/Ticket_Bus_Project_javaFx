@@ -26,6 +26,12 @@ import java.util.ResourceBundle;
 public class HomeController implements Initializable {
 
     @FXML
+    void minimize(ActionEvent event){
+        Stage stage;
+        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        stage.setIconified(true);
+    }
+    @FXML
     void close(ActionEvent event) throws IOException {
         Stage stage2;
         stage2 = (Stage) ((Node) event.getSource()).getScene().getWindow();
