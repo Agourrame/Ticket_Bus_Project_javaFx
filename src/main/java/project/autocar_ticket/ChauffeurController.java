@@ -6,10 +6,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
-import javafx.scene.control.Button;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 import org.w3c.dom.events.MouseEvent;
@@ -57,6 +54,12 @@ public class ChauffeurController implements Initializable {
 
     @FXML
     private TableColumn<chauffeur,String> tablename= new TableColumn<>();
+    //--------------------------
+    @FXML
+    private TextField srccin;
+    @FXML
+    private TextField srcname;
+
     //--------------------------
     @FXML
     void addChauffeur(ActionEvent event){
@@ -121,6 +124,25 @@ public class ChauffeurController implements Initializable {
             cininput.setText(table.getSelectionModel().getSelectedItem().getCin());
         });
     }
+    @FXML
+    public void search(ActionEvent actionEvent) {
+        clear();
+        try {
+            stmt = con.prepareStatement("select * from `chauffeur` where cin='"+srccin.getText()+"' OR nom='"+srcname.getText()+"'");
+            rs = stmt.executeQuery();
+
+            while (rs.next()) {
+                chauffeur newChauffeur = new chauffeur(
+                        rs.getInt("id"),
+                        rs.getString("nom"),
+                        rs.getString("cin")
+                );
+                this.table.getItems().add(newChauffeur);
+            }
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+    }
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -136,5 +158,6 @@ public class ChauffeurController implements Initializable {
         tableid.setCellValueFactory(new PropertyValueFactory<>("id"));
         tablename.setCellValueFactory(new PropertyValueFactory<>("nom"));
         tablecin.setCellValueFactory(new PropertyValueFactory<>("cin"));
+
     }
 }
