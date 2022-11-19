@@ -18,7 +18,7 @@ public class HelloApplication extends Application {
     @Override
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("Loginpage.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 800, 450);
+        Scene scene = new Scene(fxmlLoader.load(), 800, 417);
         scene.getStylesheets().add(getClass().getResource("style.css").toExternalForm());
         stage.setTitle("Ticket Autocar");
         stage.setScene(scene);
