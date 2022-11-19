@@ -18,14 +18,14 @@ public class Bus {
         this.date = date;
         this.chauffeur = chauffeur;
     }
-    public Bus(int id,String start, String end, int prix, int nplace, String date) {
+    public Bus(int id,String start, String end, int prix, int nplace, String date,String time) {
         this.id=id;
         this.start = start;
         this.end = end;
         this.prix = prix;
         this.nplace = nplace;
         this.date = date;
-        this.chauffeur = chauffeur;
+        this.time=time;
     }
 
 

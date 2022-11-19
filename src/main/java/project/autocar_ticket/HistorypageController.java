@@ -68,6 +68,9 @@ public class HistorypageController implements Initializable {
     @FXML
     private TableColumn<History, String> startcol;
 
+    @FXML
+    private TableColumn<History, String> timecol;
+
     //----------------------------------------
 
     @FXML
@@ -85,7 +88,7 @@ public class HistorypageController implements Initializable {
         this.tablehistory.getItems().clear();
 
         try {
-            ps=con.prepareStatement("SELECT reservation.id,reservation.nom,reservation.today,reservation.cin,bus.Vd,bus.Va FROM reservation, bus WHERE reservation.busid = bus.id AND reservation.today='"+datesearch.getValue().toString()+"'");
+            ps=con.prepareStatement("SELECT reservation.id,reservation.nom,reservation.today,reservation.cin,bus.Vd,bus.Va,bus.time FROM reservation, bus WHERE reservation.busid = bus.id AND reservation.today='"+datesearch.getValue().toString()+"'");
             rs=ps.executeQuery();
 
             while (rs.next()){
@@ -95,7 +98,9 @@ public class HistorypageController implements Initializable {
                         rs.getString("reservation.cin"),
                         rs.getString("reservation.today"),
                         rs.getString("bus.Vd"),
-                        rs.getString("bus.Va")
+                        rs.getString("bus.Va"),
+                        rs.getString("bus.time")
+
                 );
                 this.tablehistory.getItems().add(history);
 
@@ -122,6 +127,6 @@ public class HistorypageController implements Initializable {
         datecol.setCellValueFactory(new PropertyValueFactory("date"));
         startcol.setCellValueFactory(new PropertyValueFactory("start"));
         endcol.setCellValueFactory(new PropertyValueFactory("end"));
-
+        timecol.setCellValueFactory(new PropertyValueFactory("time"));
     }
 }

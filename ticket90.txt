@@ -1,9 +1,9 @@
 *************** 2022-11-19 ***************
 *************** Welcom ***************
-Start city : araich
-end city : agadir
-date start bus : 2022-11-09
-price : 120
-Time : 22:45
-N° : 47
+Start city : warzazat
+end city : knitra
+date start bus : 2022-11-10
+price : 90
+Time : 18:00
+N° : 34
 **************************************

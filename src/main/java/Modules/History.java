@@ -2,13 +2,22 @@ package Modules;
 
 public class History extends Persone{
     String date;
-    String start,end;
+    String start,end,time;
 
-    public History(int id, String nom, String cin, String date, String start, String end) {
+    public History(int id, String nom, String cin, String date, String start, String end,String time) {
         super(id, nom, cin);
         this.date = date;
         this.start = start;
         this.end = end;
+        this.time=time;
+    }
+
+    public String getTime() {
+        return time;
+    }
+
+    public void setTime(String time) {
+        this.time = time;
     }
 
     public String getDate() {

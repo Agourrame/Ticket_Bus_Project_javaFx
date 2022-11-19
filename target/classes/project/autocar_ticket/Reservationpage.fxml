@@ -14,7 +14,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="638.0" prefWidth="984.0" style="-fx-background-color: #005b96;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.autocar_ticket.ReservationtController">
+<AnchorPane prefHeight="638.0" prefWidth="984.0" style="-fx-background-color: #005b96;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.autocar_ticket.ReservationtController">
    <children>
       <HBox layoutX="37.0" layoutY="58.0" />
       <AnchorPane layoutX="37.0" layoutY="14.0" prefHeight="70.0" prefWidth="200.0" style="-fx-background-color: #E9EEF2; -fx-background-radius: 20;" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
@@ -51,22 +51,23 @@
          <children>
             <ComboBox fx:id="startCom" blendMode="HARD_LIGHT" cacheShape="false" centerShape="false" editable="true" focusTraversable="false" layoutX="30.0" layoutY="37.0" prefHeight="36.0" prefWidth="200.0" promptText="Start Place" scaleShape="false" />
             <ComboBox fx:id="endCom" blendMode="HARD_LIGHT" cacheShape="false" centerShape="false" editable="true" focusTraversable="false" layoutX="305.0" layoutY="37.0" prefHeight="36.0" prefWidth="200.0" promptText="End Place" scaleShape="false" />
-            <Button layoutX="574.0" layoutY="37.0" mnemonicParsing="false" onMouseClicked="#search" prefHeight="36.0" prefWidth="133.0" styleClass="btn_refresh" stylesheets="@Style.css" text="Search" AnchorPane.rightAnchor="250.0">
+            <Button layoutX="594.0" layoutY="37.0" mnemonicParsing="false" onMouseClicked="#search" prefHeight="36.0" prefWidth="133.0" styleClass="btn_refresh" stylesheets="@Style.css" text="Search" AnchorPane.rightAnchor="236.66666666666663">
                <font>
                   <Font name="System Bold" size="14.0" />
                </font>
             </Button>
-            <TableView fx:id="tablebus" blendMode="HARD_LIGHT" cacheShape="false" centerShape="false" focusTraversable="false" layoutX="30.0" layoutY="87.0" prefHeight="434.0" prefWidth="684.0" scaleShape="false" style="-fx-background-radius: 15;" AnchorPane.bottomAnchor="12.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="250.0" AnchorPane.topAnchor="87.0">
+            <TableView fx:id="tablebus" blendMode="HARD_LIGHT" cacheShape="false" centerShape="false" focusTraversable="false" layoutX="30.0" layoutY="87.0" prefHeight="434.0" prefWidth="698.0" scaleShape="false" style="-fx-background-radius: 15;" AnchorPane.bottomAnchor="12.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="236.0" AnchorPane.topAnchor="87.0">
               <columns>
-                <TableColumn fx:id="startcol" prefWidth="136.00002670288086" text="Start Place" />
-                <TableColumn fx:id="endcol" prefWidth="143.1999969482422" text="End Place" />
-                  <TableColumn fx:id="datecol" prefWidth="134.39996337890625" text="Date" />
-                  <TableColumn fx:id="pricecol" prefWidth="129.60003662109375" text="Price" />
-                  <TableColumn fx:id="nbcol" minWidth="8.79998779296875" prefWidth="141.59991455078125" text="N° Place" />
+                <TableColumn fx:id="startcol" prefWidth="112.88888549804688" text="Start Place" />
+                <TableColumn fx:id="endcol" prefWidth="129.77769470214844" text="End Place" />
+                  <TableColumn fx:id="datecol" prefWidth="120.0" text="Date" />
+                  <TableColumn fx:id="pricecol" prefWidth="119.11105346679688" text="Price" />
                   <TableColumn fx:id="idcol" minWidth="0.0" prefWidth="0.0" text="id" />
+                  <TableColumn fx:id="nbcol" prefWidth="118.22222900390625" text="N° Place" />
+                  <TableColumn fx:id="timecol" prefWidth="96.66668701171875" text="Time" />
               </columns>
             </TableView>
-            <VBox layoutX="738.0" layoutY="87.0" prefHeight="434.0" prefWidth="200.0" spacing="20.0" AnchorPane.rightAnchor="20.0">
+            <VBox layoutX="738.0" layoutY="44.0" prefHeight="477.0" prefWidth="200.0" spacing="20.0" AnchorPane.rightAnchor="20.0">
                <children>
                   <Text fill="#5b5b5b" strokeType="OUTSIDE" strokeWidth="0.0" text="Ticket bus" textAlignment="CENTER" wrappingWidth="199.7366943359375">
                      <font>
@@ -79,6 +80,7 @@
                   <TextField fx:id="endinput" prefHeight="35.0" promptText="End Place" />
                   <DatePicker fx:id="dateinputt" prefHeight="35.0" prefWidth="206.0" />
                   <TextField fx:id="priceinput" prefHeight="35.0" promptText="Price" />
+                  <TextField fx:id="timeinput" prefHeight="35.0" promptText="Time" />
                   <Button mnemonicParsing="false" onMouseClicked="#reserver" prefHeight="50.0" prefWidth="200.0" styleClass="searchbtn" stylesheets="@Style.css" text="Reserver">
                      <font>
                         <Font name="System Bold" size="14.0" />

@@ -68,6 +68,8 @@ public class ReservationtController implements Initializable {
     private TextField priceinput;
     @FXML
     private TextField idbus;
+    @FXML
+    private TextField timeinput;
 
     //----------------------------------------------
 
@@ -85,6 +87,8 @@ public class ReservationtController implements Initializable {
     private TableColumn<Bus,String> startcol;
     @FXML
     private TableColumn<Bus,String> idcol;
+    @FXML
+    private TableColumn<Bus,String> timecol;
 
     //----------------------------------------------
 
@@ -115,7 +119,8 @@ public class ReservationtController implements Initializable {
                          rs.getString("Va"),
                          rs.getInt("prix"),
                          rs.getInt("Nplace"),
-                         rs.getString("date")
+                         rs.getString("date"),
+                         rs.getString("time")
                          );
 
                  this.tablebus.getItems().add(newbus);
@@ -161,6 +166,7 @@ public class ReservationtController implements Initializable {
             pw.println("end city : "+endinput.getText());
             pw.println("date start bus : "+dateinputt.getValue().toString());
             pw.println("price : "+priceinput.getText());
+            pw.println("Time : "+timeinput.getText());
             pw.println("N° : "+numberofplace);
             pw.println("**************************************");
             pw.close();
@@ -244,6 +250,7 @@ public class ReservationtController implements Initializable {
         nbcol.setCellValueFactory(new PropertyValueFactory("nplace"));
         datecol.setCellValueFactory(new PropertyValueFactory("date"));
         idcol.setCellValueFactory(new PropertyValueFactory("id"));
+        timecol.setCellValueFactory(new PropertyValueFactory("time"));
 
         this.tablebus.setOnMouseClicked(event -> {
             startinput.setText(tablebus.getSelectionModel().getSelectedItem().getStart());
@@ -251,6 +258,7 @@ public class ReservationtController implements Initializable {
             dateinputt.setValue(LocalDate.parse(tablebus.getSelectionModel().getSelectedItem().getDate()));
             priceinput.setText(String.valueOf(tablebus.getSelectionModel().getSelectedItem().getPrix()));
             idbus.setText(String.valueOf(tablebus.getSelectionModel().getSelectedItem().getId()));
+            timeinput.setText(tablebus.getSelectionModel().getSelectedItem().getTime());
         });
 
     }
