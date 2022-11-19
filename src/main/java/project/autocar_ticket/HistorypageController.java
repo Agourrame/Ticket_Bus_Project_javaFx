@@ -22,6 +22,12 @@ import java.util.ResourceBundle;
 
 public class HistorypageController implements Initializable {
     @FXML
+    void minimize(ActionEvent event){
+        Stage stage;
+        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        stage.setIconified(true);
+    }
+    @FXML
     void close(ActionEvent event) throws IOException {
         Stage stage1;
         stage1 = (Stage) ((Node) event.getSource()).getScene().getWindow();
@@ -70,6 +76,7 @@ public class HistorypageController implements Initializable {
     @FXML
     void searchbtn(MouseEvent event) {
 
+        this.tablehistory.getItems().clear();
 
         try {
             ps=con.prepareStatement("SELECT reservation.id,reservation.nom,reservation.today,reservation.cin,bus.Vd,bus.Va FROM reservation, bus WHERE reservation.busid = bus.id AND reservation.today='"+datesearch.getValue().toString()+"'");

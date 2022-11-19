@@ -16,7 +16,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="594.0" prefWidth="955.0" style="-fx-background-color: #005b96;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.autocar_ticket.BusController">
+<AnchorPane prefHeight="594.0" prefWidth="955.0" style="-fx-background-color: #005b96;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.autocar_ticket.BusController">
    <children>
       <AnchorPane layoutX="26.0" layoutY="24.0" prefHeight="70.0" prefWidth="200.0" style="-fx-background-color: #E9EEF2; -fx-background-radius: 20;" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
          <children>
@@ -27,9 +27,18 @@
             </Text>
             <HBox alignment="TOP_RIGHT" layoutX="817.0" layoutY="10.0" prefHeight="50.0" prefWidth="104.0" AnchorPane.bottomAnchor="10.000000000000007" AnchorPane.leftAnchor="817.0" AnchorPane.rightAnchor="2.799999999999997" AnchorPane.topAnchor="10.0">
                <children>
-                  <Button mnemonicParsing="false" onAction="#close" prefHeight="54.0" prefWidth="52.0" styleClass="bt" stylesheets="@Style.css">
+                  <Button mnemonicParsing="false" onAction="#minimize" prefHeight="54.0" prefWidth="52.0" style="-fx-background-color: transparant;">
                      <graphic>
-                        <ImageView fx:id="close" fitHeight="41.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="41.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@img/close (2).png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="close" mnemonicParsing="false" onAction="#close" prefHeight="54.0" prefWidth="52.0" styleClass="bt" stylesheets="@Style.css">
+                     <graphic>
+                        <ImageView fitHeight="41.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@img/icons8-cancel-48.png" />
                            </image>
@@ -120,7 +129,7 @@
             </HBox>
             <HBox alignment="CENTER" layoutX="25.0" layoutY="238.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="27.0" AnchorPane.topAnchor="238.0">
                <children>
-                  <TableView fx:id="tableautocar" prefHeight="241.0" prefWidth="883.0">
+                  <TableView fx:id="tableautocar" blendMode="HARD_LIGHT" prefHeight="241.0" prefWidth="883.0">
                     <columns>
                       <TableColumn fx:id="colmunid" prefWidth="66.39995956420898" text="R.N" />
                       <TableColumn fx:id="colmunstartplace" prefWidth="184.8000030517578" text="Start Place" />
@@ -134,10 +143,22 @@
                </children>
             </HBox>
             <Pane layoutY="190.0" prefHeight="4.0" prefWidth="200.0" style="-fx-background-color: #005b96;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
-            <ComboBox fx:id="startt" editable="true" layoutX="26.0" layoutY="204.0" prefWidth="150.0" promptText="Start Place" />
-            <ComboBox fx:id="endd" editable="true" layoutX="185.0" layoutY="204.0" prefWidth="150.0" promptText="End Place" />
-            <DatePicker fx:id="datee" layoutX="344.0" layoutY="204.0" promptText="Date" />
-            <Button layoutX="536.0" layoutY="199.0" mnemonicParsing="false" onAction="#searche" prefHeight="34.0" prefWidth="38.0" />
+            <HBox alignment="CENTER" layoutX="26.0" layoutY="194.0" prefHeight="43.0" prefWidth="564.0" spacing="15.0" AnchorPane.leftAnchor="26.0" AnchorPane.rightAnchor="345.0">
+               <children>
+                  <ComboBox fx:id="startt" blendMode="HARD_LIGHT" editable="true" prefWidth="150.0" promptText="Start Place" />
+                  <ComboBox fx:id="endd" blendMode="HARD_LIGHT" editable="true" prefWidth="150.0" promptText="End Place" />
+                  <DatePicker fx:id="datee" blendMode="HARD_LIGHT" promptText="Date" />
+                  <Button mnemonicParsing="false" onAction="#searche" prefHeight="33.0" prefWidth="51.0" style="-fx-background-color: transparant;">
+                     <graphic>
+                        <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@img/icons8-export-collections-48 (1).png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+            </HBox>
          </children>
       </AnchorPane>
    </children>

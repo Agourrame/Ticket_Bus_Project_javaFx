@@ -1,7 +1,8 @@
+*************** 2022-11-19 ***************
 *************** Welcom ***************
-Start city : agadir
-end city : tanger
-date : 2022-11-10
+Start city : marakech
+end city : sidi ifni
+date start bus : 2022-11-09
 price : 100
-N° : 45
+N° : 43
 **************************************

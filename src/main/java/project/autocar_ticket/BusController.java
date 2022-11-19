@@ -24,7 +24,12 @@ public class BusController {
     ArrayList<String> start=new ArrayList<>();
     ArrayList<String> end=new ArrayList<>();
     private Button addbus;
-
+    @FXML
+    void minimize(ActionEvent event){
+        Stage stage;
+        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        stage.setIconified(true);
+    }
 
 
 
@@ -144,6 +149,16 @@ public class BusController {
         }
         clear();
         getget();
+        emptyinput();
+    }
+
+    void emptyinput(){
+        this.startplace.clear();
+        this.endplace.clear();
+        this.price.clear();
+        this.nplace.clear();
+        this.date.getEditor().clear();
+        this.chauffeur.getItems().clear();
     }
 
     void getget() {
@@ -197,6 +212,7 @@ public class BusController {
       }
          clear();
          getget();
+         emptyinput();
     }
 
 
@@ -219,6 +235,7 @@ public class BusController {
         }
         clear();
         getget();
+        emptyinput();
     }
 
     public void searche(ActionEvent actionEvent) {

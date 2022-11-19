@@ -4,10 +4,12 @@
 <?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
-
 
 <AnchorPane prefHeight="652.0" prefWidth="949.0" style="-fx-background-color: #005b96;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.autocar_ticket.HistorypageController">
    <children>
@@ -18,26 +20,53 @@
                   <Font name="System Bold" size="27.0" />
                </font>
             </Text>
+            <HBox alignment="TOP_RIGHT" layoutX="823.0" layoutY="10.0" prefHeight="50.0" prefWidth="117.0" AnchorPane.bottomAnchor="10.000000000000007" AnchorPane.leftAnchor="817.0" AnchorPane.rightAnchor="2.799999999999997" AnchorPane.topAnchor="10.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#minimize" prefHeight="54.0" prefWidth="52.0" style="-fx-background-color: transparant;">
+                     <graphic>
+                        <ImageView fitHeight="41.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@img/close (2).png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#close" prefHeight="54.0" prefWidth="52.0" styleClass="bt" stylesheets="@Style.css">
+                     <graphic>
+                        <ImageView fitHeight="41.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@img/icons8-cancel-48.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+            </HBox>
          </children>
       </AnchorPane>
       <AnchorPane layoutX="243.0" layoutY="105.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #E9EEF2; -fx-background-radius: 20;" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="95.0">
          <children>
-            <DatePicker fx:id="datesearch" layoutX="31.0" layoutY="24.0" prefHeight="40.0" prefWidth="238.0" AnchorPane.leftAnchor="30.0" />
+            <DatePicker fx:id="datesearch" blendMode="HARD_LIGHT" layoutX="31.0" layoutY="24.0" prefHeight="40.0" prefWidth="238.0" AnchorPane.leftAnchor="30.0" />
             <Button layoutX="287.0" layoutY="24.0" mnemonicParsing="false" onMouseClicked="#searchbtn" prefHeight="40.0" prefWidth="100.0" styleClass="searchbtn" stylesheets="@Style.css" text="Search">
                <font>
                   <Font name="System Bold" size="16.0" />
                </font>
             </Button>
-            <TableView fx:id="tablehistory" layoutX="30.0" layoutY="81.0" prefHeight="446.0" prefWidth="735.0" style="-fx-background-radius: 10;" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="90.60000000000002">
+            <TableView fx:id="tablehistory" blendMode="HARD_LIGHT" layoutX="30.0" layoutY="93.0" prefHeight="437.0" prefWidth="731.0">
               <columns>
-                <TableColumn fx:id="idcol" prefWidth="75.0" styleClass="tabelcolstart" text="id" />
-                <TableColumn fx:id="namecol" prefWidth="132.79998779296875" styleClass="tabelcol" text="name" />
-                  <TableColumn fx:id="cincol" prefWidth="121.60005187988281" styleClass="tabelcol" text="cin" />
-                  <TableColumn fx:id="datecol" prefWidth="145.5999755859375" styleClass="tabelcol" text="date" />
-                  <TableColumn fx:id="startcol" prefWidth="129.5999755859375" styleClass="tabelcol" text="start place" />
-                  <TableColumn fx:id="endcol" prefWidth="131.20001220703125" styleClass="tabelcolend" text="end place" />
+                <TableColumn fx:id="idcol" prefWidth="102.22219848632812" text="id" />
+                <TableColumn fx:id="namecol" prefWidth="126.22227478027344" text="name" />
+                  <TableColumn fx:id="cincol" prefWidth="137.7777099609375" text="cin" />
+                  <TableColumn fx:id="datecol" prefWidth="123.11114501953125" text="date" />
+                  <TableColumn fx:id="startcol" prefWidth="117.33331298828125" text="start place" />
+                  <TableColumn fx:id="endcol" prefWidth="123.11114501953125" text="end place" />
               </columns>
             </TableView>
+            <ImageView fitHeight="40.0" fitWidth="34.0" layoutX="396.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/icons8-search-32.png" />
+               </image>
+            </ImageView>
          </children>
       </AnchorPane>
    </children>
