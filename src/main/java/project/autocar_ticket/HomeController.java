@@ -156,7 +156,7 @@ public class HomeController implements Initializable {
 
         try{
             FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("Loginpage.fxml"));
-            Scene scene = new Scene(fxmlLoader.load(), 800, 450);
+            Scene scene = new Scene(fxmlLoader.load(), 800, 417);
             scene.getStylesheets().add(getClass().getResource("style.css").toExternalForm());
             Stage s1=new Stage();
             s1.setTitle("Ticket Autocar");

@@ -21,12 +21,12 @@
          <children>
             <AnchorPane layoutX="25.0" layoutY="19.0" prefHeight="582.0" prefWidth="200.0" style="-fx-background-color: #E9EEF2; -fx-background-radius: 20;" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
                <children>
-                  <Text fill="#5b5b5b" layoutX="38.0" layoutY="154.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Gestion de ticket" textAlignment="CENTER" wrappingWidth="135.7366943359375" AnchorPane.topAnchor="120.5478515625">
+                  <Text fill="#005b96" layoutX="25.0" layoutY="158.0" strokeType="OUTSIDE" strokeWidth="0.0" text="BUS BLADI" textAlignment="CENTER" wrappingWidth="162.13671875" AnchorPane.topAnchor="135.3388671875">
                      <font>
-                        <Font name="System Bold" size="31.0" />
+                        <Font name="System Bold" size="21.0" />
                      </font>
                   </Text>
-                  <VBox layoutX="10.0" layoutY="215.0" prefHeight="372.0" prefWidth="192.0" spacing="20.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="215.0">
+                  <VBox layoutX="10.0" layoutY="186.0" prefHeight="372.0" prefWidth="192.0" spacing="20.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="186.0">
                      <children>
                         <Button alignment="TOP_LEFT" mnemonicParsing="false" onMouseClicked="#home" prefHeight="50.0" prefWidth="192.0" styleClass="btnnav" stylesheets="@Style.css" text="   Home" textFill="#5b5b5b">
                            <font>
@@ -98,9 +98,9 @@
                         </Button>
                      </children>
                   </VBox>
-                  <ImageView fitHeight="120.0" fitWidth="188.0" layoutX="12.0" layoutY="7.0">
+                  <ImageView fitHeight="150.0" fitWidth="152.0" layoutX="30.0">
                      <image>
-                        <Image url="@img/bus-transparent-background-17.png" />
+                        <Image url="@img/Blue%20Minimalist%20Our%20Bus%20Features%20Instagram%20Post%20%20(1080%20×%20900%20px)%20(4).png" />
                      </image>
                   </ImageView>
                </children>
