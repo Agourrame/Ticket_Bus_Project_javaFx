@@ -26,7 +26,7 @@
                         <Font name="System Bold" size="31.0" />
                      </font>
                   </Text>
-                  <VBox layoutX="10.0" layoutY="213.0" prefHeight="308.0" prefWidth="186.0" spacing="20.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="213.0">
+                  <VBox layoutX="10.0" layoutY="226.0" prefHeight="308.0" prefWidth="186.0" spacing="20.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="226.0">
                      <children>
                         <Button alignment="TOP_LEFT" mnemonicParsing="false" onMouseClicked="#home" prefHeight="50.0" prefWidth="192.0" styleClass="btnnav" stylesheets="@Style.css" text="   Home" textFill="#5b5b5b">
                            <font>

@@ -14,7 +14,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="638.0" prefWidth="984.0" style="-fx-background-color: #005b96;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.autocar_ticket.ReservationtController">
+<AnchorPane prefHeight="638.0" prefWidth="984.0" style="-fx-background-color: #005b96;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.autocar_ticket.ReservationtController">
    <children>
       <HBox layoutX="37.0" layoutY="58.0" />
       <AnchorPane layoutX="37.0" layoutY="14.0" prefHeight="70.0" prefWidth="200.0" style="-fx-background-color: #E9EEF2; -fx-background-radius: 20;" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
@@ -51,7 +51,7 @@
          <children>
             <ComboBox fx:id="startCom" blendMode="HARD_LIGHT" cacheShape="false" centerShape="false" editable="true" focusTraversable="false" layoutX="30.0" layoutY="37.0" prefHeight="36.0" prefWidth="200.0" promptText="Start Place" scaleShape="false" />
             <ComboBox fx:id="endCom" blendMode="HARD_LIGHT" cacheShape="false" centerShape="false" editable="true" focusTraversable="false" layoutX="305.0" layoutY="37.0" prefHeight="36.0" prefWidth="200.0" promptText="End Place" scaleShape="false" />
-            <Button layoutX="574.0" layoutY="37.0" mnemonicParsing="false" onMouseClicked="#search" prefHeight="36.0" prefWidth="133.0" styleClass="searchbtn" stylesheets="@Style.css" text="Search" AnchorPane.rightAnchor="250.0">
+            <Button layoutX="574.0" layoutY="37.0" mnemonicParsing="false" onMouseClicked="#search" prefHeight="36.0" prefWidth="133.0" styleClass="btn_refresh" stylesheets="@Style.css" text="Search" AnchorPane.rightAnchor="250.0">
                <font>
                   <Font name="System Bold" size="14.0" />
                </font>
