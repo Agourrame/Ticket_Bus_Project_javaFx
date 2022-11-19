@@ -20,7 +20,7 @@ import java.util.ArrayList;
 
 public class BusController {
 
-    ArrayList<String> startcity=new ArrayList<>();
+    ArrayList<String> chauff=new ArrayList<>();
     ArrayList<String> start=new ArrayList<>();
     ArrayList<String> end=new ArrayList<>();
     private Button addbus;
@@ -64,7 +64,7 @@ public class BusController {
             stmt=con.prepareStatement("select nom from chauffeur");
             rs=stmt.executeQuery();
             while (rs.next()){
-                this.startcity.add(rs.getString("nom"));
+                this.chauff.add(rs.getString("nom"));
             }
         }catch(Exception e){
             System.out.println(e.toString());
@@ -108,8 +108,9 @@ public class BusController {
         getStartcity();
         getstart();
         getend();
-        chauffeur.getItems().addAll(startcity);
-
+        chauffeur.getItems().addAll(chauff);
+        this.startt.getItems().addAll(start);
+        this.endd.getItems().addAll(end);
 
 
         colmunid.setCellValueFactory(new PropertyValueFactory<>("id"));
