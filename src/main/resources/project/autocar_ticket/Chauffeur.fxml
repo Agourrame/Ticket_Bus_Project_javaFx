@@ -18,21 +18,33 @@
    <children>
       <AnchorPane layoutX="21.0" layoutY="6.0" prefHeight="70.0" prefWidth="200.0" style="-fx-background-color: #E9EEF2; -fx-background-radius: 20;" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
          <children>
-            <HBox alignment="TOP_RIGHT" prefHeight="50.0" prefWidth="72.0" />
             <Text fill="#5b5b5b" layoutX="14.0" layoutY="45.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Chauffeur" textAlignment="CENTER" wrappingWidth="140.53076171875">
                <font>
                   <Font name="System Bold" size="27.0" />
                </font>
             </Text>
-            <Button layoutX="880.0" layoutY="7.0" mnemonicParsing="false" onAction="#close" prefHeight="54.0" prefWidth="52.0" styleClass="bt" stylesheets="@Style.css">
-               <graphic>
-                  <ImageView fx:id="close" fitHeight="41.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@img/icons8-cancel-48.png" />
-                     </image>
-                  </ImageView>
-               </graphic>
-            </Button>
+            <HBox alignment="TOP_RIGHT" layoutX="833.0" layoutY="8.0" prefHeight="50.0" prefWidth="117.0">
+               <children>
+                  <Button fx:id="minimize" mnemonicParsing="false" prefHeight="54.0" prefWidth="52.0" style="-fx-background-color: transparant;">
+                     <graphic>
+                        <ImageView fitHeight="41.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@img/close%20(2).png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="close" mnemonicParsing="false" onAction="#close" prefHeight="54.0" prefWidth="52.0" styleClass="bt" stylesheets="@Style.css">
+                     <graphic>
+                        <ImageView fitHeight="41.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@img/icons8-cancel-48.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+            </HBox>
          </children>
       </AnchorPane>
       <AnchorPane layoutX="10.0" layoutY="128.0" prefHeight="355.0" prefWidth="945.0" style="-fx-background-color: #E9EEF2; -fx-background-radius: 20;" AnchorPane.bottomAnchor="59.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="128.0">

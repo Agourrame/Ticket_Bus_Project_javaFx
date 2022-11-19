@@ -101,11 +101,20 @@
                         <Font name="System Bold" size="27.0" />
                      </font>
                   </Text>
-                  <HBox alignment="TOP_RIGHT" layoutX="873.0" layoutY="10.0" prefHeight="50.0" prefWidth="72.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="873.0" AnchorPane.rightAnchor="7.0" AnchorPane.topAnchor="10.0">
+                  <HBox alignment="TOP_RIGHT" layoutX="832.0" layoutY="10.0" prefHeight="50.0" prefWidth="117.0">
                      <children>
-                        <Button mnemonicParsing="false" onAction="#close" prefHeight="54.0" prefWidth="52.0" styleClass="bt" stylesheets="@Style.css">
+                        <Button fx:id="minimize" mnemonicParsing="false" prefHeight="54.0" prefWidth="52.0" style="-fx-background-color: transparant;">
                            <graphic>
-                              <ImageView fx:id="close" fitHeight="41.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                              <ImageView fitHeight="41.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@img/close%20(2).png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="close" mnemonicParsing="false" onAction="#close" prefHeight="54.0" prefWidth="52.0" styleClass="bt" stylesheets="@Style.css">
+                           <graphic>
+                              <ImageView fitHeight="41.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
                                     <Image url="@img/icons8-cancel-48.png" />
                                  </image>
@@ -114,7 +123,6 @@
                         </Button>
                      </children>
                   </HBox>
-                  <Button layoutX="830.0" layoutY="19.0" mnemonicParsing="false" onAction="#minimize" text="minimize" />
                </children>
             </AnchorPane>
             <AnchorPane layoutX="233.0" layoutY="95.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #E9EEF2; -fx-background-radius: 20;" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="95.0">
