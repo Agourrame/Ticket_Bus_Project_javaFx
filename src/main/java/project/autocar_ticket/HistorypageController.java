@@ -2,14 +2,17 @@ package project.autocar_ticket;
 import Modules.History;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
+import javafx.scene.Scene;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 
 import java.io.IOException;
 import java.net.URL;
@@ -33,6 +36,9 @@ public class HistorypageController implements Initializable {
         stage1 = (Stage) ((Node) event.getSource()).getScene().getWindow();
         stage1.close();
     }
+
+
+
     //Database----------------------------------------
 
     String url = "jdbc:mysql://localhost/gestion_de_teckit";

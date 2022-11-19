@@ -6,12 +6,14 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.chart.*;
 import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 
 import java.io.IOException;
 import java.net.URL;
@@ -146,6 +148,29 @@ public class HomeController implements Initializable {
 
 
     //------------------------------------------
+
+    @FXML
+    void logout(MouseEvent event) {
+
+
+
+        try{
+            FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("Loginpage.fxml"));
+            Scene scene = new Scene(fxmlLoader.load(), 800, 450);
+            scene.getStylesheets().add(getClass().getResource("style.css").toExternalForm());
+            Stage s1=new Stage();
+            s1.setTitle("Ticket Autocar");
+            s1.setScene(scene);
+            s1.initStyle(StageStyle.UNDECORATED);
+            s1.show();
+        }catch (Exception e){
+            System.out.println(e);
+        }
+        Stage stage4;
+        stage4 = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        stage4.close();
+
+    }
 
     void insertintolinechart(){
 

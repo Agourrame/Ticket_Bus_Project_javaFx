@@ -15,7 +15,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<BorderPane fx:id="AllPage" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="614.0" prefWidth="1204.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.autocar_ticket.HomeController">
+<BorderPane fx:id="AllPage" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="614.0" prefWidth="1204.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.autocar_ticket.HomeController">
    <left>
       <AnchorPane prefHeight="614.0" prefWidth="232.0" style="-fx-background-color: #005b96;">
          <children>
@@ -26,7 +26,7 @@
                         <Font name="System Bold" size="31.0" />
                      </font>
                   </Text>
-                  <VBox layoutX="10.0" layoutY="226.0" prefHeight="308.0" prefWidth="186.0" spacing="20.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="226.0">
+                  <VBox layoutX="10.0" layoutY="215.0" prefHeight="372.0" prefWidth="192.0" spacing="20.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="215.0">
                      <children>
                         <Button alignment="TOP_LEFT" mnemonicParsing="false" onMouseClicked="#home" prefHeight="50.0" prefWidth="192.0" styleClass="btnnav" stylesheets="@Style.css" text="   Home" textFill="#5b5b5b">
                            <font>
@@ -73,6 +73,18 @@
                               </ImageView>
                            </graphic></Button>
                         <Button alignment="TOP_LEFT" mnemonicParsing="false" onMouseClicked="#History" prefHeight="50.0" prefWidth="192.0" styleClass="btnnav" stylesheets="@Style.css" text="   History" textFill="#5b5b5b">
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="44.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@img/352426_history_icon.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button alignment="TOP_LEFT" mnemonicParsing="false" onMouseClicked="#logout" prefHeight="50.0" prefWidth="192.0" styleClass="btnnav" stylesheets="@Style.css" text="Log out" textFill="#5b5b5b">
                            <font>
                               <Font name="System Bold" size="20.0" />
                            </font>
