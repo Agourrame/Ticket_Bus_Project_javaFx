@@ -129,7 +129,7 @@
             </HBox>
             <HBox alignment="CENTER" layoutX="25.0" layoutY="238.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="27.0" AnchorPane.topAnchor="238.0">
                <children>
-                  <TableView fx:id="tableautocar" blendMode="HARD_LIGHT" prefHeight="241.0" prefWidth="883.0">
+                  <TableView fx:id="tableautocar" blendMode="HARD_LIGHT" cacheShape="false" centerShape="false" focusTraversable="false" prefHeight="241.0" prefWidth="883.0" scaleShape="false">
                     <columns>
                       <TableColumn fx:id="colmunid" prefWidth="66.39995956420898" text="R.N" />
                       <TableColumn fx:id="colmunstartplace" prefWidth="184.8000030517578" text="Start Place" />
