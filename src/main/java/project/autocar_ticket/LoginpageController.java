@@ -8,6 +8,6 @@ import java.util.ResourceBundle;
 public class LoginpageController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        
+
     }
 }
