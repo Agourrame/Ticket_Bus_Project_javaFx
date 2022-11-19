@@ -25,7 +25,12 @@ import java.util.ArrayList;
 import java.util.ResourceBundle;
 
 public class ReservationtController implements Initializable {
-
+    @FXML
+    void minimize(ActionEvent event){
+        Stage stage;
+        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        stage.setIconified(true);
+    }
     ArrayList<String> startcity=new ArrayList<>();
 
     ArrayList<String> endcity=new ArrayList<>();

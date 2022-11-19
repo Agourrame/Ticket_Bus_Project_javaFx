@@ -24,7 +24,12 @@ public class BusController {
     ArrayList<String> start=new ArrayList<>();
     ArrayList<String> end=new ArrayList<>();
     private Button addbus;
-
+    @FXML
+    void minimize(ActionEvent event){
+        Stage stage;
+        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        stage.setIconified(true);
+    }
 
 
 

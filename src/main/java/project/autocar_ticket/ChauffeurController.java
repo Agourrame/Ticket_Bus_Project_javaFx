@@ -21,7 +21,12 @@ import java.util.ArrayList;
 import java.util.ResourceBundle;
 
 public class ChauffeurController implements Initializable {
-
+    @FXML
+    void minimize(ActionEvent event){
+        Stage stage;
+        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        stage.setIconified(true);
+    }
     @FXML
     void close(ActionEvent event) throws IOException {
         Stage stage1;

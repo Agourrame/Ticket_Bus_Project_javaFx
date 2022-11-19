@@ -24,7 +24,6 @@ import java.util.HashMap;
 import java.util.ResourceBundle;
 
 public class HomeController implements Initializable {
-
     @FXML
     void minimize(ActionEvent event){
         Stage stage;

@@ -22,6 +22,12 @@ import java.util.ResourceBundle;
 
 public class HistorypageController implements Initializable {
     @FXML
+    void minimize(ActionEvent event){
+        Stage stage;
+        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        stage.setIconified(true);
+    }
+    @FXML
     void close(ActionEvent event) throws IOException {
         Stage stage1;
         stage1 = (Stage) ((Node) event.getSource()).getScene().getWindow();

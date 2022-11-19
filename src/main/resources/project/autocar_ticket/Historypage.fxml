@@ -4,12 +4,14 @@
 <?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-
-<AnchorPane prefHeight="652.0" prefWidth="949.0" style="-fx-background-color: #005b96;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.autocar_ticket.HistorypageController">
+<AnchorPane prefHeight="652.0" prefWidth="949.0" style="-fx-background-color: #005b96;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.autocar_ticket.HistorypageController">
    <children>
       <AnchorPane layoutX="36.0" layoutY="14.0" prefHeight="70.0" prefWidth="666.0" style="-fx-background-color: #E9EEF2; -fx-background-radius: 20;" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
          <children>
@@ -18,6 +20,28 @@
                   <Font name="System Bold" size="27.0" />
                </font>
             </Text>
+            <HBox alignment="TOP_RIGHT" layoutX="823.0" layoutY="10.0" prefHeight="50.0" prefWidth="117.0" AnchorPane.bottomAnchor="10.000000000000007" AnchorPane.leftAnchor="817.0" AnchorPane.rightAnchor="2.799999999999997" AnchorPane.topAnchor="10.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#minimize" prefHeight="54.0" prefWidth="52.0" style="-fx-background-color: transparant;">
+                     <graphic>
+                        <ImageView fitHeight="41.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@img/close (2).png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#close" prefHeight="54.0" prefWidth="52.0" styleClass="bt" stylesheets="@Style.css">
+                     <graphic>
+                        <ImageView fitHeight="41.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@img/icons8-cancel-48.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+            </HBox>
          </children>
       </AnchorPane>
       <AnchorPane layoutX="243.0" layoutY="105.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #E9EEF2; -fx-background-radius: 20;" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="95.0">
