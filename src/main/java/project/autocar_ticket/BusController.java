@@ -40,7 +40,7 @@ public class BusController {
         stage1.close();
     }
 
-    public TextField startplace,endplace,price,nplace;
+    public TextField startplace,endplace,price,nplace,time;
     public ComboBox<String> chauffeur,startt,endd;
     public DatePicker date,datee;
     public TableView<Bus>tableautocar;
@@ -49,6 +49,7 @@ public class BusController {
     public TableColumn<Bus,Integer> colmunid = new TableColumn<>();
     public TableColumn<Bus,String> colmunstartplace = new TableColumn<>();
     public TableColumn<Bus,String> colmunendplace = new TableColumn<>();
+    public TableColumn<Bus, String> columntime =new TableColumn<>();
     public TableColumn<Bus,String> colmunchauffeur= new TableColumn<>();
     public TableColumn<Bus,String> colmundate = new TableColumn<>();
     public TableColumn<Bus,Integer> colmunprice= new TableColumn<>();
@@ -121,6 +122,7 @@ public class BusController {
         colmunid.setCellValueFactory(new PropertyValueFactory<>("id"));
         colmunstartplace.setCellValueFactory(new PropertyValueFactory<>("start"));
         colmunendplace.setCellValueFactory(new PropertyValueFactory<>("end"));
+        columntime.setCellValueFactory(new PropertyValueFactory<>("time"));
         colmunprice.setCellValueFactory(new PropertyValueFactory<>("prix"));
         colmundate.setCellValueFactory(new PropertyValueFactory<>("date"));
         colmunnplace.setCellValueFactory(new PropertyValueFactory<>("nplace"));
@@ -136,13 +138,14 @@ public class BusController {
         int autocarprice=Integer.parseInt(price.getText());
         int autocarnplace=Integer.parseInt(nplace.getText());
         try {
-            stmt=con.prepareStatement("INSERT INTO `bus`(`Vd`, `Va`, `prix`, `Nplace`, `date`, `chauffeur`) VALUES (?,?,?,?,?,?)");
+            stmt=con.prepareStatement("INSERT INTO `bus`(`Vd`, `Va`, `prix`, `Nplace`, `date`, `chauffeur`,`time`) VALUES (?,?,?,?,?,?,?)");
             stmt.setString(1,startplace.getText());
             stmt.setString(2,endplace.getText());
             stmt.setInt(3,autocarprice);
             stmt.setInt(4,autocarnplace);
             stmt.setString(5,date.getValue().toString());
             stmt.setString(6,chauffeur.getSelectionModel().getSelectedItem());
+            stmt.setString(7,time.getText());
             stmt.executeUpdate();
         }catch (Exception e){
             System.out.println(e.toString());
@@ -155,6 +158,7 @@ public class BusController {
     void emptyinput(){
         this.startplace.clear();
         this.endplace.clear();
+        this.time.clear();
         this.price.clear();
         this.nplace.clear();
         this.date.getEditor().clear();
@@ -172,6 +176,7 @@ public class BusController {
                         rs.getInt("id"),
                         rs.getString("Vd"),
                         rs.getString("Va"),
+                        rs.getString("time"),
                         rs.getInt("prix"),
                         rs.getInt("Nplace"),
                         rs.getString("date"),
@@ -195,6 +200,7 @@ public class BusController {
             endplace.setText(tableautocar.getSelectionModel().getSelectedItem().getEnd());
             chauffeur.setValue(tableautocar.getSelectionModel().getSelectedItem().getChauffeur());
             date.setValue(LocalDate.parse(tableautocar.getSelectionModel().getSelectedItem().getDate()));
+            time.setText(tableautocar.getSelectionModel().getSelectedItem().getTime());
             price.setText(String.valueOf(tableautocar.getSelectionModel().getSelectedItem().getPrix()));
             nplace.setText(String.valueOf(tableautocar.getSelectionModel().getSelectedItem().getNplace()));
 
@@ -222,13 +228,14 @@ public class BusController {
         int autocarnplace=Integer.parseInt(nplace.getText());
         int id=tableautocar.getSelectionModel().getSelectedItem().getId();
         try {
-            stmt=con.prepareStatement("UPDATE bus SET Vd=?,Va=?,prix=?,Nplace=?,date=?,chauffeur=? WHERE id='"+id+"'");
+            stmt=con.prepareStatement("UPDATE bus SET Vd=?,Va=?,prix=?,Nplace=?,date=?,chauffeur=?,time=? WHERE id='"+id+"'");
             stmt.setString(1,startplace.getText());
             stmt.setString(2,endplace.getText());
             stmt.setInt(3,autocarprice);
             stmt.setInt(4,autocarnplace);
             stmt.setString(5,date.getValue().toString());
             stmt.setString(6,chauffeur.getSelectionModel().getSelectedItem());
+            stmt.setString(7,time.getText());
             stmt.executeUpdate();
         }catch (Exception e){
             System.out.println(e.toString());
@@ -249,9 +256,11 @@ public class BusController {
                         rs.getInt("id"),
                         rs.getString("Vd"),
                         rs.getString("Va"),
+                        rs.getString("time"),
                         rs.getInt("prix"),
                         rs.getInt("Nplace"),
-                        rs.getString("date")
+                        rs.getString("date"),
+                        rs.getString("chauffeur")
                 );
 
                 this.tableautocar.getItems().add(newbus);

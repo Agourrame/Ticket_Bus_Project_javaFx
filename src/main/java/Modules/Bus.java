@@ -2,16 +2,17 @@ package Modules;
 
 public class Bus {
     int id;
-    String start,end;
+    String start,end,time;
     int prix;
     int nplace;
     String date;
     String chauffeur;
 
-    public Bus(int id,String start, String end, int prix, int nplace, String date, String chauffeur) {
+    public Bus(int id,String start, String end,String time, int prix, int nplace, String date, String chauffeur) {
         this.id=id;
         this.start = start;
         this.end = end;
+        this.time=time;
         this.prix = prix;
         this.nplace = nplace;
         this.date = date;
@@ -42,6 +43,14 @@ public class Bus {
 
     public void setEnd(String end) {
         this.end = end;
+    }
+
+    public String getTime() {
+        return time;
+    }
+
+    public void setTime(String time) {
+        this.time = time;
     }
 
     public int getPrix() {
