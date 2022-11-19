@@ -101,7 +101,7 @@
                         <Font name="System Bold" size="27.0" />
                      </font>
                   </Text>
-                  <HBox alignment="TOP_RIGHT" layoutX="832.0" layoutY="10.0" prefHeight="50.0" prefWidth="117.0">
+                  <HBox alignment="TOP_RIGHT" layoutX="832.0" layoutY="10.0" prefHeight="50.0" prefWidth="117.0" AnchorPane.bottomAnchor="10.000000000000007" AnchorPane.leftAnchor="817.0" AnchorPane.rightAnchor="2.799999999999997" AnchorPane.topAnchor="10.0">
                      <children>
                         <Button fx:id="minimize" mnemonicParsing="false" prefHeight="54.0" prefWidth="52.0" style="-fx-background-color: transparant;">
                            <graphic>

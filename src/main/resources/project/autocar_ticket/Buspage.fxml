@@ -143,14 +143,14 @@
                </children>
             </HBox>
             <Pane layoutY="190.0" prefHeight="4.0" prefWidth="200.0" style="-fx-background-color: #005b96;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
-            <HBox alignment="CENTER" layoutX="26.0" layoutY="203.0" prefHeight="34.0" prefWidth="564.0" spacing="15.0" AnchorPane.leftAnchor="26.0" AnchorPane.rightAnchor="345.0">
+            <HBox alignment="CENTER" layoutX="26.0" layoutY="194.0" prefHeight="43.0" prefWidth="564.0" spacing="15.0" AnchorPane.leftAnchor="26.0" AnchorPane.rightAnchor="345.0">
                <children>
                   <ComboBox fx:id="startt" editable="true" prefWidth="150.0" promptText="Start Place" />
                   <ComboBox fx:id="endd" editable="true" prefWidth="150.0" promptText="End Place" />
                   <DatePicker fx:id="datee" promptText="Date" />
                   <Button mnemonicParsing="false" onAction="#searche" prefHeight="33.0" prefWidth="51.0" style="-fx-background-color: transparant;">
                      <graphic>
-                        <ImageView fitHeight="25.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@img/icons8-export-collections-48%20(1).png" />
                            </image>
