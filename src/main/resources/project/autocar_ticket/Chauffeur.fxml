@@ -14,7 +14,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="542.0" prefWidth="965.0" style="-fx-background-color: #005b96;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.autocar_ticket.ChauffeurController">
+<AnchorPane prefHeight="542.0" prefWidth="965.0" style="-fx-background-color: #005b96;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.autocar_ticket.ChauffeurController">
    <children>
       <AnchorPane layoutX="21.0" layoutY="6.0" prefHeight="70.0" prefWidth="200.0" style="-fx-background-color: #E9EEF2; -fx-background-radius: 20;" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
          <children>
@@ -125,9 +125,9 @@
          <children>
             <HBox layoutX="31.0" layoutY="17.0" prefHeight="43.0" prefWidth="450.0" spacing="15.0">
                <children>
-                  <TextField blendMode="HARD_LIGHT" prefHeight="38.0" promptText="Name" />
-                  <TextField blendMode="HARD_LIGHT" prefHeight="38.0" promptText="CIN" />
-                  <Button mnemonicParsing="false" prefHeight="38.0" prefWidth="108.0" styleClass="btn_refresh" stylesheets="@Style.css" text="Search" textFill="#797979">
+                  <TextField fx:id="srcname" blendMode="HARD_LIGHT" prefHeight="38.0" promptText="Name" />
+                  <TextField fx:id="srccin" blendMode="HARD_LIGHT" prefHeight="38.0" promptText="CIN" />
+                  <Button mnemonicParsing="false" onAction="#search" prefHeight="38.0" prefWidth="108.0" styleClass="btn_refresh" stylesheets="@Style.css" text="Search" textFill="#797979">
                      <font>
                         <Font name="System Bold" size="17.0" />
                      </font>
