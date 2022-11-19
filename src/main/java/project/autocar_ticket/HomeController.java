@@ -21,6 +21,8 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.time.LocalTime;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.ResourceBundle;
@@ -81,6 +83,12 @@ public class HomeController implements Initializable {
     @FXML
     private Label Nbticket;
 
+    @FXML
+    private Label Nbprofits;
+    @FXML
+    private Label timelabael;
+    @FXML
+    private Label ttlab;
 
     void navbarhomeinformation(){
 
@@ -112,6 +120,17 @@ public class HomeController implements Initializable {
 
             while (rs.next()){
                this.NbChauff.setText(rs.getString("nb"));
+            }
+        }catch (Exception e){
+            System.out.println(e);
+        }
+
+        try{
+            ps=con.prepareStatement("select sum(bus.prix) from bus,reservation where bus.id=reservation.busid;");
+            rs=ps.executeQuery();
+
+            while (rs.next()){
+                this.Nbprofits.setText(rs.getString("sum(bus.prix)"));
             }
         }catch (Exception e){
             System.out.println(e);
@@ -252,9 +271,10 @@ public class HomeController implements Initializable {
         }
 
         navbarhomeinformation();
-
-
-
+        LocalTime time = LocalTime.now();
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("HH:mm:ss");
+        this.timelabael.setText(java.time.LocalDate.now().toString());
+        this.ttlab.setText(time.format(formatter));
 
         insertintobarchart();
         barchartinformation();
