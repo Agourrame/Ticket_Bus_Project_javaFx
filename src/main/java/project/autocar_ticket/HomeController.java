@@ -161,6 +161,8 @@ public class HomeController implements Initializable {
 
         }
 
+
+
     }
 
     void linechartinformation(){
