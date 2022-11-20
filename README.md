@@ -3,3 +3,4 @@ Gestion des tickets d'autobus avec JavaFx et base de données 'Mysql'
 1. <strong>Hamza Agourrame</strong>
 2. <strong>Anas Rokhmi</strong>
 3. <strong>Badar hilali</strong>
+![Tux, the Linux mascot](/assets/images/tux.png)
