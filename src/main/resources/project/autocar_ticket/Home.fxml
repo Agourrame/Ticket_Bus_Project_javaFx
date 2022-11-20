@@ -219,7 +219,7 @@
                         <Font name="System Bold" size="19.0" />
                      </font>
                   </Label>
-                  <Label layoutX="543.0" layoutY="227.0" prefHeight="35.0" prefWidth="193.0" text="Citys Piechart" textFill="#747474">
+                  <Label layoutX="558.0" layoutY="227.0" prefHeight="35.0" prefWidth="193.0" text="Citys Piechart" textFill="#747474">
                      <font>
                         <Font name="System Bold" size="19.0" />
                      </font>
@@ -277,6 +277,11 @@
                   <ImageView fitHeight="33.0" fitWidth="44.0" layoutX="47.0" layoutY="228.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@img/chart-671.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="36.0" fitWidth="34.0" layoutX="517.0" layoutY="225.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@img/discount-2045.png" />
                      </image>
                   </ImageView>
                </children>
