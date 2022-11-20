@@ -9,6 +9,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -40,7 +41,9 @@ public class LoginpageController implements Initializable {
                Scene scene = new Scene(fxmlLoader.load(), 1250, 650);
                scene.getStylesheets().add(getClass().getResource("style.css").toExternalForm());
                Stage stage=new Stage();
-               stage.setTitle("Ticket Autocar");
+               Image image=new Image(getClass().getResourceAsStream("img/app logo.png"));
+               stage.getIcons().add(image);
+               stage.setTitle("BUS BLADI");
                stage.setScene(scene);
                stage.initStyle(StageStyle.UNDECORATED);
                stage.show();

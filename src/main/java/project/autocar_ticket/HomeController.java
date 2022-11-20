@@ -9,6 +9,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.chart.*;
 import javafx.scene.control.Label;
+import javafx.scene.image.Image;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
@@ -178,7 +179,9 @@ public class HomeController implements Initializable {
             Scene scene = new Scene(fxmlLoader.load(), 800, 417);
             scene.getStylesheets().add(getClass().getResource("style.css").toExternalForm());
             Stage s1=new Stage();
-            s1.setTitle("Ticket Autocar");
+            Image image=new Image(getClass().getResourceAsStream("img/app logo.png"));
+            s1.getIcons().add(image);
+            s1.setTitle("BUS BLADI");
             s1.setScene(scene);
             s1.initStyle(StageStyle.UNDECORATED);
             s1.show();
