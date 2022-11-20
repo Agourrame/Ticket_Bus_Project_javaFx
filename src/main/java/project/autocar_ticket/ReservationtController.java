@@ -154,7 +154,7 @@ public class ReservationtController implements Initializable {
         }
 
         try{
-            File reserv=new File("ticket"+numberofplace+priceinput.getText()+".txt");
+            File reserv=new File("Tickets/ticket"+numberofplace+priceinput.getText()+".txt");
 
               if(!reserv.exists()){
                 reserv.createNewFile();
