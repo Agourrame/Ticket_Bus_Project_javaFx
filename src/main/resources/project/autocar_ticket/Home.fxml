@@ -207,7 +207,7 @@
                                     <Font name="System Bold" size="20.0" />
                                  </font>
                               </Label>
-                              <Label fx:id="Nbprofits" layoutX="85.0" layoutY="64.0" prefHeight="40.0" prefWidth="61.0" text="100" textAlignment="CENTER" textFill="WHITE">
+                              <Label fx:id="Nbprofits" layoutX="76.0" layoutY="64.0" prefHeight="40.0" prefWidth="70.0" text="100" textAlignment="CENTER" textFill="WHITE">
                                  <font>
                                     <Font name="System Bold" size="28.0" />
                                  </font>
@@ -252,9 +252,9 @@
                       <NumberAxis fx:id="YL" label="N° ticket" side="LEFT" tickLabelFill="#c52727" />
                     </yAxis>
                   </LineChart>
-                  <AnchorPane layoutX="40.0" layoutY="160.0" prefHeight="40.0" prefWidth="872.0" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="200.0">
+                  <AnchorPane layoutX="40.0" layoutY="160.0" prefHeight="46.0" prefWidth="883.0" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="29.0">
                      <children>
-                        <HBox layoutX="14.0" prefHeight="46.0" prefWidth="873.0" spacing="50.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                        <HBox layoutX="14.0" prefHeight="46.0" prefWidth="885.0" spacing="50.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="-2.0">
                            <children>
                               <AnchorPane prefHeight="18.0" prefWidth="200.0" style="-fx-background-color: #168bce; -fx-background-radius: 10;">
                                  <children>
@@ -272,12 +272,12 @@
                               </AnchorPane>
                               <AnchorPane prefHeight="18.0" prefWidth="200.0" style="-fx-background-color: #168bce; -fx-background-radius: 10;">
                                  <children>
-                                    <Label fx:id="ttlab" layoutX="88.0" layoutY="8.0" text="00:00:00" textFill="WHITE">
+                                    <Label fx:id="ttlab" layoutX="83.0" layoutY="8.0" text="00:00:00" textFill="WHITE">
                                        <font>
                                           <Font name="System Bold" size="20.0" />
                                        </font>
                                     </Label>
-                                    <ImageView fitHeight="32.0" fitWidth="39.0" layoutX="36.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+                                    <ImageView fitHeight="35.0" fitWidth="40.0" layoutX="28.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
                                           <Image url="@img/pngegg%20(1).png" />
                                        </image>
@@ -285,15 +285,15 @@
                                  </children>
                               </AnchorPane>
                               <AnchorPane prefHeight="18.0" prefWidth="200.0" style="-fx-background-color: #168bce; -fx-background-radius: 10;" />
+                              <Button mnemonicParsing="false" prefHeight="48.0" prefWidth="142.0" styleClass="btn_refresh" stylesheets="@Style.css" text="Download file details">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Button>
                            </children>
                         </HBox>
                      </children>
                   </AnchorPane>
-                  <Button layoutX="779.0" layoutY="159.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="142.0" styleClass="btn_refresh" stylesheets="@Style.css" text="Download file details">
-                     <font>
-                        <Font name="System Bold" size="12.0" />
-                     </font>
-                  </Button>
                   <ImageView fitHeight="33.0" fitWidth="44.0" layoutX="47.0" layoutY="228.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@img/chart-671.png" />
