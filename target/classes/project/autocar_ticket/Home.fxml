@@ -207,12 +207,12 @@
                                     <Font name="System Bold" size="20.0" />
                                  </font>
                               </Label>
-                              <Label fx:id="Nbprofits" layoutX="85.0" layoutY="64.0" prefHeight="40.0" prefWidth="52.0" text="100" textAlignment="CENTER" textFill="WHITE">
+                              <Label fx:id="Nbprofits" layoutX="85.0" layoutY="64.0" prefHeight="40.0" prefWidth="61.0" text="100" textAlignment="CENTER" textFill="WHITE">
                                  <font>
                                     <Font name="System Bold" size="28.0" />
                                  </font>
                               </Label>
-                              <Label layoutX="137.0" layoutY="64.0" prefHeight="40.0" prefWidth="38.0" text="DH" textAlignment="CENTER" textFill="WHITE">
+                              <Label layoutX="145.0" layoutY="64.0" prefHeight="40.0" prefWidth="38.0" text="DH" textAlignment="CENTER" textFill="WHITE">
                                  <font>
                                     <Font name="System Bold" size="24.0" />
                                  </font>
