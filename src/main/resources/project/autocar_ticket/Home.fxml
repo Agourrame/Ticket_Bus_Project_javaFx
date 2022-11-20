@@ -214,7 +214,7 @@
                       <NumberAxis fx:id="Y" label="N °place" side="LEFT" />
                     </yAxis>
                   </BarChart>
-                  <Label layoutX="50.0" layoutY="227.0" prefHeight="35.0" prefWidth="193.0" text="Autocars Barchart" textFill="#747474">
+                  <Label layoutX="86.0" layoutY="227.0" prefHeight="35.0" prefWidth="193.0" text="Autocars Barchart" textFill="#747474">
                      <font>
                         <Font name="System Bold" size="19.0" />
                      </font>
@@ -274,6 +274,11 @@
                         <Font name="System Bold" size="12.0" />
                      </font>
                   </Button>
+                  <ImageView fitHeight="33.0" fitWidth="44.0" layoutX="47.0" layoutY="228.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@img/chart-671.png" />
+                     </image>
+                  </ImageView>
                </children>
             </AnchorPane>
          </children></AnchorPane>
