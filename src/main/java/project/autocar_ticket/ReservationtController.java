@@ -154,20 +154,20 @@ public class ReservationtController implements Initializable {
         }
 
         try{
-            File reserv=new File("ticket"+priceinput.getText()+".txt");
+            File reserv=new File("ticket"+numberofplace+priceinput.getText()+".txt");
 
               if(!reserv.exists()){
                 reserv.createNewFile();
                }
               PrintWriter pw=new PrintWriter(reserv);
             pw.println("*************** "+java.time.LocalDate.now()+" *****************");
-            pw.println("  *************** Welcome ***************");
-            pw.println("Start city : "+startinput.getText());
-            pw.println("end city : "+endinput.getText());
-            pw.println("date  : "+dateinputt.getValue().toString());
-            pw.println("price : "+priceinput.getText()+"Dhs");
-            pw.println("Time : "+timeinput.getText());
-            pw.println("N° : "+numberofplace);
+            pw.println("*  *************** Welcome ***************");
+            pw.println("*  Start city : "+startinput.getText());
+            pw.println("*  end city : "+endinput.getText());
+            pw.println("*  date  : "+dateinputt.getValue().toString());
+            pw.println("*  price : "+priceinput.getText()+"Dhs");
+            pw.println("*  Time : "+timeinput.getText());
+            pw.println("*  N° : "+numberofplace);
             pw.println("**************************************");
             pw.close();
             System.out.println("your tickt is ready");

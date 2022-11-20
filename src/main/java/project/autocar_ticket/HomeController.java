@@ -208,12 +208,11 @@ public class HomeController implements Initializable {
         }
 
 
-
     }
 
     void linechartinformation(){
 
-        this.barchatinfo.forEach((k,v) -> {
+        this.linechatinfo.forEach((k,v) -> {
             this.set2.getData().add(new XYChart.Data(k,v));
         });
 
