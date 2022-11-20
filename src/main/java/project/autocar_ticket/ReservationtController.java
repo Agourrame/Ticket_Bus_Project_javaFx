@@ -160,12 +160,12 @@ public class ReservationtController implements Initializable {
                 reserv.createNewFile();
                }
               PrintWriter pw=new PrintWriter(reserv);
-            pw.println("*************** "+java.time.LocalDate.now()+" ***************");
-            pw.println("*************** Welcom ***************");
+            pw.println("*************** "+java.time.LocalDate.now()+" *****************");
+            pw.println("  *************** Welcome ***************");
             pw.println("Start city : "+startinput.getText());
             pw.println("end city : "+endinput.getText());
-            pw.println("date start bus : "+dateinputt.getValue().toString());
-            pw.println("price : "+priceinput.getText());
+            pw.println("date  : "+dateinputt.getValue().toString());
+            pw.println("price : "+priceinput.getText()+"Dhs");
             pw.println("Time : "+timeinput.getText());
             pw.println("N° : "+numberofplace);
             pw.println("**************************************");
