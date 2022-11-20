@@ -192,9 +192,14 @@
                                     <Font name="System Bold" size="20.0" />
                                  </font>
                               </Label>
-                              <Label fx:id="Nbprofits" layoutX="79.0" layoutY="64.0" prefHeight="40.0" prefWidth="65.0" text="4" textAlignment="CENTER" textFill="WHITE">
+                              <Label fx:id="Nbprofits" layoutX="48.0" layoutY="64.0" prefHeight="40.0" prefWidth="52.0" text="100" textAlignment="CENTER" textFill="WHITE">
                                  <font>
                                     <Font name="System Bold" size="28.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="105.0" layoutY="64.0" prefHeight="40.0" prefWidth="71.0" text="MAD" textAlignment="CENTER" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="24.0" />
                                  </font>
                               </Label>
                            </children>
@@ -252,7 +257,7 @@
                                           <Font name="System Bold" size="20.0" />
                                        </font>
                                     </Label>
-                                    <ImageView fitHeight="32.0" fitWidth="39.0" layoutX="29.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+                                    <ImageView fitHeight="32.0" fitWidth="39.0" layoutX="36.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
                                           <Image url="@img/pngegg%20(1).png" />
                                        </image>
