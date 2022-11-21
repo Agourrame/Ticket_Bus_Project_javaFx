@@ -291,13 +291,18 @@ public class HomeController implements Initializable {
         navbarhomeinformation();
         LocalTime time = LocalTime.now();
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("HH:mm:ss");
-        this.timelabael.setText(java.time.LocalDate.now().toString());
-        this.ttlab.setText(time.format(formatter));
 
-        insertintobarchart();
-        barchartinformation();
-        insertintolinechart();
-        linechartinformation();
+
+
+
+
+          this.timelabael.setText(java.time.LocalDate.now().toString());
+          this.ttlab.setText(time.format(formatter));
+
+          insertintobarchart();
+          barchartinformation();
+          insertintolinechart();
+          linechartinformation();
 
 
 
