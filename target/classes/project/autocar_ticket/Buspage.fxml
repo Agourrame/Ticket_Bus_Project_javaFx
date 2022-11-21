@@ -16,11 +16,11 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="594.0" prefWidth="955.0" style="-fx-background-color: #005b96;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.autocar_ticket.BusController">
+<AnchorPane prefHeight="594.0" prefWidth="955.0" style="-fx-background-color: #005b96;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.autocar_ticket.BusController">
    <children>
       <AnchorPane layoutX="26.0" layoutY="24.0" prefHeight="70.0" prefWidth="200.0" style="-fx-background-color: #E9EEF2; -fx-background-radius: 20;" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
          <children>
-            <Text fill="#5b5b5b" layoutX="14.0" layoutY="43.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Autocar" textAlignment="CENTER" wrappingWidth="122.32293701171875">
+            <Text fill="#5b5b5b" layoutX="46.0" layoutY="46.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Autocar" textAlignment="CENTER" wrappingWidth="122.32293701171875">
                <font>
                   <Font name="System Bold" size="27.0" />
                </font>
@@ -47,29 +47,34 @@
                   </Button>
                </children>
             </HBox>
+            <ImageView fitHeight="32.0" fitWidth="39.0" layoutX="14.0" layoutY="19.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/school-bus-1759%20(1).png" />
+               </image>
+            </ImageView>
          </children>
       </AnchorPane>
       <AnchorPane layoutX="14.0" layoutY="97.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #E9EEF2; -fx-background-radius: 20;" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="95.0">
          <children>
-            <HBox alignment="CENTER" layoutX="26.0" layoutY="13.0" prefHeight="165.0" prefWidth="900.0" spacing="75.0" AnchorPane.bottomAnchor="311.0" AnchorPane.leftAnchor="6.0" AnchorPane.rightAnchor="6.0" AnchorPane.topAnchor="13.0">
+            <HBox alignment="CENTER" layoutX="26.0" layoutY="13.0" prefHeight="165.0" prefWidth="900.0" spacing="75.0" AnchorPane.bottomAnchor="311.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="13.0">
                <children>
                   <VBox prefHeight="210.0" prefWidth="210.0" spacing="20.0">
                      <children>
-                        <TextField fx:id="startplace" promptText="Start Place" styleClass="input" stylesheets="@Style.css" />
-                        <TextField fx:id="endplace" promptText="End Place" styleClass="input" stylesheets="@Style.css" />
-                        <ComboBox fx:id="chauffeur" editable="true" prefHeight="34.0" prefWidth="246.0" promptText="Chauffeur" style="-fx-background-radius: 15;" />
+                        <TextField fx:id="startplace" prefHeight="34.0" prefWidth="246.0" promptText="Start Place" />
+                        <TextField fx:id="endplace" prefHeight="34.0" prefWidth="246.0" promptText="End Place" />
+                        <ComboBox fx:id="chauffeur" editable="true" prefHeight="34.0" prefWidth="246.0" promptText="Chauffeur" />
                      </children>
                   </VBox>
                   <VBox prefHeight="210.0" prefWidth="220.0" spacing="20.0">
                      <children>
-                        <DatePicker fx:id="date" prefHeight="39.0" prefWidth="246.0" promptText="Date" style="-fx-background-radius: 15;" />
-                        <TextField fx:id="time" promptText="Time" styleClass="input" stylesheets="@Style.css" />
+                        <DatePicker fx:id="date" prefHeight="34.0" prefWidth="246.0" promptText="Date" />
+                        <TextField fx:id="time" prefHeight="34.0" prefWidth="246.0" promptText="Time" />
                      </children>
                   </VBox>
                   <VBox prefHeight="210.0" prefWidth="220.0" spacing="20.0">
                      <children>
-                        <TextField fx:id="price" prefWidth="301.0" promptText="Price" styleClass="input" stylesheets="@Style.css" />
-                        <TextField fx:id="nplace" promptText="N° Place" styleClass="input" stylesheets="@Style.css" />
+                        <TextField fx:id="price" prefHeight="34.0" prefWidth="246.0" promptText="Price" />
+                        <TextField fx:id="nplace" prefHeight="34.0" prefWidth="246.0" promptText="N° Place" />
                      </children>
                   </VBox>
                   <VBox alignment="TOP_RIGHT" prefHeight="210.0" prefWidth="228.0" spacing="20.0">

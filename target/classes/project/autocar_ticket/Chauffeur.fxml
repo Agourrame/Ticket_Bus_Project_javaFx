@@ -18,7 +18,7 @@
    <children>
       <AnchorPane layoutX="21.0" layoutY="6.0" prefHeight="70.0" prefWidth="200.0" style="-fx-background-color: #E9EEF2; -fx-background-radius: 20;" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
          <children>
-            <Text fill="#5b5b5b" layoutX="14.0" layoutY="45.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Chauffeur" textAlignment="CENTER" wrappingWidth="140.53076171875">
+            <Text fill="#5b5b5b" layoutX="46.0" layoutY="46.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Chauffeur" textAlignment="CENTER" wrappingWidth="140.53076171875">
                <font>
                   <Font name="System Bold" size="27.0" />
                </font>
@@ -45,6 +45,11 @@
                   </Button>
                </children>
             </HBox>
+            <ImageView fitHeight="32.0" fitWidth="39.0" layoutX="14.0" layoutY="19.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/manage-315.png" />
+               </image>
+            </ImageView>
          </children>
       </AnchorPane>
       <AnchorPane layoutX="10.0" layoutY="128.0" prefHeight="355.0" prefWidth="945.0" style="-fx-background-color: #E9EEF2; -fx-background-radius: 20;" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="170.0">
