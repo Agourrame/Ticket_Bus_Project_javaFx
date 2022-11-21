@@ -89,7 +89,7 @@
                               <Font name="System Bold" size="20.0" />
                            </font>
                            <graphic>
-                              <ImageView fitHeight="44.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                              <ImageView fitHeight="30.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
                                     <Image url="@img/import-arrow-14571.png" />
                                  </image>
