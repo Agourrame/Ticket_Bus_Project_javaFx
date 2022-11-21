@@ -29,6 +29,8 @@ import java.util.HashMap;
 import java.util.ResourceBundle;
 
 public class HomeController implements Initializable {
+    private double xOffset=0;
+    private double yOffset=0;
     @FXML
     void minimize(ActionEvent event){
         Stage stage;
@@ -184,6 +186,15 @@ public class HomeController implements Initializable {
             s1.setTitle("BUS BLADI");
             s1.setScene(scene);
             s1.initStyle(StageStyle.UNDECORATED);
+
+            scene.setOnMousePressed(mouseEvent -> {
+                xOffset=mouseEvent.getScreenX();
+                yOffset=mouseEvent.getScreenY();
+            });
+            scene.setOnMouseDragged(mouseEvent -> {
+                s1.setX(mouseEvent.getSceneX() - xOffset);
+                s1.setY(mouseEvent.getSceneY() - yOffset);
+            });
             s1.show();
         }catch (Exception e){
             System.out.println(e);
@@ -230,7 +241,12 @@ public class HomeController implements Initializable {
     @FXML
     private void home(MouseEvent event){
 
-         AllPage.setCenter(homepage);
+        AllPage.setCenter(homepage);
+
+        LocalTime time = LocalTime.now();
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("HH:mm:ss");
+        this.timelabael.setText(java.time.LocalDate.now().toString());
+        this.ttlab.setText(time.format(formatter));
     }
     @FXML
     private void chauffeur(MouseEvent event){
@@ -264,7 +280,7 @@ public class HomeController implements Initializable {
     }
 
     @Override
-    public void initialize(URL url, ResourceBundle resourceBundle) {
+    public void initialize(URL url, ResourceBundle resourceBundle){
         try {
             con = DriverManager.getConnection(this.url,username,password);
             System.out.println("Good");
@@ -282,6 +298,8 @@ public class HomeController implements Initializable {
         barchartinformation();
         insertintolinechart();
         linechartinformation();
+
+
 
 
     }

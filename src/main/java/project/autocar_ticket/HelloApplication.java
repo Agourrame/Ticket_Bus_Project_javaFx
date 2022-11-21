@@ -2,6 +2,7 @@ package project.autocar_ticket;
 
 import javafx.application.Application;
 import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
@@ -15,7 +16,8 @@ import javafx.stage.StageStyle;
 import java.io.IOException;
 
 public class HelloApplication extends Application {
-
+    private double xOffset=0;
+    private double yOffset=0;
     @Override
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("Loginpage.fxml"));
@@ -24,8 +26,18 @@ public class HelloApplication extends Application {
         Image image=new Image(getClass().getResourceAsStream("img/app logo.png"));
         stage.getIcons().add(image);
         stage.setTitle("BUS BLADI");
-        stage.setScene(scene);
         stage.initStyle(StageStyle.UNDECORATED);
+
+        scene.setOnMousePressed(mouseEvent -> {
+            xOffset=mouseEvent.getScreenX();
+            yOffset=mouseEvent.getScreenY();
+        });
+        scene.setOnMouseDragged(mouseEvent -> {
+            stage.setX(mouseEvent.getSceneX() - xOffset);
+            stage.setY(mouseEvent.getSceneY() - yOffset);
+        });
+
+        stage.setScene(scene);
         stage.show();
     }
 

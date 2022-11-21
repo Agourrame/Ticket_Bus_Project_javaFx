@@ -1,9 +1,9 @@
 *************** 2022-11-21 ************
 ***************** Welcome *************
-*  Start city : taroudant
-*  end city : titwan
-*  date  : 2022-11-23
-*  price : 80Dhs
-*  Time : 12:30
-*  N° : 45
+*  Start city : dufkhl
+*  end city : fu
+*  date  : 2022-11-09
+*  price : 55Dhs
+*  Time : 00:00:00
+*  N° : 20
 **************************************
