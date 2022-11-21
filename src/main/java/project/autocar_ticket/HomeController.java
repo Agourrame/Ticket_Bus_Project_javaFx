@@ -241,7 +241,12 @@ public class HomeController implements Initializable {
     @FXML
     private void home(MouseEvent event){
 
-         AllPage.setCenter(homepage);
+        AllPage.setCenter(homepage);
+
+        LocalTime time = LocalTime.now();
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("HH:mm:ss");
+        this.timelabael.setText(java.time.LocalDate.now().toString());
+        this.ttlab.setText(time.format(formatter));
     }
     @FXML
     private void chauffeur(MouseEvent event){
@@ -275,7 +280,7 @@ public class HomeController implements Initializable {
     }
 
     @Override
-    public void initialize(URL url, ResourceBundle resourceBundle) {
+    public void initialize(URL url, ResourceBundle resourceBundle){
         try {
             con = DriverManager.getConnection(this.url,username,password);
             System.out.println("Good");
@@ -293,6 +298,8 @@ public class HomeController implements Initializable {
         barchartinformation();
         insertintolinechart();
         linechartinformation();
+
+
 
 
     }
