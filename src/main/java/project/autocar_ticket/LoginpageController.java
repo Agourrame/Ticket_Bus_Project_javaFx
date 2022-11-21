@@ -21,7 +21,8 @@ import javafx.stage.StageStyle;
 
 public class LoginpageController implements Initializable {
 
-
+    private double xOffset=0;
+    private double yOffset=0;
     @FXML
     private PasswordField passinput;
 
@@ -46,6 +47,15 @@ public class LoginpageController implements Initializable {
                stage.setTitle("BUS BLADI");
                stage.setScene(scene);
                stage.initStyle(StageStyle.UNDECORATED);
+
+               scene.setOnMousePressed(mouseEvent -> {
+                   xOffset=mouseEvent.getScreenX();
+                   yOffset=mouseEvent.getScreenY();
+               });
+               scene.setOnMouseDragged(mouseEvent -> {
+                   stage.setX(mouseEvent.getSceneX() - xOffset);
+                   stage.setY(mouseEvent.getSceneY() - yOffset);
+               });
                stage.show();
 
            }catch (Exception e){

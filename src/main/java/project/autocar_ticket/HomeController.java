@@ -29,6 +29,8 @@ import java.util.HashMap;
 import java.util.ResourceBundle;
 
 public class HomeController implements Initializable {
+    private double xOffset=0;
+    private double yOffset=0;
     @FXML
     void minimize(ActionEvent event){
         Stage stage;
@@ -184,6 +186,15 @@ public class HomeController implements Initializable {
             s1.setTitle("BUS BLADI");
             s1.setScene(scene);
             s1.initStyle(StageStyle.UNDECORATED);
+
+            scene.setOnMousePressed(mouseEvent -> {
+                xOffset=mouseEvent.getScreenX();
+                yOffset=mouseEvent.getScreenY();
+            });
+            scene.setOnMouseDragged(mouseEvent -> {
+                s1.setX(mouseEvent.getSceneX() - xOffset);
+                s1.setY(mouseEvent.getSceneY() - yOffset);
+            });
             s1.show();
         }catch (Exception e){
             System.out.println(e);
