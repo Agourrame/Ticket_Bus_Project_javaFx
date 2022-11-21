@@ -61,7 +61,7 @@
               <columns>
                 <TableColumn fx:id="idcol" prefWidth="102.22219848632812" text="id" />
                 <TableColumn fx:id="namecol" prefWidth="126.22227478027344" text="name" />
-                  <TableColumn fx:id="cincol" prefWidth="137.7777099609375" text="cin" />
+                  <TableColumn fx:id="cincol" prefWidth="137.7777099609375" style="-fx-text-alignment: center;" text="cin" />
                   <TableColumn fx:id="datecol" prefWidth="123.11114501953125" text="date" />
                   <TableColumn fx:id="startcol" prefWidth="117.33331298828125" text="start place" />
                   <TableColumn fx:id="endcol" prefWidth="123.11114501953125" text="end place" />
