@@ -67,7 +67,7 @@ public class BusController {
 
     void getStartcity(){
         try {
-            stmt=con.prepareStatement("select nom from chauffeur");
+            stmt=con.prepareStatement("select chauffeur.nom from chauffeur,bus where chauffeur.nom!=bus.chauffeur group by chauffeur.nom");
             rs=stmt.executeQuery();
             while (rs.next()){
                 this.chauff.add(rs.getString("nom"));
