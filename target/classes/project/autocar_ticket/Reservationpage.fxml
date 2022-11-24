@@ -79,13 +79,13 @@
                         <Font name="System Bold" size="18.0" />
                      </font>
                   </Text>
-                  <TextField fx:id="nameinput" prefHeight="35.0" prefWidth="200.0" promptText="Name" />
-                  <TextField fx:id="cininput" prefHeight="35.0" prefWidth="200.0" promptText="CIN" />
-                  <TextField fx:id="startinput" prefHeight="35.0" promptText="Start Place" />
-                  <TextField fx:id="endinput" prefHeight="35.0" promptText="End Place" />
-                  <DatePicker fx:id="dateinputt" prefHeight="35.0" prefWidth="206.0" />
-                  <TextField fx:id="priceinput" prefHeight="35.0" promptText="Price" />
-                  <TextField fx:id="timeinput" prefHeight="35.0" promptText="Time" />
+                  <TextField fx:id="nameinput" prefHeight="35.0" prefWidth="200.0" promptText="Name" styleClass="inputfiald" stylesheets="@Style.css" />
+                  <TextField fx:id="cininput" prefHeight="35.0" prefWidth="200.0" promptText="CIN" styleClass="inputfiald" stylesheets="@Style.css" />
+                  <TextField fx:id="startinput" prefHeight="35.0" promptText="Start Place" styleClass="inputfiald" stylesheets="@Style.css" />
+                  <TextField fx:id="endinput" prefHeight="35.0" promptText="End Place" styleClass="inputfiald" stylesheets="@Style.css" />
+                  <DatePicker fx:id="dateinputt" prefHeight="35.0" prefWidth="206.0" stylesheets="@Style.css" />
+                  <TextField fx:id="priceinput" prefHeight="35.0" promptText="Price" styleClass="inputfiald" stylesheets="@Style.css" />
+                  <TextField fx:id="timeinput" prefHeight="35.0" promptText="Time" styleClass="inputfiald" stylesheets="@Style.css" />
                   <Button mnemonicParsing="false" onMouseClicked="#reserver" prefHeight="50.0" prefWidth="200.0" styleClass="searchbtn" stylesheets="@Style.css" text="Reserver">
                      <font>
                         <Font name="System Bold" size="14.0" />

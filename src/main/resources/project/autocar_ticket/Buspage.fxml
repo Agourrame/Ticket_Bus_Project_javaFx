@@ -60,21 +60,21 @@
                <children>
                   <VBox prefHeight="210.0" prefWidth="210.0" spacing="20.0">
                      <children>
-                        <TextField fx:id="startplace" prefHeight="34.0" prefWidth="246.0" promptText="Start Place" />
-                        <TextField fx:id="endplace" prefHeight="34.0" prefWidth="246.0" promptText="End Place" />
+                        <TextField fx:id="startplace" prefHeight="34.0" prefWidth="246.0" promptText="Start Place" styleClass="inputfiald" stylesheets="@Style.css" />
+                        <TextField fx:id="endplace" prefHeight="34.0" prefWidth="246.0" promptText="End Place" styleClass="inputfiald" stylesheets="@Style.css" />
                         <ComboBox fx:id="chauffeur" editable="true" prefHeight="34.0" prefWidth="246.0" promptText="Chauffeur" />
                      </children>
                   </VBox>
                   <VBox prefHeight="210.0" prefWidth="220.0" spacing="20.0">
                      <children>
                         <DatePicker fx:id="date" prefHeight="34.0" prefWidth="246.0" promptText="Date" />
-                        <TextField fx:id="time" prefHeight="34.0" prefWidth="246.0" promptText="Time" />
+                        <TextField fx:id="time" prefHeight="34.0" prefWidth="246.0" promptText="Time" styleClass="inputfiald" stylesheets="@Style.css" />
                      </children>
                   </VBox>
                   <VBox prefHeight="210.0" prefWidth="220.0" spacing="20.0">
                      <children>
-                        <TextField fx:id="price" prefHeight="34.0" prefWidth="246.0" promptText="Price" />
-                        <TextField fx:id="nplace" prefHeight="34.0" prefWidth="246.0" promptText="N° Place" />
+                        <TextField fx:id="price" prefHeight="34.0" prefWidth="246.0" promptText="Price" styleClass="inputfiald" stylesheets="@Style.css" />
+                        <TextField fx:id="nplace" prefHeight="34.0" prefWidth="246.0" promptText="N° Place" styleClass="inputfiald" stylesheets="@Style.css" />
                      </children>
                   </VBox>
                   <VBox alignment="TOP_RIGHT" prefHeight="210.0" prefWidth="228.0" spacing="20.0">
