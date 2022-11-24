@@ -67,7 +67,7 @@ public class BusController {
 
     void getStartcity(){
         try {
-            stmt=con.prepareStatement("select chauffeur.nom from chauffeur,bus where chauffeur.nom!=bus.chauffeur group by chauffeur.nom");
+            stmt=con.prepareStatement("SELECT nom FROM chauffeur WHERE nom not in(select chauffeur from bus);");
             rs=stmt.executeQuery();
             while (rs.next()){
                 this.chauff.add(rs.getString("nom"));
