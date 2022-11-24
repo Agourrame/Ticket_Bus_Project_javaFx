@@ -137,7 +137,7 @@
                   </VBox>
                </children>
             </HBox>
-            <HBox layoutX="25.0" layoutY="255.0" prefHeight="224.0" prefWidth="883.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="255.0">
+            <HBox layoutX="25.0" layoutY="252.0" prefHeight="227.0" prefWidth="875.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="252.0">
                <children>
                   <TableView fx:id="tableautocar" blendMode="HARD_LIGHT" cacheShape="false" centerShape="false" focusTraversable="false" prefHeight="226.0" scaleShape="false" stylesheets="@Style.css">
                     <columns>
@@ -154,15 +154,22 @@
                </children>
             </HBox>
             <Pane layoutY="190.0" prefHeight="4.0" prefWidth="200.0" style="-fx-background-color: #005b96;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
-            <HBox alignment="CENTER" layoutX="26.0" layoutY="194.0" prefHeight="59.0" prefWidth="568.0" spacing="15.0" AnchorPane.leftAnchor="30.0">
+            <HBox alignment="CENTER" layoutX="26.0" layoutY="194.0" prefHeight="61.0" prefWidth="568.0" spacing="15.0" AnchorPane.leftAnchor="30.0">
                <children>
                   <ComboBox fx:id="startt" blendMode="MULTIPLY" editable="true" prefHeight="33.0" prefWidth="148.0" promptText="Start Place" />
                   <ComboBox fx:id="endd" blendMode="MULTIPLY" editable="true" prefHeight="33.0" prefWidth="148.0" promptText="End Place" />
                   <DatePicker fx:id="datee" blendMode="MULTIPLY" prefHeight="33.0" prefWidth="148.0" promptText="Date" />
-                  <Button mnemonicParsing="false" onAction="#searche" prefHeight="33.0" prefWidth="75.0" styleClass="btn_refresh" stylesheets="@Style.css" text="Seach" textFill="#343434">
+                  <Button mnemonicParsing="false" onAction="#searche" prefHeight="46.0" prefWidth="45.0" style="-fx-background-color: transparent;" textFill="#343434">
                      <font>
                         <Font name="System Bold" size="14.0" />
                      </font>
+                     <graphic>
+                        <ImageView fitHeight="37.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@img/search-3825.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
                   </Button>
                </children>
             </HBox>

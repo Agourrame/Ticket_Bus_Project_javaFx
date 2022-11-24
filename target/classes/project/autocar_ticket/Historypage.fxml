@@ -52,10 +52,17 @@
       <AnchorPane layoutX="243.0" layoutY="105.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #E9EEF2; -fx-background-radius: 20;" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="95.0">
          <children>
             <DatePicker fx:id="datesearch" blendMode="MULTIPLY" layoutX="31.0" layoutY="24.0" prefHeight="40.0" prefWidth="238.0" AnchorPane.leftAnchor="30.0" />
-            <Button layoutX="287.0" layoutY="24.0" mnemonicParsing="false" onMouseClicked="#searchbtn" prefHeight="40.0" prefWidth="100.0" styleClass="btn_refresh" stylesheets="@Style.css" text="Search">
+            <Button layoutX="275.0" layoutY="14.0" mnemonicParsing="false" onMouseClicked="#searchbtn" prefHeight="57.0" prefWidth="57.0" style="-fx-background-color: transparent;">
                <font>
                   <Font name="System Bold" size="16.0" />
                </font>
+               <graphic>
+                  <ImageView fitHeight="42.0" fitWidth="47.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@img/search-3825.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
             </Button>
             <TableView fx:id="tablehistory" blendMode="HARD_LIGHT" cacheShape="false" centerShape="false" focusTraversable="false" layoutX="30.0" layoutY="93.0" prefHeight="437.0" prefWidth="804.0" scaleShape="false">
               <columns>
