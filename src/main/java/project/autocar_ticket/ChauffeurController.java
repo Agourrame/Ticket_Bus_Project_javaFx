@@ -61,6 +61,12 @@ public class ChauffeurController implements Initializable {
     private TextField srcname;
 
     //--------------------------
+
+    void emptyinput(){
+        this.nameinput.clear();
+        this.cininput.clear();
+    }
+
     @FXML
     void addChauffeur(ActionEvent event){
         try {
@@ -71,6 +77,7 @@ public class ChauffeurController implements Initializable {
         }
         clear();
         uploadChauffeurInfo();
+        emptyinput();
     }
     @FXML
     void updateChauffeur(ActionEvent event) {
@@ -83,6 +90,7 @@ public class ChauffeurController implements Initializable {
         }
         clear();
         uploadChauffeurInfo();
+        emptyinput();
     }
     @FXML
     void deleteChauffeur(ActionEvent event) {
@@ -95,6 +103,7 @@ public class ChauffeurController implements Initializable {
         }
         clear();
         uploadChauffeurInfo();
+        emptyinput();
     }
     void clear(){
         this.table.getItems().clear();
