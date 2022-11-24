@@ -56,18 +56,18 @@
       </AnchorPane>
       <AnchorPane layoutX="14.0" layoutY="97.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #E9EEF2; -fx-background-radius: 20;" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="95.0">
          <children>
-            <HBox alignment="CENTER" layoutX="26.0" layoutY="13.0" prefHeight="165.0" prefWidth="900.0" spacing="75.0" AnchorPane.bottomAnchor="311.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="13.0">
+            <HBox alignment="CENTER" cacheShape="false" centerShape="false" layoutX="26.0" layoutY="13.0" prefHeight="165.0" prefWidth="900.0" spacing="75.0" AnchorPane.bottomAnchor="311.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="13.0">
                <children>
                   <VBox prefHeight="210.0" prefWidth="210.0" spacing="20.0">
                      <children>
                         <TextField fx:id="startplace" prefHeight="34.0" prefWidth="246.0" promptText="Start Place" styleClass="inputfiald" stylesheets="@Style.css" />
                         <TextField fx:id="endplace" prefHeight="34.0" prefWidth="246.0" promptText="End Place" styleClass="inputfiald" stylesheets="@Style.css" />
-                        <ComboBox fx:id="chauffeur" editable="true" prefHeight="34.0" prefWidth="246.0" promptText="Chauffeur" />
+                        <ComboBox fx:id="chauffeur" blendMode="MULTIPLY" editable="true" prefHeight="34.0" prefWidth="246.0" promptText="Chauffeur" />
                      </children>
                   </VBox>
                   <VBox prefHeight="210.0" prefWidth="220.0" spacing="20.0">
                      <children>
-                        <DatePicker fx:id="date" prefHeight="34.0" prefWidth="246.0" promptText="Date" />
+                        <DatePicker fx:id="date" blendMode="MULTIPLY" prefHeight="34.0" prefWidth="246.0" promptText="Date" />
                         <TextField fx:id="time" prefHeight="34.0" prefWidth="246.0" promptText="Time" styleClass="inputfiald" stylesheets="@Style.css" />
                      </children>
                   </VBox>
@@ -137,9 +137,9 @@
                   </VBox>
                </children>
             </HBox>
-            <HBox alignment="CENTER" layoutX="25.0" layoutY="238.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="27.0" AnchorPane.topAnchor="238.0">
+            <HBox layoutX="25.0" layoutY="255.0" prefHeight="224.0" prefWidth="883.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="255.0">
                <children>
-                  <TableView fx:id="tableautocar" blendMode="HARD_LIGHT" cacheShape="false" centerShape="false" focusTraversable="false" prefHeight="241.0" prefWidth="883.0" scaleShape="false">
+                  <TableView fx:id="tableautocar" blendMode="HARD_LIGHT" cacheShape="false" centerShape="false" focusTraversable="false" prefHeight="226.0" scaleShape="false" stylesheets="@Style.css">
                     <columns>
                       <TableColumn fx:id="colmunid" prefWidth="47.999996185302734" text="R.N" />
                       <TableColumn fx:id="colmunstartplace" prefWidth="127.19998168945312" text="Start Place" />
@@ -154,19 +154,15 @@
                </children>
             </HBox>
             <Pane layoutY="190.0" prefHeight="4.0" prefWidth="200.0" style="-fx-background-color: #005b96;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
-            <HBox alignment="CENTER" layoutX="26.0" layoutY="194.0" prefHeight="43.0" prefWidth="564.0" spacing="15.0" AnchorPane.leftAnchor="26.0" AnchorPane.rightAnchor="345.0">
+            <HBox alignment="CENTER" layoutX="26.0" layoutY="194.0" prefHeight="59.0" prefWidth="568.0" spacing="15.0" AnchorPane.leftAnchor="30.0">
                <children>
-                  <ComboBox fx:id="startt" blendMode="HARD_LIGHT" editable="true" prefWidth="150.0" promptText="Start Place" />
-                  <ComboBox fx:id="endd" blendMode="HARD_LIGHT" editable="true" prefWidth="150.0" promptText="End Place" />
-                  <DatePicker fx:id="datee" blendMode="HARD_LIGHT" promptText="Date" />
-                  <Button mnemonicParsing="false" onAction="#searche" prefHeight="33.0" prefWidth="51.0" style="-fx-background-color: transparant;">
-                     <graphic>
-                        <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@img/icons8-export-collections-48 (1).png" />
-                           </image>
-                        </ImageView>
-                     </graphic>
+                  <ComboBox fx:id="startt" blendMode="MULTIPLY" editable="true" prefHeight="33.0" prefWidth="148.0" promptText="Start Place" />
+                  <ComboBox fx:id="endd" blendMode="MULTIPLY" editable="true" prefHeight="33.0" prefWidth="148.0" promptText="End Place" />
+                  <DatePicker fx:id="datee" blendMode="MULTIPLY" prefHeight="33.0" prefWidth="148.0" promptText="Date" />
+                  <Button mnemonicParsing="false" onAction="#searche" prefHeight="33.0" prefWidth="75.0" styleClass="btn_refresh" stylesheets="@Style.css" text="Seach" textFill="#343434">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
                   </Button>
                </children>
             </HBox>

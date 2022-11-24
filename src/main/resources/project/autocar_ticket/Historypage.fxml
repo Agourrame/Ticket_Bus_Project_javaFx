@@ -51,7 +51,7 @@
       </AnchorPane>
       <AnchorPane layoutX="243.0" layoutY="105.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #E9EEF2; -fx-background-radius: 20;" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="95.0">
          <children>
-            <DatePicker fx:id="datesearch" blendMode="HARD_LIGHT" layoutX="31.0" layoutY="24.0" prefHeight="40.0" prefWidth="238.0" AnchorPane.leftAnchor="30.0" />
+            <DatePicker fx:id="datesearch" blendMode="MULTIPLY" layoutX="31.0" layoutY="24.0" prefHeight="40.0" prefWidth="238.0" AnchorPane.leftAnchor="30.0" />
             <Button layoutX="287.0" layoutY="24.0" mnemonicParsing="false" onMouseClicked="#searchbtn" prefHeight="40.0" prefWidth="100.0" styleClass="btn_refresh" stylesheets="@Style.css" text="Search">
                <font>
                   <Font name="System Bold" size="16.0" />

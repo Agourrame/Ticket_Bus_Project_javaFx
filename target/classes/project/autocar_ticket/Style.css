@@ -103,3 +103,9 @@
 -fx-border-color: #5b5b5b;
 -fx-border-style: hidden hidden solid hidden;
 }
+
+
+table {
+    border-spacing: 10px;
+    border-collapse: separate;
+}
