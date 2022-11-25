@@ -1,11 +1,14 @@
 package project.autocar_ticket;
 import Modules.History;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Scene;
+import javafx.scene.chart.PieChart;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
@@ -49,6 +52,11 @@ public class HistorypageController implements Initializable {
     ResultSet rs;
 
     //----------------------------------------------
+
+    @FXML
+    private PieChart piecity;
+
+    //--------------------------
 
     @FXML
     private TableColumn<History, String> cincol;
@@ -128,5 +136,16 @@ public class HistorypageController implements Initializable {
         startcol.setCellValueFactory(new PropertyValueFactory("start"));
         endcol.setCellValueFactory(new PropertyValueFactory("end"));
         timecol.setCellValueFactory(new PropertyValueFactory("time"));
+
+
+        ObservableList<PieChart.Data> piechartdata
+                = FXCollections.observableArrayList(
+                new PieChart.Data("taroudant",13),
+                new PieChart.Data("agadir",20),
+                new PieChart.Data("oujda",25),
+                new PieChart.Data("warzazat",10)
+        );
+
+        piecity.setData(piechartdata);
     }
 }
