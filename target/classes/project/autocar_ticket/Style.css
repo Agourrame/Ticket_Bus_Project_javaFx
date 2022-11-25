@@ -96,3 +96,16 @@
 -fx-pref-height:30;
 -fx-text-fill: white;
 }
+
+.inputfiald{
+-fx-background-color: transparent;
+-fx-border-width: 1 ;
+-fx-border-color: #5b5b5b;
+-fx-border-style: hidden hidden solid hidden;
+}
+
+
+table {
+    border-spacing: 10px;
+    border-collapse: separate;
+}

@@ -94,7 +94,7 @@
             </VBox>
             <VBox layoutX="31.0" layoutY="38.0" prefHeight="78.0" prefWidth="200.0">
                <children>
-                  <TextField fx:id="nameinput" prefHeight="33.0" prefWidth="200.0" promptText="Name">
+                  <TextField fx:id="nameinput" prefHeight="33.0" prefWidth="200.0" promptText="Name" styleClass="inputfiald" stylesheets="@Style.css">
                      <opaqueInsets>
                         <Insets />
                      </opaqueInsets>
@@ -102,7 +102,7 @@
                         <Insets />
                      </VBox.margin>
                   </TextField>
-                  <TextField fx:id="cininput" prefHeight="34.0" prefWidth="200.0" promptText="CIN">
+                  <TextField fx:id="cininput" prefHeight="34.0" prefWidth="200.0" promptText="CIN" styleClass="inputfiald" stylesheets="@Style.css">
                      <VBox.margin>
                         <Insets top="10.0" />
                      </VBox.margin>
@@ -128,14 +128,21 @@
       </AnchorPane>
       <AnchorPane layoutX="10.0" layoutY="94.0" prefHeight="70.0" prefWidth="200.0" style="-fx-background-color: #E9EEF2; -fx-background-radius: 20;" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="90.0">
          <children>
-            <HBox layoutX="31.0" layoutY="17.0" prefHeight="43.0" prefWidth="450.0" spacing="15.0">
+            <HBox layoutX="31.0" layoutY="10.0" prefHeight="50.0" prefWidth="450.0" spacing="15.0">
                <children>
-                  <TextField fx:id="srcname" blendMode="HARD_LIGHT" prefHeight="38.0" promptText="Name" />
-                  <TextField fx:id="srccin" blendMode="HARD_LIGHT" prefHeight="38.0" promptText="CIN" />
-                  <Button mnemonicParsing="false" onAction="#search" prefHeight="38.0" prefWidth="108.0" styleClass="btn_refresh" stylesheets="@Style.css" text="Search" textFill="#797979">
+                  <TextField fx:id="srcname" prefHeight="38.0" promptText="Name" styleClass="inputfiald" stylesheets="@Style.css" />
+                  <TextField fx:id="srccin" prefHeight="38.0" promptText="CIN" styleClass="inputfiald" stylesheets="@Style.css" />
+                  <Button mnemonicParsing="false" onAction="#search" prefHeight="51.0" prefWidth="54.0" style="-fx-background-color: transparent;" textFill="#797979">
                      <font>
                         <Font name="System Bold" size="17.0" />
                      </font>
+                     <graphic>
+                        <ImageView fitHeight="32.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@img/search-3825.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
                   </Button>
                </children>
             </HBox>
