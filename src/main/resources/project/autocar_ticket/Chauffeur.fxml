@@ -14,7 +14,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="542.0" prefWidth="965.0" style="-fx-background-color: #005b96;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.autocar_ticket.ChauffeurController">
+<AnchorPane prefHeight="542.0" prefWidth="965.0" style="-fx-background-color: #005b96;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.autocar_ticket.ChauffeurController">
    <children>
       <AnchorPane layoutX="21.0" layoutY="6.0" prefHeight="70.0" prefWidth="200.0" style="-fx-background-color: #E9EEF2; -fx-background-radius: 20;" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
          <children>
@@ -54,14 +54,14 @@
       </AnchorPane>
       <AnchorPane layoutX="10.0" layoutY="128.0" prefHeight="355.0" prefWidth="945.0" style="-fx-background-color: #E9EEF2; -fx-background-radius: 20;" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="170.0">
          <children>
-            <TableView fx:id="table" blendMode="HARD_LIGHT" cacheShape="false" centerShape="false" focusTraversable="false" layoutX="294.0" layoutY="38.0" prefHeight="263.0" prefWidth="472.0" scaleShape="false">
+            <TableView fx:id="table" blendMode="HARD_LIGHT" cacheShape="false" centerShape="false" focusTraversable="false" layoutX="14.0" layoutY="29.0" prefHeight="263.0" prefWidth="638.0" scaleShape="false">
               <columns>
-                <TableColumn fx:id="tableid" prefWidth="142.66668701171875" text="Id" />
-                <TableColumn fx:id="tablename" prefWidth="162.66668701171875" text="Name" />
-                  <TableColumn fx:id="tablecin" prefWidth="165.77777099609375" text="CIN" />
+                <TableColumn fx:id="tableid" prefWidth="133.5999755859375" text="Id" />
+                <TableColumn fx:id="tablename" prefWidth="282.4000549316406" text="Name" />
+                  <TableColumn fx:id="tablecin" prefWidth="222.4000244140625" text="CIN" />
               </columns>
             </TableView>
-            <VBox layoutX="78.0" layoutY="150.0" prefHeight="138.0" prefWidth="156.0" spacing="20.0">
+            <VBox layoutX="730.0" layoutY="137.0" prefHeight="138.0" prefWidth="158.0" spacing="20.0">
                <children>
                   <Button mnemonicParsing="false" onAction="#addChauffeur" prefHeight="26.0" prefWidth="212.0" stylesheets="@Style.css" text="Add Chauffeur">
                      <font>
@@ -92,7 +92,7 @@
                   </Button>
                </children>
             </VBox>
-            <VBox layoutX="31.0" layoutY="38.0" prefHeight="78.0" prefWidth="200.0">
+            <VBox layoutX="689.0" layoutY="29.0" prefHeight="78.0" prefWidth="200.0">
                <children>
                   <TextField fx:id="nameinput" prefHeight="33.0" prefWidth="200.0" promptText="Name" styleClass="inputfiald" stylesheets="@Style.css">
                      <opaqueInsets>
@@ -109,17 +109,17 @@
                   </TextField>
                </children>
             </VBox>
-            <ImageView fitHeight="36.0" fitWidth="37.0" layoutX="31.0" layoutY="150.0">
+            <ImageView fitHeight="36.0" fitWidth="37.0" layoutX="677.0" layoutY="137.0">
                <image>
                   <Image url="@img/addicon.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="36.0" fitWidth="37.0" layoutX="31.0" layoutY="201.0">
+            <ImageView fitHeight="36.0" fitWidth="37.0" layoutX="677.0" layoutY="188.0">
                <image>
                   <Image url="@img/updateicon.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="43.0" fitWidth="45.0" layoutX="26.0" layoutY="250.0">
+            <ImageView fitHeight="43.0" fitWidth="45.0" layoutX="673.0" layoutY="239.0">
                <image>
                   <Image url="@img/removeicon.png" />
                </image>
@@ -128,9 +128,8 @@
       </AnchorPane>
       <AnchorPane layoutX="10.0" layoutY="94.0" prefHeight="70.0" prefWidth="200.0" style="-fx-background-color: #E9EEF2; -fx-background-radius: 20;" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="90.0">
          <children>
-            <HBox layoutX="31.0" layoutY="10.0" prefHeight="50.0" prefWidth="450.0" spacing="15.0">
+            <HBox layoutX="14.0" layoutY="10.0" prefHeight="50.0" prefWidth="221.0" spacing="15.0">
                <children>
-                  <TextField fx:id="srcname" prefHeight="38.0" promptText="Name" styleClass="inputfiald" stylesheets="@Style.css" />
                   <TextField fx:id="srccin" prefHeight="38.0" promptText="CIN" styleClass="inputfiald" stylesheets="@Style.css" />
                   <Button mnemonicParsing="false" onAction="#search" prefHeight="51.0" prefWidth="54.0" style="-fx-background-color: transparent;" textFill="#797979">
                      <font>

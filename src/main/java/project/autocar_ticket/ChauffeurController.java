@@ -137,7 +137,7 @@ public class ChauffeurController implements Initializable {
     public void search(ActionEvent actionEvent) {
         clear();
         try {
-            stmt = con.prepareStatement("select * from `chauffeur` where cin='"+srccin.getText()+"' OR nom='"+srcname.getText()+"'");
+            stmt = con.prepareStatement("select * from `chauffeur` where cin='"+srccin.getText()+"'");
             rs = stmt.executeQuery();
 
             while (rs.next()) {
