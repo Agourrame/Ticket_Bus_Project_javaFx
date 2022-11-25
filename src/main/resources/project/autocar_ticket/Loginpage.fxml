@@ -24,7 +24,7 @@
                </children></AnchorPane>
             <AnchorPane prefHeight="300.0" prefWidth="300.0" style="-fx-background-color: #E9EEF2;">
                <children>
-                  <VBox layoutX="32.0" layoutY="43.0" prefHeight="200.0" prefWidth="100.0" spacing="25.0" AnchorPane.bottomAnchor="80.0" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="80.0">
+                  <VBox layoutX="32.0" layoutY="43.0" prefHeight="200.0" prefWidth="100.0" spacing="25.0" AnchorPane.bottomAnchor="80.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="80.0">
                      <children>
                         <Text fill="#686868" strokeType="OUTSIDE" strokeWidth="0.0" text="Log in" textAlignment="CENTER" wrappingWidth="219.91448974609375">
                            <font>
@@ -62,6 +62,16 @@
                         </Button>
                      </children>
                   </HBox>
+                  <ImageView fitHeight="28.0" fitWidth="28.0" layoutX="14.0" layoutY="165.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@img/user-login-security-11955.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="34.0" fitWidth="28.0" layoutX="14.0" layoutY="225.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@img/password-11942.png" />
+                     </image>
+                  </ImageView>
                </children>
             </AnchorPane>
          </children>
