@@ -2,10 +2,13 @@ package project.autocar_ticket;
 
 import Modules.Bus;
 import Modules.chauffeur;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
+import javafx.scene.chart.PieChart;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
@@ -39,6 +42,7 @@ public class ChauffeurController implements Initializable {
     ResultSet rs;
 
     //--------------------------
+
     @FXML
     private TextField nameinput;
     @FXML
@@ -167,6 +171,9 @@ public class ChauffeurController implements Initializable {
         tableid.setCellValueFactory(new PropertyValueFactory<>("id"));
         tablename.setCellValueFactory(new PropertyValueFactory<>("nom"));
         tablecin.setCellValueFactory(new PropertyValueFactory<>("cin"));
+
+
+
 
     }
 }
