@@ -1,0 +1,24 @@
+*************** 2022-12-12 ***********
+**************************************
+***************** 1 ***************
+N° Ticket     :
+N° Bus        :
+N° Chauffeur  :
+N° Solde      :
+***************** linechatinfo ***************
+Day : 23 and  N°ticket : 1
+Day : 12 and  N°ticket : 8
+Day : 24 and  N°ticket : 3
+Day : 27 and  N°ticket : 1
+Day : 29 and  N°ticket : 1
+Day : 19 and  N°ticket : 3
+Day : 20 and  N°ticket : 6
+Day : 21 and  N°ticket : 4
+***************** barchatinfo ****************
+Bus ID : 4 and  N°Place : 39
+Bus ID : 5 and  N°Place : 30
+Bus ID : 6 and  N°Place : 50
+Bus ID : 7 and  N°Place : 43
+Bus ID : 8 and  N°Place : 39
+Bus ID : 9 and  N°Place : 45
+**********************************************

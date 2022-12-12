@@ -50,8 +50,6 @@ public class HistorypageController implements Initializable {
         stage1.close();
     }
 
-
-
     //Database----------------------------------------
 
     String url = "jdbc:mysql://localhost/gestion_de_teckit";

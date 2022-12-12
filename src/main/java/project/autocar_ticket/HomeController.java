@@ -8,6 +8,7 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.chart.*;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.input.MouseEvent;
@@ -16,15 +17,19 @@ import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
+import java.io.File;
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.net.URL;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.text.SimpleDateFormat;
 import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.ResourceBundle;
 
@@ -277,6 +282,52 @@ public class HomeController implements Initializable {
             e.printStackTrace();
         }
         AllPage.setCenter(root);
+    }
+
+
+    public void getAllDataFromHome(){
+        try{
+            Date date = new Date() ;
+            SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH-mm-ss") ;
+
+            File reserv=new File("Informations/information"+dateFormat.format(date)+".txt");
+
+            if(!reserv.exists()){
+                reserv.createNewFile();
+            }
+            PrintWriter pw=new PrintWriter(reserv);
+            pw.println("*************** "+java.time.LocalDate.now()+" ***********");
+            pw.println("***************** Some Information ***************");
+            pw.println();
+            pw.println("N° Ticket     : "+this.Nbticket.getText());
+            pw.println("N° Bus        : "+this.NbAuto.getText());
+            pw.println("N° Chauffeur  : "+this.NbChauff.getText());
+            pw.println("N° Solde      : "+this.Nbprofits.getText()+" DH");
+            pw.println();
+            pw.println("***************** line chart Ticket ***************");
+            pw.println();
+            this.linechatinfo.forEach((k,v) -> {
+                pw.println("Day : "+k+" and  N°ticket : "+v);
+            });
+            pw.println();
+            pw.println("***************** bar chart Bus *******************");
+            pw.println();
+            this.barchatinfo.forEach((k,v) -> {
+                pw.println("Bus ID : "+k+" and  N°Place : "+v);
+            })
+            ;pw.println();
+            pw.println("***************************************************");
+            pw.close();
+
+            Alert alert=new Alert(Alert.AlertType.INFORMATION);
+            alert.setTitle("Status");
+            alert.setHeaderText(null);
+            alert.setContentText("information.txt added succssefuly");
+            alert.showAndWait();
+
+        }catch (Exception e){
+            System.out.println(e);
+        }
     }
 
     @Override
