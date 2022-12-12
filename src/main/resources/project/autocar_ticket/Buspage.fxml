@@ -16,7 +16,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="594.0" prefWidth="955.0" style="-fx-background-color: #005b96;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.autocar_ticket.BusController">
+<AnchorPane prefHeight="594.0" prefWidth="955.0" style="-fx-background-color: #005b96;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.autocar_ticket.BusController">
    <children>
       <AnchorPane layoutX="26.0" layoutY="24.0" prefHeight="70.0" prefWidth="200.0" style="-fx-background-color: #E9EEF2; -fx-background-radius: 20;" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
          <children>
@@ -146,7 +146,7 @@
                         <TableColumn fx:id="colmunendplace" prefWidth="136.00001525878906" text="End Place" />
                         <TableColumn fx:id="colmundate" prefWidth="136.800048828125" text="Date" />
                         <TableColumn fx:id="columntime" prefWidth="76.79998779296875" text="Time" />
-                        <TableColumn fx:id="colmunprice" prefWidth="92.79998779296875" text="price" />
+                        <TableColumn fx:id="colmunprice" prefWidth="92.79998779296875" text="Price" />
                         <TableColumn fx:id="colmunnplace" minWidth="0.0" prefWidth="143.20001220703125" text="N° Place" />
                         <TableColumn fx:id="colmunchauffeur" minWidth="0.0" prefWidth="119.99993896484375" text="Chauffeur" />
                     </columns>
@@ -173,6 +173,18 @@
                   </Button>
                </children>
             </HBox>
+            <Button layoutX="679.0" layoutY="201.0" mnemonicParsing="false" onAction="#ExportFileExcileBus" prefHeight="46.0" prefWidth="200.0" style="-fx-background-color: #f6f3ee; -fx-background-radius: 8;" text="  Download file Exile" textFill="#5c5c5c">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="31.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@img/excel.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
          </children>
       </AnchorPane>
    </children>

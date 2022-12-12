@@ -13,10 +13,12 @@ import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.sql.*;
 import java.time.LocalDate;
 import java.util.ArrayList;
+import org.apache.poi.xssf.usermodel.*;
 
 public class BusController {
 
@@ -269,6 +271,55 @@ public class BusController {
         }catch (Exception e){
             System.out.println(e);
         }
+    }
+
+    public void ExportFileExcileBus(){
+        try {
+            stmt=con.prepareStatement("SELECT * FROM bus;");
+            rs=stmt.executeQuery();
+
+            XSSFWorkbook wb=new XSSFWorkbook();
+            XSSFSheet sheet=wb.createSheet("Bus Detials");
+            XSSFRow header= sheet.createRow(0);
+            header.createCell(0).setCellValue("R.N");
+            header.createCell(1).setCellValue("Start Place");
+            header.createCell(2).setCellValue("End Place");
+            header.createCell(3).setCellValue("Date");
+            header.createCell(4).setCellValue("Time");
+            header.createCell(5).setCellValue("Price");
+            header.createCell(6).setCellValue("N° Place");
+            header.createCell(7).setCellValue("Chauffeur");
+            int index=1;
+            while (rs.next()){
+                XSSFRow row= sheet.createRow(index);
+                row.createCell(0).setCellValue(rs.getString("id"));
+                row.createCell(1).setCellValue(rs.getString("Vd"));
+                row.createCell(2).setCellValue(rs.getString("Va"));
+                row.createCell(3).setCellValue(rs.getString("date"));
+                row.createCell(4).setCellValue(rs.getString("time"));
+                row.createCell(5).setCellValue(rs.getString("prix"));
+                row.createCell(6).setCellValue(rs.getString("Nplace"));
+                row.createCell(7).setCellValue(rs.getString("chauffeur"));
+                index++;
+            }
+
+            FileOutputStream fileOutputStream=new FileOutputStream("ExcelBus/Bus.xlsx ");
+            wb.write(fileOutputStream);
+            fileOutputStream.close();
+
+            Alert alert=new Alert(Alert.AlertType.INFORMATION);
+            alert.setTitle("Status");
+            alert.setHeaderText(null);
+            alert.setContentText("Excel file added succssefuly");
+            alert.showAndWait();
+
+
+
+        }catch(Exception e){
+            System.out.println(e);
+        }
+
+
     }
 
 }

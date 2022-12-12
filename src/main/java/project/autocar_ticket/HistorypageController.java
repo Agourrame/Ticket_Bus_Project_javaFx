@@ -167,12 +167,12 @@ public class HistorypageController implements Initializable {
             while (rs.next()){
                 XSSFRow row= sheet.createRow(index);
                 row.createCell(0).setCellValue(rs.getString("id"));
-                row.createCell(0).setCellValue(rs.getString("name"));
-                row.createCell(0).setCellValue(rs.getString("dateof"));
-                row.createCell(0).setCellValue(rs.getString("cin"));
-                row.createCell(0).setCellValue(rs.getString("startcity"));
-                row.createCell(0).setCellValue(rs.getString("endcity"));
-                row.createCell(0).setCellValue(rs.getString("timeof"));
+                row.createCell(1).setCellValue(rs.getString("name"));
+                row.createCell(2).setCellValue(rs.getString("dateof"));
+                row.createCell(3).setCellValue(rs.getString("cin"));
+                row.createCell(4).setCellValue(rs.getString("startcity"));
+                row.createCell(5).setCellValue(rs.getString("endcity"));
+                row.createCell(6).setCellValue(rs.getString("timeof"));
                 index++;
             }
 
