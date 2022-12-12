@@ -9,10 +9,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.chart.PieChart;
-import javafx.scene.control.Alert;
-import javafx.scene.control.DatePicker;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
+import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
@@ -92,6 +89,14 @@ public class HistorypageController implements Initializable {
     @FXML
     private DatePicker datesearch;
 
+    @FXML
+    private Label bestCityid;
+
+    @FXML
+    private Label bestdateid;
+
+   
+
     //---------------------------------------
 
     @FXML
@@ -147,6 +152,7 @@ public class HistorypageController implements Initializable {
 
 
        insertintopieChart();
+        Best();
     }
 
     public void ExportFileExcile(){
@@ -201,6 +207,34 @@ public class HistorypageController implements Initializable {
         }
 
 
+    }
+
+    public void Best(){
+        try {
+            ps=con.prepareStatement("select count(Va) as num,Va from bus inner join reservation on bus.id=reservation.busid GROUP by Va HAVING num in (select max(a.num) from (select count(Va) as num,Va from bus inner join reservation on bus.id=reservation.busid GROUP by Va) a);");
+            rs=ps.executeQuery();
+
+            while (rs.next()){
+                String bestcity=rs.getString("Va");
+                this.bestCityid.setText(bestcity);
+            }
+
+        }catch(Exception e){
+            System.out.println(e);
+        }
+
+        try {
+            ps=con.prepareStatement("select max(a.td) from (select count(Va) as num,Va,reservation.today as td from bus inner join reservation on bus.id=reservation.busid GROUP by Va) a");
+            rs=ps.executeQuery();
+
+            while (rs.next()){
+                String bestcity=rs.getString("max(a.td)");
+                this.bestdateid.setText(bestcity);
+            }
+
+        }catch(Exception e){
+            System.out.println(e);
+        }
     }
 
     public void insertintopieChart(){
