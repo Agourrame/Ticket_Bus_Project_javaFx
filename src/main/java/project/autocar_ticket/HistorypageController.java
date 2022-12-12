@@ -144,15 +144,7 @@ public class HistorypageController implements Initializable {
         timecol.setCellValueFactory(new PropertyValueFactory("time"));
 
 
-        ObservableList<PieChart.Data> piechartdata
-                = FXCollections.observableArrayList(
-                new PieChart.Data("taroudant",13),
-                new PieChart.Data("agadir",20),
-                new PieChart.Data("oujda",25),
-                new PieChart.Data("warzazat",10)
-        );
-
-        piecity.setData(piechartdata);
+       insertintopieChart();
     }
 
     public void ExportFileExcile(){
@@ -201,5 +193,25 @@ public class HistorypageController implements Initializable {
         }
 
 
+    }
+
+    public void insertintopieChart(){
+        try{
+            ps=con.prepareStatement("select count(Va) as num,Va from bus inner join reservation on bus.id=reservation.busid GROUP by Va;");
+            rs=ps.executeQuery();
+            ObservableList<PieChart.Data> pie=FXCollections.observableArrayList();
+
+            while (rs.next()){
+                String city=rs.getString("Va");
+                int num=rs.getInt("num");
+
+                pie.add(new PieChart.Data(city,num));
+            }
+
+            piecity.setData(pie);
+
+        }catch (Exception e){
+            System.out.println(e);
+        }
     }
 }
