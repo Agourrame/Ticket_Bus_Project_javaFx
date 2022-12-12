@@ -1,5 +1,0 @@
-*************** Welcom ***************
-Start city : taroudant
-end city : agadir
-price : 40
-**************************************

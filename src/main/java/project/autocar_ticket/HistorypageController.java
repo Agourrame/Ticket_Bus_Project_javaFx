@@ -26,6 +26,10 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.text.SimpleDateFormat;
+import java.time.LocalTime;
+import java.time.format.DateTimeFormatter;
+import java.util.Date;
+import java.util.Random;
 import java.util.ResourceBundle;
 import org.apache.poi.xssf.usermodel.*;
 import org.apache.poi.xssf.usermodel.XSSFAnchor;
@@ -148,6 +152,10 @@ public class HistorypageController implements Initializable {
     }
 
     public void ExportFileExcile(){
+        Random randI = new Random();
+        int myRandInt = randI.nextInt(100);
+        //myRandInt = myRandInt+1;
+
         try {
             ps=con.prepareStatement("SELECT reservation.id as id, reservation.nom as name, reservation.today as dateof, reservation.cin as cin, bus.Vd as startcity, bus.Va as endcity, bus.time as timeof FROM reservation, bus WHERE reservation.busid = bus.id;");
             rs=ps.executeQuery();
@@ -175,8 +183,10 @@ public class HistorypageController implements Initializable {
                 row.createCell(6).setCellValue(rs.getString("timeof"));
                 index++;
             }
+            Date date = new Date() ;
+            SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH-mm-ss") ;
 
-            FileOutputStream fileOutputStream=new FileOutputStream("ExcelHistory/history.xlsx ");
+            FileOutputStream fileOutputStream=new FileOutputStream("ExcelHistory/history_"+dateFormat.format(date)+".xlsx");
             wb.write(fileOutputStream);
             fileOutputStream.close();
 

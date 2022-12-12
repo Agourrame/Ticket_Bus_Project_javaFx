@@ -1,6 +1,0 @@
-*************** Welcom ***************
-Start city : taroudant
-end city : agadir
-date : 2022-11-15
-price : 40
-**************************************
