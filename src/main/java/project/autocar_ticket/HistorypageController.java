@@ -9,6 +9,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.chart.PieChart;
+import javafx.scene.control.Alert;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
@@ -17,6 +18,7 @@ import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.net.URL;
 import java.sql.Connection;
@@ -25,6 +27,10 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.text.SimpleDateFormat;
 import java.util.ResourceBundle;
+import org.apache.poi.xssf.usermodel.*;
+import org.apache.poi.xssf.usermodel.XSSFAnchor;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+
 
 public class HistorypageController implements Initializable {
     @FXML
@@ -147,5 +153,53 @@ public class HistorypageController implements Initializable {
         );
 
         piecity.setData(piechartdata);
+    }
+
+    public void ExportFileExcile(){
+        try {
+            ps=con.prepareStatement("SELECT reservation.id as id, reservation.nom as name, reservation.today as dateof, reservation.cin as cin, bus.Vd as startcity, bus.Va as endcity, bus.time as timeof FROM reservation, bus WHERE reservation.busid = bus.id;");
+            rs=ps.executeQuery();
+
+
+            XSSFWorkbook wb=new XSSFWorkbook();
+            XSSFSheet sheet=wb.createSheet("history detials");
+            XSSFRow header= sheet.createRow(0);
+            header.createCell(0).setCellValue("id");
+            header.createCell(1).setCellValue("name");
+            header.createCell(2).setCellValue("dateof");
+            header.createCell(3).setCellValue("cin");
+            header.createCell(4).setCellValue("startcity");
+            header.createCell(5).setCellValue("endcity");
+            header.createCell(6).setCellValue("timeof");
+            int index=1;
+            while (rs.next()){
+                XSSFRow row= sheet.createRow(index);
+                row.createCell(0).setCellValue(rs.getString("id"));
+                row.createCell(0).setCellValue(rs.getString("name"));
+                row.createCell(0).setCellValue(rs.getString("dateof"));
+                row.createCell(0).setCellValue(rs.getString("cin"));
+                row.createCell(0).setCellValue(rs.getString("startcity"));
+                row.createCell(0).setCellValue(rs.getString("endcity"));
+                row.createCell(0).setCellValue(rs.getString("timeof"));
+                index++;
+            }
+
+            FileOutputStream fileOutputStream=new FileOutputStream("history.xlsx ");
+            wb.write(fileOutputStream);
+            fileOutputStream.close();
+
+            Alert alert=new Alert(Alert.AlertType.INFORMATION);
+            alert.setTitle("Status");
+            alert.setHeaderText(null);
+            alert.setContentText("Excel file added succssefuly");
+            alert.showAndWait();
+
+
+
+        }catch(Exception e){
+            System.out.println(e);
+        }
+
+
     }
 }

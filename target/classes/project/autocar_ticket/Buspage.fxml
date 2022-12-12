@@ -49,7 +49,7 @@
             </HBox>
             <ImageView fitHeight="32.0" fitWidth="39.0" layoutX="14.0" layoutY="19.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@img/school-bus-1759%20(1).png" />
+                  <Image url="@img/school-bus-1759 (1).png" />
                </image>
             </ImageView>
          </children>
