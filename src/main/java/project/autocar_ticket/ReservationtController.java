@@ -1,6 +1,7 @@
 package project.autocar_ticket;
 
 import Modules.Bus;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -9,6 +10,8 @@ import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
+
+import java.text.SimpleDateFormat;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.io.File;
@@ -22,9 +25,11 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.ResourceBundle;
 
 public class ReservationtController implements Initializable {
+
     @FXML
     void minimize(ActionEvent event){
         Stage stage;
@@ -54,8 +59,6 @@ public class ReservationtController implements Initializable {
 
     @FXML
     private TextField cininput;
-    @FXML
-    private TextField dateinput;
     @FXML
     private TextField endinput;
     @FXML
@@ -109,7 +112,7 @@ public class ReservationtController implements Initializable {
     void search(MouseEvent event) {
         this.tablebus.getItems().clear();
         try{
-            ps=con.prepareStatement("select * from bus where Vd='"+startCom.getSelectionModel().getSelectedItem()+"' and Va='"+endCom.getSelectionModel().getSelectedItem()+"'");
+            ps=con.prepareStatement("select * from bus where Vd='taroudant' and Va='"+endCom.getSelectionModel().getSelectedItem()+"'");
             rs=ps.executeQuery();
 
             while (rs.next()){
@@ -154,21 +157,25 @@ public class ReservationtController implements Initializable {
         }
 
         try{
-            File reserv=new File("Tickets/ticket"+numberofplace+priceinput.getText()+".txt");
+            Date date = new Date() ;
+            SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH-mm-ss") ;
+
+            File reserv=new File("Tickets/ticket_"+dateFormat.format(date)+".txt");
 
               if(!reserv.exists()){
                 reserv.createNewFile();
                }
               PrintWriter pw=new PrintWriter(reserv);
-            pw.println("*************** "+java.time.LocalDate.now()+" ************");
-            pw.println("***************** Welcome *************");
+            pw.println("*************** "+java.time.LocalDate.now()+" ***********");
+            pw.println("***************** Welcome ************");
             pw.println("*  Start city : "+startinput.getText());
-            pw.println("*  end city : "+endinput.getText());
-            pw.println("*  date  : "+dateinputt.getValue().toString());
-            pw.println("*  price : "+priceinput.getText()+"Dhs");
-            pw.println("*  Time : "+timeinput.getText());
-            pw.println("*  N° : "+numberofplace);
+            pw.println("*  end city   : "+endinput.getText());
+            pw.println("*  date       : "+dateinputt.getValue().toString());
+            pw.println("*  price      : "+priceinput.getText()+"Dhs");
+            pw.println("*  Time       : "+timeinput.getText());
+            pw.println("*  N°         : "+numberofplace);
             pw.println("**************************************");
+            pw.println("************* Bus Bladi **************");
             pw.close();
             System.out.println("your tickt is ready");
             }catch (Exception e){
@@ -177,9 +184,11 @@ public class ReservationtController implements Initializable {
 
         Alert alert=new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle("Status");
+        alert.setHeaderText(null);
         alert.setContentText("ticket added succssefuly");
         alert.showAndWait();
 
+        clearinput();
     }
 
     void getStartcity(){
@@ -228,6 +237,16 @@ public class ReservationtController implements Initializable {
         stage1.close();
     }
 
+    public void clearinput(){
+       this.timeinput.setText("");
+       this.endinput.setText("");
+       this.startinput.setText("");
+       this.priceinput.setText("");
+       this.cininput.setText("");
+       this.dateinputt.setValue(null);
+       this.nameinput.setText("");
+    }
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         try {
@@ -241,8 +260,9 @@ public class ReservationtController implements Initializable {
         getStartcity();
         getEndcity();
 
-        this.startCom.getItems().addAll(startcity);
+      //  this.startCom.getItems().addAll(startcity);
         this.endCom.getItems().addAll(endcity);
+        this.startCom.getItems().add("taroudant");
 
         startcol.setCellValueFactory(new PropertyValueFactory("start"));
         endcol.setCellValueFactory(new PropertyValueFactory("end"));
