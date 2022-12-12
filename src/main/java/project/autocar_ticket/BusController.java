@@ -16,8 +16,11 @@ import javafx.stage.StageStyle;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.sql.*;
+import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.Date;
+
 import org.apache.poi.xssf.usermodel.*;
 
 public class BusController {
@@ -302,8 +305,10 @@ public class BusController {
                 row.createCell(7).setCellValue(rs.getString("chauffeur"));
                 index++;
             }
+            java.util.Date date = new Date() ;
+            SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH-mm-ss") ;
 
-            FileOutputStream fileOutputStream=new FileOutputStream("ExcelBus/Bus.xlsx ");
+            FileOutputStream fileOutputStream=new FileOutputStream("ExcelBus/Bus."+dateFormat.format(date)+".xlsx");
             wb.write(fileOutputStream);
             fileOutputStream.close();
 
