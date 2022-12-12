@@ -295,8 +295,9 @@ public class HomeController implements Initializable {
             if(!reserv.exists()){
                 reserv.createNewFile();
             }
+
             PrintWriter pw=new PrintWriter(reserv);
-            pw.println("*************** "+java.time.LocalDate.now()+" ***********");
+            pw.println("***************** "+java.time.LocalDate.now()+" *************");
             pw.println("***************** Some Information ***************");
             pw.println();
             pw.println("N° Ticket     : "+this.Nbticket.getText());
