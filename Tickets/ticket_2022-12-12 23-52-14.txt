@@ -1,10 +1,10 @@
 *************** 2022-12-12 ***********
 ***************** Welcome ************
 *  Start city : taroudant
-*  end city   : sidi ifni
-*  date       : 2022-11-09
-*  price      : 100Dhs
-*  Time       : 12:00
-*  N°         : 40
+*  end city   : inzagen
+*  date       : 2022-12-09
+*  price      : 25Dhs
+*  Time       : 09:00
+*  N°         : 50
 **************************************
 ************* Bus Bladi **************

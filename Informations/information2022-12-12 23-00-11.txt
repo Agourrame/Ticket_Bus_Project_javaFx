@@ -1,0 +1,23 @@
+*************** 2022-12-12 ***********
+***************** Some Information ***************
+
+N° Ticket     : 3
+N° Bus        : 5
+N° Chauffeur  : 7
+N° Solde      : 560 DH
+
+***************** line chart Ticket ***************
+
+Day : 24 and  N°ticket : 1
+Day : 6 and  N°ticket : 1
+Day : 29 and  N°ticket : 1
+
+***************** bar chart Bus *******************
+
+Bus ID : 4 and  N°Place : 48
+Bus ID : 6 and  N°Place : 50
+Bus ID : 7 and  N°Place : 50
+Bus ID : 8 and  N°Place : 49
+Bus ID : 9 and  N°Place : 50
+
+***************************************************

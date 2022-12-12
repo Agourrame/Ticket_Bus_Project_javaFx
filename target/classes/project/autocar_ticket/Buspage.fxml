@@ -173,7 +173,7 @@
                   </Button>
                </children>
             </HBox>
-            <Button layoutX="679.0" layoutY="201.0" mnemonicParsing="false" onAction="#ExportFileExcileBus" prefHeight="46.0" prefWidth="200.0" style="-fx-background-color: #f6f3ee; -fx-background-radius: 8;" text="  Download file Exile" textFill="#5c5c5c">
+            <Button layoutX="689.0" layoutY="207.0" mnemonicParsing="false" onAction="#ExportFileExcileBus" prefHeight="34.0" prefWidth="171.0" style="-fx-background-color: #f6f3ee; -fx-background-radius: 8;" text="  Download File Excel" textFill="#5c5c5c">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font>

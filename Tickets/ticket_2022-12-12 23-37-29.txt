@@ -1,10 +1,10 @@
 *************** 2022-12-12 ***********
 ***************** Welcome ************
 *  Start city : taroudant
-*  end city   : dakhla
-*  date       : 2022-11-10
-*  price      : 220Dhs
-*  Time       : 17:30
-*  N°         : 51
+*  end city   : marrakech
+*  date       : 2022-12-19
+*  price      : 85Dhs
+*  Time       : 20:00
+*  N°         : 49
 **************************************
 ************* Bus Bladi **************
