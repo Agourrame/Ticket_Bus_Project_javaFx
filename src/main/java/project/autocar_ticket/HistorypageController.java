@@ -176,7 +176,7 @@ public class HistorypageController implements Initializable {
                 index++;
             }
 
-            FileOutputStream fileOutputStream=new FileOutputStream("history.xlsx ");
+            FileOutputStream fileOutputStream=new FileOutputStream("ExcelHistory/history.xlsx ");
             wb.write(fileOutputStream);
             fileOutputStream.close();
 
