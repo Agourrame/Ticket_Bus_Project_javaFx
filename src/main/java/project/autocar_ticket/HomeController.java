@@ -147,6 +147,23 @@ public class HomeController implements Initializable {
 
     //---------------------------------------------
 
+    public void Refresh(){
+        
+        navbarhomeinformation();
+        LocalTime time = LocalTime.now();
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("HH:mm:ss");
+
+        this.timelabael.setText(java.time.LocalDate.now().toString());
+        this.ttlab.setText(time.format(formatter));
+
+        insertintobarchart();
+        barchartinformation();
+        insertintolinechart();
+        linechartinformation();
+    }
+
+    //---------------------------------------------
+
       void insertintobarchart(){
 
           try{

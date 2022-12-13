@@ -289,8 +289,19 @@
                                     </ImageView>
                                  </children>
                               </AnchorPane>
-                              <AnchorPane prefHeight="46.0" prefWidth="200.0" style="-fx-background-color: #e07a5f; -fx-background-radius: 10;" />
                               <Button mnemonicParsing="false" onAction="#getAllDataFromHome" prefHeight="46.0" prefWidth="200.0" style="-fx-background-color: #f6f3ee; -fx-background-radius: 8;" text="  Download file details" textFill="#5c5c5c">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                                 <graphic>
+                                    <ImageView fitHeight="33.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@img/icons8-txt-file-64.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                              <Button mnemonicParsing="false" onAction="#Refresh" prefHeight="46.0" prefWidth="200.0" style="-fx-background-color: #f6f3ee; -fx-background-radius: 8;" text="Refresh" textFill="#5c5c5c">
                                  <font>
                                     <Font name="System Bold" size="12.0" />
                                  </font>
